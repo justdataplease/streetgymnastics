@@ -104,10 +104,10 @@
       "level": 1,
       "number": 41,
       "title": {
-        "en": "Post-Legacy Re-entry Check"
+        "en": "Foundation Re-entry Check"
       },
       "description": {
-        "en": "The authentic Level 1 sequence ends before this newly authored continuation, so prior capacity cannot be assumed. Use this deload assessment to reset today's safe hang, row, and assisted-pull baselines."
+        "en": "Begin this continuation with a deload assessment to establish safe hang, row, and assisted-pull baselines before volume rises."
       },
       "schedule": {
         "week": 1,

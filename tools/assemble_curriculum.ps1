@@ -23,19 +23,36 @@ function Localized([string]$English) {
 }
 
 $script:polishKey = ([string][char]112) + ([string][char]108)
-function Remove-PolishFields($Value) {
+function Test-DormantVideoMetadataKey([string]$Name) {
+    $normalized = [regex]::Replace($Name, '[_\-\s]', '').ToLowerInvariant()
+    return $normalized -in @(
+        "video",
+        "videoid",
+        "videourl",
+        "videoprovider",
+        "url",
+        "provider",
+        "vimeo",
+        "vimeoid",
+        "vimeourl",
+        "vimeoprovider"
+    )
+}
+
+function Remove-AppOnlyMetadata($Value) {
     if ($null -eq $Value -or $Value -is [string]) { return }
     if ($Value -is [System.Management.Automation.PSCustomObject]) {
-        if ($null -ne $Value.PSObject.Properties[$script:polishKey]) {
-            $Value.PSObject.Properties.Remove($script:polishKey)
-        }
         foreach ($property in @($Value.PSObject.Properties)) {
-            Remove-PolishFields $property.Value
+            if ($property.Name -ceq $script:polishKey -or (Test-DormantVideoMetadataKey $property.Name)) {
+                $Value.PSObject.Properties.Remove($property.Name)
+                continue
+            }
+            Remove-AppOnlyMetadata $property.Value
         }
         return
     }
     if ($Value -is [System.Collections.IEnumerable]) {
-        foreach ($item in $Value) { Remove-PolishFields $item }
+        foreach ($item in $Value) { Remove-AppOnlyMetadata $item }
     }
 }
 
@@ -108,7 +125,7 @@ foreach ($levelDefinition in $levelDefinitions) {
             $stableId = Stable-ProgramId $levelNumber $number
 
             if ([bool]$legacyProgram.has_details) {
-                Remove-PolishFields $legacyProgram
+                Remove-AppOnlyMetadata $legacyProgram
                 $profile = $coachingProfiles[($number - 1) % $coachingProfiles.Count]
                 $assembled = [ordered]@{
                     id = $stableId

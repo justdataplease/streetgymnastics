@@ -12,9 +12,9 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 /**
- * Normalizes both the immutable forensic export and the revival's compact static catalog.
+ * Normalizes both the technical source export and the app's compact static catalog.
  *
- * Revival workout choices are authored in JSON. Tuple expansion here only turns an authored
+ * Workout choices are authored in JSON. Tuple expansion here only turns an authored
  * prescription into the exercise/set objects expected by the UI; it never selects movements,
  * doses, progressions, or variations.
  */
@@ -183,11 +183,11 @@ object CurriculumJsonParser {
                 add(
                     TrainingExercise(
                         id = exerciseId,
+                        movementId = movementId,
                         number = exerciseNumber,
                         name = movement?.optLocalized("name")
                             ?: LocalizedText(en = movementId.humanize()),
                         description = description,
-                        videoId = movement?.optValueAsString("video_id"),
                         sets = List(setCount) { setIndex ->
                             val repetitionNote = when {
                                 repetitionText.equals("max", ignoreCase = true) -> null
@@ -228,10 +228,11 @@ object CurriculumJsonParser {
 
     private fun parseExpandedExercise(json: JSONObject): TrainingExercise = TrainingExercise(
         id = json.optValueAsString("id") ?: "exercise-${json.optInt("number", 0)}",
+        movementId = json.optValueAsString("movement_id")
+            ?: json.optValueAsString("animation_id"),
         number = json.optInt("number", 0),
         name = json.optLocalized("name"),
         description = json.optLocalized("description"),
-        videoId = json.optValueAsString("video_id"),
         sets = json.optJSONArray("sets").mapObjects(::parseExpandedSet),
         category = json.optValueAsString("category"),
         equipment = json.optJSONArray("equipment").mapStrings(),

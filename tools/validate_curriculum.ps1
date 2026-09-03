@@ -56,15 +56,31 @@ function Get-PropertyValue($Value, [string]$Name) {
     return $Value.PSObject.Properties[$Name].Value
 }
 
-function Copy-WithoutPolish($Value) {
+function Test-DormantVideoMetadataKey([string]$Name) {
+    $normalized = [regex]::Replace($Name, '[_\-\s]', '').ToLowerInvariant()
+    return $normalized -in @(
+        "video",
+        "videoid",
+        "videourl",
+        "videoprovider",
+        "url",
+        "provider",
+        "vimeo",
+        "vimeoid",
+        "vimeourl",
+        "vimeoprovider"
+    )
+}
+
+function Copy-AppCatalogProjection($Value) {
     if ($null -eq $Value -or $Value -is [string] -or $Value.GetType().IsPrimitive -or $Value -is [decimal]) {
         return $Value
     }
     if ($Value -is [System.Collections.IDictionary]) {
         $copy = [ordered]@{}
         foreach ($key in $Value.Keys) {
-            if ([string]$key -cne "pl") {
-                $copy[[string]$key] = Copy-WithoutPolish $Value[$key]
+            if ([string]$key -cne "pl" -and -not (Test-DormantVideoMetadataKey ([string]$key))) {
+                $copy[[string]$key] = Copy-AppCatalogProjection $Value[$key]
             }
         }
         return $copy
@@ -72,8 +88,8 @@ function Copy-WithoutPolish($Value) {
     if ($Value -is [System.Management.Automation.PSCustomObject]) {
         $copy = [ordered]@{}
         foreach ($property in $Value.PSObject.Properties) {
-            if ($property.Name -cne "pl") {
-                $copy[$property.Name] = Copy-WithoutPolish $property.Value
+            if ($property.Name -cne "pl" -and -not (Test-DormantVideoMetadataKey $property.Name)) {
+                $copy[$property.Name] = Copy-AppCatalogProjection $property.Value
             }
         }
         return $copy
@@ -81,7 +97,7 @@ function Copy-WithoutPolish($Value) {
     if ($Value -is [System.Collections.IEnumerable]) {
         $items = New-Object System.Collections.ArrayList
         foreach ($item in $Value) {
-            [void]$items.Add((Copy-WithoutPolish $item))
+            [void]$items.Add((Copy-AppCatalogProjection $item))
         }
         return ,@($items)
     }
@@ -142,6 +158,32 @@ function Contains-PropertyName($Value, [string]$Name) {
     if ($Value -is [System.Collections.IEnumerable]) {
         foreach ($item in $Value) {
             if (Contains-PropertyName $item $Name) { return $true }
+        }
+    }
+    return $false
+}
+
+function Contains-DormantVideoMetadata($Value) {
+    if ($null -eq $Value -or $Value -is [string] -or $Value.GetType().IsPrimitive -or $Value -is [decimal]) {
+        return $false
+    }
+    if ($Value -is [System.Collections.IDictionary]) {
+        foreach ($key in $Value.Keys) {
+            if (Test-DormantVideoMetadataKey ([string]$key)) { return $true }
+            if (Contains-DormantVideoMetadata $Value[$key]) { return $true }
+        }
+        return $false
+    }
+    if ($Value -is [System.Management.Automation.PSCustomObject]) {
+        foreach ($property in $Value.PSObject.Properties) {
+            if (Test-DormantVideoMetadataKey $property.Name) { return $true }
+            if (Contains-DormantVideoMetadata $property.Value) { return $true }
+        }
+        return $false
+    }
+    if ($Value -is [System.Collections.IEnumerable]) {
+        foreach ($item in $Value) {
+            if (Contains-DormantVideoMetadata $item) { return $true }
         }
     }
     return $false
@@ -452,6 +494,9 @@ if (Contains-PropertyName $catalog "pl") {
 }
 if (Contains-PropertyName $catalog "routing") {
     Add-Error "Final generated catalog contains a forbidden routing field"
+}
+if (Contains-DormantVideoMetadata $catalog) {
+    Add-Error "Final generated catalog contains dormant video id, URL, or provider metadata"
 }
 if ([string]$catalog.schema_version -cne "2.0.0") { Add-Error "schema_version must be 2.0.0" }
 if ([string]$catalog.source_baseline.sha256 -cne $expectedBaselineSha256) { Add-Error "Catalog source_baseline.sha256 is missing or incorrect" }
@@ -764,9 +809,9 @@ foreach ($level in $levels) {
             if ($null -eq $baselineProgram) {
                 Add-Error "$location cannot verify authentic content without a baseline slot"
             } else {
-                $expectedContent = Copy-WithoutPolish $baselineProgram
+                $expectedContent = Copy-AppCatalogProjection $baselineProgram
                 if ((ConvertTo-CanonicalJson $program.content) -cne (ConvertTo-CanonicalJson $expectedContent)) {
-                    Add-Error "$location authentic content differs from the English-only baseline projection"
+                    Add-Error "$location authentic content differs from the English-only, video-free baseline projection"
                 }
                 if ([string]$program.legacy.workout_id -cne [string]$baselineProgram.id) {
                     Add-Error "$location legacy.workout_id does not match the baseline"

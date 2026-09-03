@@ -3,7 +3,6 @@ package co.streetgymnastic.streetgymnastic.revival.ui
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
 import android.content.res.ColorStateList
 import android.content.res.Configuration
 import android.graphics.Color
@@ -11,7 +10,6 @@ import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.media.AudioManager
 import android.media.ToneGenerator
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -33,7 +31,6 @@ import android.widget.TextView
 import android.widget.Toast
 import co.streetgymnastic.streetgymnastic.revival.R
 import co.streetgymnastic.streetgymnastic.revival.data.AssetCurriculumRepository
-import co.streetgymnastic.streetgymnastic.revival.data.model.ContentOrigin
 import co.streetgymnastic.streetgymnastic.revival.data.model.CurriculumCatalog
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingExercise
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingLevel
@@ -49,8 +46,8 @@ import java.util.Locale
 import java.util.concurrent.Executors
 
 /**
- * Framework-only application shell. It intentionally avoids a network or private API dependency:
- * the catalog is loaded from the bundled asset and historic video IDs open public Vimeo pages.
+ * Framework-only application shell. It intentionally avoids network and private API dependencies:
+ * the catalog and exercise demonstrations are bundled with the app.
  */
 open class RevivalActivity : Activity() {
     private sealed interface Screen {
@@ -415,20 +412,7 @@ open class RevivalActivity : Activity() {
             todayCard.addWithMargins(bodyText(getString(R.string.all_complete_body)), topDp = 8)
         } else {
             val isResume = active?.programId == nextProgram.id
-            val origin = nextProgram.origin.presentation()
-            val header = LinearLayout(this).apply {
-                orientation = LinearLayout.HORIZONTAL
-                gravity = Gravity.CENTER_VERTICAL
-                addView(
-                    badge(getString(origin.labelRes), origin.color),
-                    LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ),
-                )
-            }
-            todayCard.addView(header)
-            todayCard.addWithMargins(titleText(displayName(nextProgram, locale), 22f), topDp = 10)
+            todayCard.addView(titleText(displayName(nextProgram, locale), 22f))
             val level = catalog.levels.firstOrNull { it.number == nextProgram.levelNumber }
             val meta = buildList {
                 add(level?.let { displayName(it, locale) } ?: getString(R.string.level_number, nextProgram.levelNumber))
@@ -603,9 +587,7 @@ open class RevivalActivity : Activity() {
         val page = verticalPage()
 
         val hero = card()
-        val origin = program.origin.presentation()
-        hero.addView(badge(getString(origin.labelRes), origin.color))
-        hero.addWithMargins(titleText(displayName(program, locale), 25f), topDp = 12)
+        hero.addView(titleText(displayName(program, locale), 25f))
         val meta = buildList {
             add(getString(R.string.level_number, program.levelNumber))
             programMeta(program).takeIf(String::isNotBlank)?.let(::add)
@@ -617,23 +599,9 @@ open class RevivalActivity : Activity() {
             ),
             topDp = 12,
         )
-        val originNote = bodyText(getString(origin.noteRes), 13f).apply {
-            setTextColor(origin.color)
-            typeface = Typeface.DEFAULT_BOLD
-        }
-        hero.addWithMargins(originNote, topDp = 14)
         page.addWithMargins(hero, bottomDp = 14)
 
-        if (program.origin == ContentOrigin.APK_AUTHENTIC) {
-            page.addWithMargins(authenticSafetyCard(), bottomDp = 14)
-        }
-
-        val readiness = card().apply {
-            background = roundedDrawable(AppColors.WARNING_SURFACE, dp(10).toFloat())
-            addView(titleText(getString(R.string.safety_title), 17f))
-            addWithMargins(bodyText(getString(R.string.readiness_note), 14f), topDp = 5)
-        }
-        page.addWithMargins(readiness, bottomDp = 16)
+        page.addWithMargins(workoutSafetyCard(), bottomDp = 16)
 
         val sections = sections(program)
         if (sections.all { it.exercises.isEmpty() }) {
@@ -708,6 +676,11 @@ open class RevivalActivity : Activity() {
                 )
             }
             exerciseCard.addView(heading)
+            exerciseCard.addWithMargins(
+                exerciseAnimation(exercise, exerciseName, locale),
+                height = dp(168),
+                topDp = 10,
+            )
             exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let {
                 exerciseCard.addWithMargins(bodyText(it, 14f), topDp = 10)
             }
@@ -735,15 +708,6 @@ open class RevivalActivity : Activity() {
                     )
                 }
                 exerciseCard.addView(row)
-            }
-            validVideoId(exercise.videoId)?.let { videoId ->
-                val video = primaryButton(getString(R.string.legacy_video), AppColors.PRIMARY) {
-                    openLegacyVideo(videoId)
-                }
-                video.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_movie_white_24dp, 0, 0, 0)
-                video.compoundDrawablePadding = dp(8)
-                video.contentDescription = getString(R.string.legacy_video_description, exerciseName)
-                exerciseCard.addWithMargins(video, topDp = 12)
             }
             page.addWithMargins(exerciseCard, bottomDp = 10)
         }
@@ -823,9 +787,7 @@ open class RevivalActivity : Activity() {
         }
         page.addWithMargins(status, bottomDp = 14)
 
-        if (program.origin == ContentOrigin.APK_AUTHENTIC) {
-            page.addWithMargins(authenticSafetyCard(), bottomDp = 14)
-        }
+        page.addWithMargins(workoutSafetyCard(), bottomDp = 14)
 
         sections.forEach { section ->
             page.addView(sectionLabel(getString(section.titleRes)))
@@ -833,6 +795,11 @@ open class RevivalActivity : Activity() {
                 val exerciseName = displayName(exercise, locale)
                 val exerciseCard = card()
                 exerciseCard.addView(titleText(exerciseName, 18f))
+                exerciseCard.addWithMargins(
+                    exerciseAnimation(exercise, exerciseName, locale),
+                    height = dp(168),
+                    topDp = 8,
+                )
                 exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let {
                     exerciseCard.addWithMargins(bodyText(it, 13f), topDp = 4)
                 }
@@ -889,15 +856,6 @@ open class RevivalActivity : Activity() {
                     }
                     row.setOnClickListener { checkBox.performClick() }
                     exerciseCard.addView(row)
-                }
-                validVideoId(exercise.videoId)?.let { videoId ->
-                    val video = primaryButton(getString(R.string.legacy_video), AppColors.PRIMARY) {
-                        openLegacyVideo(videoId)
-                    }
-                    video.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_movie_white_24dp, 0, 0, 0)
-                    video.compoundDrawablePadding = dp(8)
-                    video.contentDescription = getString(R.string.legacy_video_description, exerciseName)
-                    exerciseCard.addWithMargins(video, topDp = 8)
                 }
                 page.addWithMargins(exerciseCard, bottomDp = 10)
             }
@@ -1106,13 +1064,6 @@ open class RevivalActivity : Activity() {
         }
         page.addWithMargins(safety, bottomDp = 16)
 
-        page.addView(sectionLabel(getString(R.string.transparency_title)))
-        val transparency = card().apply {
-            addView(titleText(getString(R.string.transparency_title), 19f))
-            addWithMargins(bodyText(getString(R.string.transparency_body), 14f), topDp = 7)
-        }
-        page.addWithMargins(transparency, bottomDp = 12)
-
         val version = packageManager.getPackageInfo(packageName, 0).versionName ?: "1.0"
         val about = card().apply {
             addView(titleText(getString(R.string.about_title), 19f))
@@ -1140,10 +1091,31 @@ open class RevivalActivity : Activity() {
         ExerciseSection("cooldown", R.string.cool_down, program.cooldown),
     )
 
-    private fun authenticSafetyCard(): LinearLayout = card().apply {
+    private fun exerciseAnimation(
+        exercise: TrainingExercise,
+        exerciseName: CharSequence,
+        locale: Locale,
+    ): ExerciseAnimationView = ExerciseAnimationView(this).apply {
+        val descriptor = buildList {
+            exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
+            exercise.sets.forEach { set ->
+                set.name.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
+                set.description.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
+            }
+        }.distinct().joinToString(" ").takeIf(String::isNotBlank)
+        bind(
+            movementId = exercise.movementId,
+            exerciseName = exerciseName,
+            category = exercise.category,
+            equipment = exercise.equipment,
+            descriptor = descriptor,
+        )
+    }
+
+    private fun workoutSafetyCard(): LinearLayout = card().apply {
         background = roundedDrawable(AppColors.WARNING_SURFACE, dp(10).toFloat())
-        addView(titleText(getString(R.string.legacy_safety_title), 18f))
-        addWithMargins(bodyText(getString(R.string.legacy_safety_body), 14f), topDp = 7)
+        addView(titleText(getString(R.string.safety_title), 18f))
+        addWithMargins(bodyText(getString(R.string.readiness_note), 14f), topDp = 7)
     }
 
     private fun scopedSetId(
@@ -1157,18 +1129,6 @@ open class RevivalActivity : Activity() {
         append(program.id).append(':').append(section).append(':')
         append(exercise.id).append('-').append(exerciseIndex).append(':')
         append(set.id).append('-').append(setIndex)
-    }
-
-    private fun validVideoId(value: String?): String? =
-        value?.takeIf { it.matches(Regex("[0-9]{5,20}")) }
-
-    private fun openLegacyVideo(videoId: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://vimeo.com/$videoId"))
-        try {
-            startActivity(intent)
-        } catch (_: Exception) {
-            Toast.makeText(this, R.string.video_unavailable, Toast.LENGTH_LONG).show()
-        }
     }
 
     private fun programById(id: String): TrainingProgram? =

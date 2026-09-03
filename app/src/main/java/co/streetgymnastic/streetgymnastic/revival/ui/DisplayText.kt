@@ -2,7 +2,6 @@ package co.streetgymnastic.streetgymnastic.revival.ui
 
 import android.content.Context
 import co.streetgymnastic.streetgymnastic.revival.R
-import co.streetgymnastic.streetgymnastic.revival.data.model.ContentOrigin
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingExercise
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingLevel
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingProgram
@@ -46,37 +45,3 @@ fun Context.setPrescription(set: TrainingSet, locale: Locale): String = buildLis
     set.description.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
     set.breakSeconds?.takeIf { it > 0 }?.let { add(getString(R.string.rest_format, it)) }
 }.joinToString(" • ").ifBlank { getString(R.string.set_number, set.number) }
-
-data class OriginPresentation(
-    val labelRes: Int,
-    val noteRes: Int,
-    val color: Int,
-)
-
-fun ContentOrigin.presentation(): OriginPresentation = when (this) {
-    ContentOrigin.APK_AUTHENTIC -> OriginPresentation(
-        R.string.source_authentic,
-        R.string.source_authentic_note,
-        AppColors.SUCCESS,
-    )
-    ContentOrigin.RECONSTRUCTED_PLACEHOLDER -> OriginPresentation(
-        R.string.source_reconstructed,
-        R.string.source_reconstructed_note,
-        AppColors.ACTION,
-    )
-    ContentOrigin.LLM_EXTENSION -> OriginPresentation(
-        R.string.source_extension,
-        R.string.source_extension_note,
-        AppColors.ACTION,
-    )
-    ContentOrigin.NEW_LEVEL -> OriginPresentation(
-        R.string.source_new,
-        R.string.source_new_note,
-        AppColors.NUMBER,
-    )
-    ContentOrigin.UNKNOWN -> OriginPresentation(
-        R.string.source_catalog,
-        R.string.source_catalog_note,
-        AppColors.TEXT_SECONDARY,
-    )
-}

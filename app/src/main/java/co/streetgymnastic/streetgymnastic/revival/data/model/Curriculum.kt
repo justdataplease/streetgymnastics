@@ -44,10 +44,10 @@ data class TrainingProgram(
 
 data class TrainingExercise(
     val id: String,
+    val movementId: String? = null,
     val number: Int,
     val name: LocalizedText,
     val description: LocalizedText,
-    val videoId: String?,
     val sets: List<TrainingSet>,
     val category: String? = null,
     val equipment: List<String> = emptyList(),
