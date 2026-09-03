@@ -1,0 +1,9 @@
+* text=auto
+
+# Preserve byte-identical curriculum evidence and packaged release payloads.
+*.json binary
+*.apk binary
+*.png binary
+*.jar binary
+dist/*.md binary
+dist/SHA256SUMS.txt binary
