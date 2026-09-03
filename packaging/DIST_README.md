@@ -6,7 +6,7 @@ This folder is a scripted, rebuildable debug distribution of Street Gymnastic.
 
 - `street-gymnastic-debug.apk` — installable English-only Android debug package.
 - `street-gymnastic-curriculum-v2.json` — complete English-only application catalog: six levels, 100 workouts each.
-- `street-gymnastic-exercise-animations.json` — editable offline line-and-circle poses and exercise mappings used by the app.
+- `street-gymnastic-exercise-animations.json` — editable offline line-figure poses (joint angles on a fixed-proportion rig), animation templates, and exercise mappings used by the app.
 - `street-gymnastic-forensic-export.json` — untouched bilingual extraction from the supplied Base APK.
 - `EXTRACTION_REPORT.md` — source hashes, exact extraction counts, and missing-Pro findings.
 - `CURRICULUM_METHOD.md` — provenance, fixed-sequence design, research, and safety boundaries.
@@ -36,7 +36,7 @@ All new workouts are static, individually authored JSON—not runtime-random or 
 
 The app UI and bundled catalog are English-only. The separate technical export retains Polish alongside English only to record the supplied source data accurately.
 
-Exercise demonstrations are drawn locally from simple line-and-circle keyframes in JSON. The app contains no video playback or outbound video links; unavailable videos are not used.
+Exercise demonstrations are drawn locally by an articulated line-figure rig from angle-based keyframes in JSON. The app contains no video playback or outbound video links; unavailable videos are not used.
 
 ## Safety
 

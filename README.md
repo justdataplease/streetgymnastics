@@ -35,6 +35,15 @@ Every authored skill or advanced movement includes a listed regression for the s
 - `generated/curriculum_v2.json` — mechanically assembled English-only 600-workout app catalog.
 - `tools/assemble_curriculum.ps1` — combines source data and authored batches; it does not invent workouts.
 - `tools/validate_curriculum.ps1` — verifies all 619 authored source records and the 600 app workouts: counts, IDs, provenance, prescriptions, explicit per-side doses, movement references, regression direction and prior rehearsal, uniqueness, rolling seven-authored-session fundamentals, Level 3+ five-goal exposure, low-RPE recovery, workload limits, and English-only output.
+- `tools/validate_animations.ps1` — verifies the offline exercise-animation asset: schema, figure proportions, pose inheritance and pins, keyframe timing, complete coverage of all 115 movement IDs and all 34 recovered exercise names, and a forward-kinematics pass that keeps every keyframe inside the drawing canvas.
+- `tools/preview_animations.py` — optional development aid (Python 3 + Pillow) that renders contact sheets of every animation so pose edits can be reviewed without building the app.
+- `tools/animation_authoring/` — optional source scripts for the animation asset; `build.py` regenerates `exercise_animations.json` from compact angle specs with small inverse-kinematics helpers so hands and feet land exactly on bars, boxes, and the floor.
+
+## Exercise animations
+
+Each exercise card shows a small animated line figure. The figure is an articulated side-view rig with fixed bone lengths: a pose stores absolute joint angles (0 = up, 90 = right, 180 = down) for the torso, head, both arms, both legs and feet, plus one pinned joint such as the hands on a bar or a foot on the floor. Because the renderer interpolates angles rather than points, limbs never stretch, contact points stay put, and the drawing keeps its proportions on every screen size. Templates chain several keyframes, so multi-phase movements (muscle-up, pullover, jump to hang, negatives with a slow lowering phase) are shown as sequences rather than a single back-and-forth.
+
+Poses can inherit from a `base` pose and override only what changes. Two small shoulder parameters, `shrug` (along the torso) and `protract` (toward the front), let scapular drills and support shrugs read correctly. Every catalog movement ID maps to a template, every recovered exercise name has an alias, and descriptor heuristics resolve compound exercises from their set names.
 
 The technical export remains bilingual because it records what was present in the supplied package. Polish is absent from the app UI and bundled training catalog.
 
@@ -57,7 +66,7 @@ The command assembles and validates the catalog and offline exercise-animation d
 
 - One assigned Today workout and a browse-only six-level catalog for future sessions
 - Workout overviews with warm-up, main work, cooldown, doses, rests, safety notes, and regressions
-- Offline line-and-circle movement guides whose poses and mappings are editable in `app/src/main/assets/exercise_animations.json`
+- Offline articulated line-figure movement guides for every exercise, drawn from `app/src/main/assets/exercise_animations.json` (see [Exercise animations](#exercise-animations))
 - Persistent active workout and checked sets
 - Between-set rest timer, sound cue, finish/effort flow, progress, and history
 - Local-only progress in Android `SharedPreferences`

@@ -14,3 +14,7 @@
 # Keep the auditable JSON export, but do not publish supplied APKs, decoded
 # resources, decompiled dependencies, or local emulator captures.
 /reference/
+
+# Contact sheets rendered by tools/preview_animations.py (development aid only)
+/generated/animation_previews/
+__pycache__/
