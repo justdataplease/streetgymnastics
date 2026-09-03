@@ -1,0 +1,2289 @@
+{
+  "schema_version": "2.0-static",
+  "purpose": {
+    "en": "English movement definitions used by the newly authored Street Gymnastic Revival curriculum."
+  },
+  "provenance": {
+    "origin": "newly_authored",
+    "notice": {
+      "en": "These coaching definitions are newly authored. They are not recovered Street Gymnastic Pro content."
+    },
+    "authored_on": "2026-09-03"
+  },
+  "global_safety": {
+    "en": "Use controlled, pain-free range. Stop for sharp pain, numbness, dizziness, joint instability, or a sudden loss of strength. Skill holds end when body shape changes; do not grind to failure."
+  },
+  "movements": [
+    {
+      "id": "march",
+      "name": {
+        "en": "Brisk March"
+      },
+      "description": {
+        "en": "March lightly while swinging the arms and gradually raising body temperature."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "locomotion"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the pace conversational and land softly."
+      }
+    },
+    {
+      "id": "easy_walk",
+      "name": {
+        "en": "Easy Walk"
+      },
+      "description": {
+        "en": "Walk at an easy pace to recover while keeping a little daily movement."
+      },
+      "category": "recovery",
+      "patterns": [
+        "locomotion"
+      ],
+      "equipment": [],
+      "regression_id": "march",
+      "safety": {
+        "en": "Use level ground and shorten the walk if fatigue rises."
+      }
+    },
+    {
+      "id": "low_jack",
+      "name": {
+        "en": "Low-Impact Jack"
+      },
+      "description": {
+        "en": "Step one foot sideways as both arms arc overhead, then alternate."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "locomotion",
+        "shoulder"
+      ],
+      "equipment": [],
+      "regression_id": "march",
+      "safety": {
+        "en": "Stay low impact and keep knees tracking over toes."
+      }
+    },
+    {
+      "id": "wrist_circles",
+      "name": {
+        "en": "Wrist Circles"
+      },
+      "description": {
+        "en": "Make slow circles in both directions with relaxed fingers."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "wrist"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Use a small range if the wrists feel stiff."
+      }
+    },
+    {
+      "id": "wrist_rocks",
+      "name": {
+        "en": "Quadruped Wrist Rocks"
+      },
+      "description": {
+        "en": "From hands and knees, gently shift shoulders forward and back over the palms."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "wrist",
+        "push"
+      ],
+      "equipment": [],
+      "regression_id": "wrist_circles",
+      "safety": {
+        "en": "Keep most weight on the knees and never push into wrist pain."
+      }
+    },
+    {
+      "id": "shoulder_cars",
+      "name": {
+        "en": "Shoulder Circles"
+      },
+      "description": {
+        "en": "Draw slow, controlled circles with straight arms and quiet ribs."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "shoulder"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Use only a smooth, pinch-free arc."
+      }
+    },
+    {
+      "id": "arm_swings",
+      "name": {
+        "en": "Arm Swings"
+      },
+      "description": {
+        "en": "Alternate open-and-cross arm swings without forcing end range."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "shoulder"
+      ],
+      "equipment": [],
+      "regression_id": "shoulder_cars",
+      "safety": {
+        "en": "Keep the motion loose and below any painful angle."
+      }
+    },
+    {
+      "id": "cat_cow",
+      "name": {
+        "en": "Cat-Cow"
+      },
+      "description": {
+        "en": "Move the spine gently between rounded and extended positions with the breath."
+      },
+      "category": "mobility",
+      "patterns": [
+        "spine"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Move segment by segment and avoid forcing the low back."
+      }
+    },
+    {
+      "id": "thoracic_rotation",
+      "name": {
+        "en": "Open-Book Rotation"
+      },
+      "description": {
+        "en": "Rotate the upper back while keeping hips stacked and breathing slowly."
+      },
+      "category": "mobility",
+      "patterns": [
+        "spine",
+        "shoulder"
+      ],
+      "equipment": [],
+      "regression_id": "cat_cow",
+      "safety": {
+        "en": "The movement comes from the upper back, not a forced shoulder stretch."
+      }
+    },
+    {
+      "id": "hip_circles",
+      "name": {
+        "en": "Hip Circles"
+      },
+      "description": {
+        "en": "Trace controlled circles through a comfortable hip range."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "hip"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Hold a support if balance limits the motion."
+      }
+    },
+    {
+      "id": "ankle_rocks",
+      "name": {
+        "en": "Ankle Rocks"
+      },
+      "description": {
+        "en": "Drive the knee gently over the middle toes while the heel stays down."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "ankle",
+        "squat"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Stop before the heel lifts or the ankle pinches."
+      }
+    },
+    {
+      "id": "leg_swings",
+      "name": {
+        "en": "Supported Leg Swings"
+      },
+      "description": {
+        "en": "Hold a support and swing one leg front to back with a quiet trunk."
+      },
+      "category": "dynamic_warmup",
+      "patterns": [
+        "hip"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": "hip_circles",
+      "safety": {
+        "en": "Begin with a small arc and avoid snapping the knee."
+      }
+    },
+    {
+      "id": "scapular_pull",
+      "name": {
+        "en": "Scapular Pull-Up"
+      },
+      "description": {
+        "en": "From a straight-arm hang, draw shoulders down without bending the elbows."
+      },
+      "category": "activation",
+      "patterns": [
+        "pull",
+        "scapula"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "active_hang",
+      "safety": {
+        "en": "Use a box for partial unloading if the shoulders shrug painfully."
+      }
+    },
+    {
+      "id": "scapular_pushup",
+      "name": {
+        "en": "Scapular Push-Up"
+      },
+      "description": {
+        "en": "Keep elbows straight while the shoulder blades glide together and apart."
+      },
+      "category": "activation",
+      "patterns": [
+        "push",
+        "scapula"
+      ],
+      "equipment": [],
+      "regression_id": "elevated_scapular_pushup",
+      "safety": {
+        "en": "Keep ribs controlled and use an incline if wrists or shoulders complain."
+      }
+    },
+    {
+      "id": "elevated_scapular_pushup",
+      "name": {
+        "en": "Elevated Scapular Push-Up"
+      },
+      "description": {
+        "en": "Perform straight-arm shoulder-blade motion with hands on a secure high support."
+      },
+      "category": "activation",
+      "patterns": [
+        "push",
+        "scapula"
+      ],
+      "equipment": [
+        "secure_incline"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Verify that the support cannot slide."
+      }
+    },
+    {
+      "id": "dead_hang",
+      "name": {
+        "en": "Relaxed Hang"
+      },
+      "description": {
+        "en": "Hang with feet ready to assist and let the grip and shoulders acclimate."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "hang",
+        "grip"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "foot_assisted_hang",
+      "safety": {
+        "en": "Do not sink into a painful shoulder; keep a foot on support when needed."
+      }
+    },
+    {
+      "id": "foot_assisted_hang",
+      "name": {
+        "en": "Foot-Assisted Hang"
+      },
+      "description": {
+        "en": "Hold the bar while the feet carry enough weight to maintain comfortable shoulders."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "hang",
+        "grip"
+      ],
+      "equipment": [
+        "low_bar_or_box"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the support directly under you and step down before grip fails."
+      }
+    },
+    {
+      "id": "active_hang",
+      "name": {
+        "en": "Active Hang"
+      },
+      "description": {
+        "en": "Maintain straight elbows, shoulders gently down, and ribs stacked over pelvis."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "hang",
+        "pull",
+        "bodyline"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "foot_assisted_hang",
+      "safety": {
+        "en": "End the hold before the shoulders rise uncontrollably."
+      }
+    },
+    {
+      "id": "assisted_pullup",
+      "name": {
+        "en": "Foot-Assisted Pull-Up"
+      },
+      "description": {
+        "en": "Use only enough leg help to pull the chest toward a low bar with a smooth path."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_pull"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "inverted_row",
+      "safety": {
+        "en": "Keep shoulders away from ears and lower under control."
+      }
+    },
+    {
+      "id": "eccentric_pullup",
+      "name": {
+        "en": "Pull-Up Negative"
+      },
+      "description": {
+        "en": "Step to the top and lower through a controlled range before stepping down."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_pull"
+      ],
+      "equipment": [
+        "high_bar",
+        "box"
+      ],
+      "regression_id": "assisted_pullup",
+      "safety": {
+        "en": "Never jump to a bar blindly; stop the descent before shoulder control is lost."
+      }
+    },
+    {
+      "id": "pullup",
+      "name": {
+        "en": "Strict Pull-Up"
+      },
+      "description": {
+        "en": "Pull from an active hang without kicking, then return to straight arms under control."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_pull"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "assisted_pullup",
+      "safety": {
+        "en": "Leave one or two clean reps in reserve; no neck reaching."
+      }
+    },
+    {
+      "id": "chinup",
+      "name": {
+        "en": "Strict Chin-Up"
+      },
+      "description": {
+        "en": "Pull with palms facing you, a quiet body, and a controlled full descent."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_pull"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "assisted_pullup",
+      "safety": {
+        "en": "Use a grip width that keeps elbows and wrists comfortable."
+      }
+    },
+    {
+      "id": "inverted_row",
+      "name": {
+        "en": "Inverted Row"
+      },
+      "description": {
+        "en": "Keep a straight body and pull the chest to a secure waist-high bar."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_pull"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "high_inverted_row",
+      "safety": {
+        "en": "Test the bar and footing before leaning back."
+      }
+    },
+    {
+      "id": "high_inverted_row",
+      "name": {
+        "en": "High-Bar Body Row"
+      },
+      "description": {
+        "en": "Use a more upright body angle and pull the sternum toward the bar."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_pull"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the feet planted and the bar secure."
+      }
+    },
+    {
+      "id": "feet_elevated_row",
+      "name": {
+        "en": "Feet-Elevated Row"
+      },
+      "description": {
+        "en": "Row a rigid body to the bar while the heels rest on a secure support."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_pull"
+      ],
+      "equipment": [
+        "low_bar",
+        "box"
+      ],
+      "regression_id": "inverted_row",
+      "safety": {
+        "en": "Use only a non-slip support and keep hips from dropping."
+      }
+    },
+    {
+      "id": "support_hold",
+      "name": {
+        "en": "Parallel-Bar Support"
+      },
+      "description": {
+        "en": "Stand tall on straight arms with shoulders gently depressed and feet ready to assist."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "support",
+        "push"
+      ],
+      "equipment": [
+        "parallel_bars"
+      ],
+      "regression_id": "foot_assisted_support",
+      "safety": {
+        "en": "Step down before elbows bend or shoulders collapse."
+      }
+    },
+    {
+      "id": "foot_assisted_support",
+      "name": {
+        "en": "Foot-Assisted Support"
+      },
+      "description": {
+        "en": "Use the feet to unload a straight-arm support between stable bars."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "support",
+        "push"
+      ],
+      "equipment": [
+        "parallel_bars"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the feet directly beneath you and avoid shoulder pain."
+      }
+    },
+    {
+      "id": "assisted_dip",
+      "name": {
+        "en": "Foot-Assisted Dip"
+      },
+      "description": {
+        "en": "Descend between bars while the feet provide just enough assistance to press back up."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_push"
+      ],
+      "equipment": [
+        "parallel_bars",
+        "foot_support"
+      ],
+      "regression_id": "support_hold",
+      "safety": {
+        "en": "Use a comfortable depth and keep shoulders from rolling forward."
+      }
+    },
+    {
+      "id": "eccentric_dip",
+      "name": {
+        "en": "Dip Negative"
+      },
+      "description": {
+        "en": "Start in support, lower slowly to a comfortable depth, then step back up."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_push"
+      ],
+      "equipment": [
+        "parallel_bars",
+        "foot_support"
+      ],
+      "regression_id": "assisted_dip",
+      "safety": {
+        "en": "Stop before the front of the shoulder feels strained."
+      }
+    },
+    {
+      "id": "parallel_dip",
+      "name": {
+        "en": "Parallel-Bar Dip"
+      },
+      "description": {
+        "en": "Lower with stable shoulders, then press to a tall straight-arm support."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_push"
+      ],
+      "equipment": [
+        "parallel_bars"
+      ],
+      "regression_id": "assisted_dip",
+      "safety": {
+        "en": "Use pain-free depth and keep one or two reps in reserve."
+      }
+    },
+    {
+      "id": "straight_bar_support",
+      "name": {
+        "en": "Straight-Bar Support"
+      },
+      "description": {
+        "en": "Hold above a waist-high bar with straight arms, a hollow trunk, and light contact if needed."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "support",
+        "muscle_up"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "foot_assisted_support",
+      "safety": {
+        "en": "Use a bar low enough for a safe step-down."
+      }
+    },
+    {
+      "id": "incline_pushup",
+      "name": {
+        "en": "Incline Push-Up"
+      },
+      "description": {
+        "en": "Keep a straight body and lower the chest to a secure elevated surface."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_push"
+      ],
+      "equipment": [
+        "secure_incline"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Verify the surface cannot move and keep elbows at a comfortable angle."
+      }
+    },
+    {
+      "id": "pushup",
+      "name": {
+        "en": "Push-Up"
+      },
+      "description": {
+        "en": "Lower a rigid body to comfortable depth and press the floor away."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_push"
+      ],
+      "equipment": [],
+      "regression_id": "incline_pushup",
+      "safety": {
+        "en": "Keep hips and ribs connected; stop before technique breaks."
+      }
+    },
+    {
+      "id": "pause_pushup",
+      "name": {
+        "en": "Paused Push-Up"
+      },
+      "description": {
+        "en": "Pause briefly near the bottom while maintaining a rigid body, then press smoothly."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_push"
+      ],
+      "equipment": [],
+      "regression_id": "incline_pushup",
+      "safety": {
+        "en": "Shorten the pause or elevate the hands if alignment changes."
+      }
+    },
+    {
+      "id": "close_pushup",
+      "name": {
+        "en": "Close-Grip Push-Up"
+      },
+      "description": {
+        "en": "Use a comfortable close hand position and keep elbows tracking back."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "horizontal_push",
+        "triceps"
+      ],
+      "equipment": [],
+      "regression_id": "pushup",
+      "safety": {
+        "en": "Do not force a diamond shape if wrists object."
+      }
+    },
+    {
+      "id": "pike_pushup",
+      "name": {
+        "en": "Pike Push-Up"
+      },
+      "description": {
+        "en": "With hips high, bend the elbows and guide the head forward between the hands."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "vertical_push"
+      ],
+      "equipment": [],
+      "regression_id": "incline_pushup",
+      "safety": {
+        "en": "Use a short range and an incline if shoulders or wrists feel overloaded."
+      }
+    },
+    {
+      "id": "squat",
+      "name": {
+        "en": "Bodyweight Squat"
+      },
+      "description": {
+        "en": "Sit between the hips with balanced feet, then stand tall."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "squat",
+        "legs"
+      ],
+      "equipment": [],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Use a depth that keeps feet planted and knees comfortable."
+      }
+    },
+    {
+      "id": "box_squat",
+      "name": {
+        "en": "Supported Box Squat"
+      },
+      "description": {
+        "en": "Reach the hips to a stable seat and use light hand support as needed."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "squat",
+        "legs"
+      ],
+      "equipment": [
+        "box",
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Use a stable seat that cannot slide."
+      }
+    },
+    {
+      "id": "tempo_squat",
+      "name": {
+        "en": "Tempo Squat"
+      },
+      "description": {
+        "en": "Descend slowly, stay balanced, and stand without bouncing."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "squat",
+        "legs"
+      ],
+      "equipment": [],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Reduce depth before the pelvis tucks or knees become painful."
+      }
+    },
+    {
+      "id": "pause_squat",
+      "name": {
+        "en": "Paused Squat"
+      },
+      "description": {
+        "en": "Pause at a stable depth, keep the whole foot grounded, then stand."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "squat",
+        "legs"
+      ],
+      "equipment": [],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Use a higher pause position if knees or hips object."
+      }
+    },
+    {
+      "id": "reverse_lunge",
+      "name": {
+        "en": "Reverse Lunge"
+      },
+      "description": {
+        "en": "Step back, lower with a tall torso, and drive through the front foot to return."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "lunge",
+        "legs"
+      ],
+      "equipment": [],
+      "regression_id": "split_squat",
+      "safety": {
+        "en": "Hold a support and shorten the step if balance is uncertain."
+      }
+    },
+    {
+      "id": "split_squat",
+      "name": {
+        "en": "Supported Split Squat"
+      },
+      "description": {
+        "en": "Use a staggered stance and light hand support while lowering straight down."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "lunge",
+        "legs"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Use a short pain-free depth and stable footing."
+      }
+    },
+    {
+      "id": "cossack_squat",
+      "name": {
+        "en": "Supported Cossack Squat"
+      },
+      "description": {
+        "en": "Shift toward one leg while the other lengthens, using support for balance."
+      },
+      "category": "mobility_strength",
+      "patterns": [
+        "lateral_lunge",
+        "legs"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": "split_squat",
+      "safety": {
+        "en": "Stay shallow and keep the loaded knee aligned with the toes."
+      }
+    },
+    {
+      "id": "calf_raise",
+      "name": {
+        "en": "Calf Raise"
+      },
+      "description": {
+        "en": "Rise onto the balls of the feet, pause, and lower with control."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "ankle",
+        "legs"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Use hand support and keep pressure across all toes."
+      }
+    },
+    {
+      "id": "glute_bridge",
+      "name": {
+        "en": "Glute Bridge"
+      },
+      "description": {
+        "en": "Press through the feet and lift the hips without arching the low back."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "posterior_chain",
+        "hip_extension"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Stop at full hip extension rather than overextending the spine."
+      }
+    },
+    {
+      "id": "single_leg_bridge",
+      "name": {
+        "en": "Single-Leg Bridge"
+      },
+      "description": {
+        "en": "Keep the pelvis level while one leg supplies the bridge effort."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "posterior_chain",
+        "hip_extension"
+      ],
+      "equipment": [],
+      "regression_id": "glute_bridge",
+      "safety": {
+        "en": "Return to two legs if hamstrings cramp or the pelvis twists."
+      }
+    },
+    {
+      "id": "plank",
+      "name": {
+        "en": "Forearm Plank"
+      },
+      "description": {
+        "en": "Maintain a long body line while breathing behind a gently braced abdomen."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "bodyline"
+      ],
+      "equipment": [],
+      "regression_id": "incline_plank",
+      "safety": {
+        "en": "End the hold when hips sag or the low back feels compressed."
+      }
+    },
+    {
+      "id": "incline_plank",
+      "name": {
+        "en": "Incline Plank"
+      },
+      "description": {
+        "en": "Hold a straight body with hands on a secure elevated surface."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "bodyline"
+      ],
+      "equipment": [
+        "secure_incline"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Verify the support cannot move and keep breathing."
+      }
+    },
+    {
+      "id": "hollow_hold",
+      "name": {
+        "en": "Tucked Hollow Hold"
+      },
+      "description": {
+        "en": "Flatten the low back gently while holding bent knees over the hips."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "core",
+        "bodyline"
+      ],
+      "equipment": [],
+      "regression_id": "dead_bug",
+      "safety": {
+        "en": "Raise the head or keep it down according to neck comfort; stop if the back lifts."
+      }
+    },
+    {
+      "id": "dead_bug",
+      "name": {
+        "en": "Dead Bug"
+      },
+      "description": {
+        "en": "Alternate opposite arm and leg while the trunk stays quiet against the floor."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "coordination"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Shorten limb range before the low back arches."
+      }
+    },
+    {
+      "id": "bird_dog",
+      "name": {
+        "en": "Bird Dog"
+      },
+      "description": {
+        "en": "Reach opposite arm and leg long while keeping hips and ribs square."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "posterior_chain"
+      ],
+      "equipment": [],
+      "regression_id": "dead_bug",
+      "safety": {
+        "en": "Reach long rather than high and avoid twisting."
+      }
+    },
+    {
+      "id": "side_plank",
+      "name": {
+        "en": "Knee Side Plank"
+      },
+      "description": {
+        "en": "Support on one forearm and bent lower knee while keeping hips forward."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "lateral_chain"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the shoulder stacked over the elbow and stop if it pinches."
+      }
+    },
+    {
+      "id": "knee_raise",
+      "name": {
+        "en": "Hanging Knee Raise"
+      },
+      "description": {
+        "en": "From an active hang, lift bent knees without swinging and lower slowly."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core",
+        "hang"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "lying_knee_raise",
+      "safety": {
+        "en": "Use short sets and step down before grip or shoulder control fails."
+      }
+    },
+    {
+      "id": "lying_knee_raise",
+      "name": {
+        "en": "Lying Knee Raise"
+      },
+      "description": {
+        "en": "Draw bent knees toward the trunk while keeping the low back controlled."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core"
+      ],
+      "equipment": [],
+      "regression_id": "dead_bug",
+      "safety": {
+        "en": "Reduce range if the low back arches."
+      }
+    },
+    {
+      "id": "lying_leg_raise",
+      "name": {
+        "en": "Bent-Leg Lowering"
+      },
+      "description": {
+        "en": "Lower bent legs away from the trunk only as far as the low back stays quiet."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "core"
+      ],
+      "equipment": [],
+      "regression_id": "lying_knee_raise",
+      "safety": {
+        "en": "Make the lever shorter immediately if the back arches."
+      }
+    },
+    {
+      "id": "arch_hold",
+      "name": {
+        "en": "Prone Arch Hold"
+      },
+      "description": {
+        "en": "Lift the chest and legs slightly while reaching long through fingers and toes."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "posterior_chain",
+        "bodyline"
+      ],
+      "equipment": [],
+      "regression_id": "bird_dog",
+      "safety": {
+        "en": "Think length, not height; stop if the low back compresses."
+      }
+    },
+    {
+      "id": "tuck_lsit",
+      "name": {
+        "en": "Foot-Assisted Tuck L-Sit"
+      },
+      "description": {
+        "en": "Press tall between supports, lighten the feet, and draw knees toward the chest."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "support",
+        "core",
+        "l_sit"
+      ],
+      "equipment": [
+        "parallel_bars_or_blocks"
+      ],
+      "regression_id": "support_hold",
+      "safety": {
+        "en": "Keep feet close to the floor for an immediate exit."
+      }
+    },
+    {
+      "id": "candlestick",
+      "name": {
+        "en": "Candlestick Roll"
+      },
+      "description": {
+        "en": "Roll onto the upper back, stack hips gently, and return without loading the neck."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "core",
+        "dragon_flag"
+      ],
+      "equipment": [
+        "mat"
+      ],
+      "regression_id": "lying_knee_raise",
+      "safety": {
+        "en": "Weight stays on shoulders and upper back, never the neck."
+      }
+    },
+    {
+      "id": "low_bar_transition",
+      "name": {
+        "en": "Feet-Assisted Low-Bar Transition"
+      },
+      "description": {
+        "en": "At a low bar, use the legs to guide chest from below the bar to a straight-bar support."
+      },
+      "category": "skill",
+      "patterns": [
+        "muscle_up",
+        "transition"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "straight_bar_support",
+      "safety": {
+        "en": "Keep feet grounded, move slowly, and never force wrists over the bar."
+      }
+    },
+    {
+      "id": "pullover_lowbar",
+      "name": {
+        "en": "Foot-Assisted Low-Bar Pullover"
+      },
+      "description": {
+        "en": "Use a low bar and leg support to rehearse bringing hips toward the bar into support."
+      },
+      "category": "skill",
+      "patterns": [
+        "muscle_up",
+        "inversion"
+      ],
+      "equipment": [
+        "low_bar",
+        "mat"
+      ],
+      "regression_id": "low_bar_transition",
+      "safety": {
+        "en": "Use a spotter or keep feet available; do not throw the head back."
+      }
+    },
+    {
+      "id": "jump_muscleup",
+      "name": {
+        "en": "Jump-Assisted Muscle-Up"
+      },
+      "description": {
+        "en": "Use a low bar and a small leg drive to pass smoothly into support, then step down."
+      },
+      "category": "skill",
+      "patterns": [
+        "muscle_up",
+        "transition"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "low_bar_transition",
+      "safety": {
+        "en": "Keep repetitions low, bar path close, and landing controlled."
+      }
+    },
+    {
+      "id": "chest_to_bar",
+      "name": {
+        "en": "Chest-to-Bar Pull-Up"
+      },
+      "description": {
+        "en": "Pull the lower chest toward the bar without kicking or craning the neck."
+      },
+      "category": "skill_strength",
+      "patterns": [
+        "muscle_up",
+        "vertical_pull"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "pullup",
+      "safety": {
+        "en": "Regress once height drops; do not chase the bar with the chin."
+      }
+    },
+    {
+      "id": "band_muscleup",
+      "name": {
+        "en": "Band-Assisted Muscle-Up"
+      },
+      "description": {
+        "en": "Use a securely anchored band to practice a close, symmetrical transition above the bar."
+      },
+      "category": "skill",
+      "patterns": [
+        "muscle_up"
+      ],
+      "equipment": [
+        "high_bar",
+        "resistance_band"
+      ],
+      "regression_id": "jump_muscleup",
+      "safety": {
+        "en": "Inspect the band, protect the face, and never use a frayed band."
+      }
+    },
+    {
+      "id": "strict_muscleup",
+      "name": {
+        "en": "Strict Bar Muscle-Up"
+      },
+      "description": {
+        "en": "Pull high, pass both shoulders over together, and finish in stable straight-bar support."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "muscle_up"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "band_muscleup",
+      "safety": {
+        "en": "Attempt only with prerequisite high pull and dip strength; avoid chicken-wing transitions."
+      }
+    },
+    {
+      "id": "tuck_front_row",
+      "name": {
+        "en": "Foot-Assisted Tuck Front-Lever Row"
+      },
+      "description": {
+        "en": "Under a low bar, tuck the knees and use light foot contact while drawing the hips upward."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "front_lever",
+        "horizontal_pull"
+      ],
+      "equipment": [
+        "low_bar"
+      ],
+      "regression_id": "inverted_row",
+      "safety": {
+        "en": "Keep feet close, shoulders active, and range small."
+      }
+    },
+    {
+      "id": "tuck_front_hold",
+      "name": {
+        "en": "Tuck Front-Lever Hold"
+      },
+      "description": {
+        "en": "Hold a compact tuck under the bar with active shoulders and hips near shoulder height."
+      },
+      "category": "skill",
+      "patterns": [
+        "front_lever",
+        "horizontal_pull",
+        "bodyline"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "tuck_front_row",
+      "safety": {
+        "en": "Use a spotter or low rings and end before the shoulders lose position."
+      }
+    },
+    {
+      "id": "advanced_tuck_front",
+      "name": {
+        "en": "Advanced-Tuck Front Lever"
+      },
+      "description": {
+        "en": "Open the hip angle from tuck while maintaining a level trunk and active shoulders."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "front_lever"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "tuck_front_hold",
+      "safety": {
+        "en": "Return to tuck immediately when the hips fall or elbows bend."
+      }
+    },
+    {
+      "id": "one_leg_front",
+      "name": {
+        "en": "One-Leg Front Lever"
+      },
+      "description": {
+        "en": "Extend one leg from an advanced tuck without rotating the pelvis."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "front_lever"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "advanced_tuck_front",
+      "safety": {
+        "en": "Alternate legs evenly and regress before the back arches."
+      }
+    },
+    {
+      "id": "straddle_front",
+      "name": {
+        "en": "Straddle Front Lever"
+      },
+      "description": {
+        "en": "Hold a straight body with legs opened only as wide as needed for control."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "front_lever"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "one_leg_front",
+      "safety": {
+        "en": "Use short submaximal holds and avoid lumbar arching."
+      }
+    },
+    {
+      "id": "full_front",
+      "name": {
+        "en": "Full Front Lever"
+      },
+      "description": {
+        "en": "Maintain a straight horizontal body under the bar with locked elbows and active shoulders."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "front_lever"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "straddle_front",
+      "safety": {
+        "en": "Attempt only after consistent straddle control; stop as soon as the line breaks."
+      }
+    },
+    {
+      "id": "skin_cat_partial",
+      "name": {
+        "en": "Supported Partial Skin-the-Cat"
+      },
+      "description": {
+        "en": "With low rings or a low bar and feet available, rotate only through a comfortable shoulder range."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "back_lever",
+        "inversion",
+        "shoulder_extension"
+      ],
+      "equipment": [
+        "low_rings_or_bar",
+        "mat"
+      ],
+      "regression_id": "straight_bar_support",
+      "safety": {
+        "en": "Never force a German hang; reverse direction before any shoulder stretch becomes intense."
+      }
+    },
+    {
+      "id": "tuck_back_entry",
+      "name": {
+        "en": "Spotted Tuck Back-Lever Entry"
+      },
+      "description": {
+        "en": "From a supported inverted tuck, lower only slightly toward a tucked back-lever line."
+      },
+      "category": "skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "low_rings",
+        "spotter",
+        "mat"
+      ],
+      "regression_id": "skin_cat_partial",
+      "safety": {
+        "en": "A spotter and pain-free shoulder extension are required; no forced depth."
+      }
+    },
+    {
+      "id": "tuck_back_hold",
+      "name": {
+        "en": "Tuck Back Lever"
+      },
+      "description": {
+        "en": "Hold a compact tuck behind the bar with straight elbows and controlled shoulders."
+      },
+      "category": "skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "rings_or_bar",
+        "spotter"
+      ],
+      "regression_id": "tuck_back_entry",
+      "safety": {
+        "en": "Use a spotter and stop before shoulder extension feels strained."
+      }
+    },
+    {
+      "id": "advanced_tuck_back",
+      "name": {
+        "en": "Advanced-Tuck Back Lever"
+      },
+      "description": {
+        "en": "Open the hips from tuck while retaining straight elbows and a level trunk."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "rings_or_bar",
+        "spotter"
+      ],
+      "regression_id": "tuck_back_hold",
+      "safety": {
+        "en": "Regress immediately if shoulder comfort or elbow lock changes."
+      }
+    },
+    {
+      "id": "one_leg_back",
+      "name": {
+        "en": "One-Leg Back Lever"
+      },
+      "description": {
+        "en": "Extend one leg from advanced tuck while keeping hips square."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "rings_or_bar",
+        "spotter"
+      ],
+      "regression_id": "advanced_tuck_back",
+      "safety": {
+        "en": "Alternate sides and keep holds brief with a spotter."
+      }
+    },
+    {
+      "id": "straddle_back",
+      "name": {
+        "en": "Straddle Back Lever"
+      },
+      "description": {
+        "en": "Extend into a straight straddle line behind the bar with controlled shoulders."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "rings_or_bar",
+        "spotter"
+      ],
+      "regression_id": "one_leg_back",
+      "safety": {
+        "en": "Use submaximal holds and stop at the first loss of shoulder position."
+      }
+    },
+    {
+      "id": "full_back",
+      "name": {
+        "en": "Full Back Lever"
+      },
+      "description": {
+        "en": "Hold a straight horizontal line behind the bar with locked elbows."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "back_lever"
+      ],
+      "equipment": [
+        "rings_or_bar",
+        "spotter"
+      ],
+      "regression_id": "straddle_back",
+      "safety": {
+        "en": "Attempt only after consistent straddle control and with a safe exit."
+      }
+    },
+    {
+      "id": "bent_dragon_negative",
+      "name": {
+        "en": "Bent-Knee Dragon-Flag Negative"
+      },
+      "description": {
+        "en": "Anchor the shoulders, keep weight off the neck, and lower a bent-knee body line slowly."
+      },
+      "category": "skill",
+      "patterns": [
+        "dragon_flag",
+        "core"
+      ],
+      "equipment": [
+        "secure_anchor",
+        "mat"
+      ],
+      "regression_id": "candlestick",
+      "safety": {
+        "en": "Shoulders and upper back bear contact; never load the neck or lose low-back control."
+      }
+    },
+    {
+      "id": "one_leg_dragon_negative",
+      "name": {
+        "en": "One-Leg Dragon-Flag Negative"
+      },
+      "description": {
+        "en": "Lower with one leg longer while maintaining a single rigid line from shoulders through hips."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "dragon_flag",
+        "core"
+      ],
+      "equipment": [
+        "secure_anchor",
+        "mat"
+      ],
+      "regression_id": "bent_dragon_negative",
+      "safety": {
+        "en": "Alternate legs and stop before the hips fold or back arches."
+      }
+    },
+    {
+      "id": "full_dragon_negative",
+      "name": {
+        "en": "Full Dragon-Flag Negative"
+      },
+      "description": {
+        "en": "Lower a straight body slowly from the shoulders while gripping a secure anchor."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "dragon_flag",
+        "core"
+      ],
+      "equipment": [
+        "secure_anchor",
+        "mat"
+      ],
+      "regression_id": "one_leg_dragon_negative",
+      "safety": {
+        "en": "Never place pressure on the neck; regress as soon as body line bends."
+      }
+    },
+    {
+      "id": "dragon_flag",
+      "name": {
+        "en": "Dragon Flag"
+      },
+      "description": {
+        "en": "Raise and lower a rigid body from shoulder support without hinging at the hips."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "dragon_flag",
+        "core"
+      ],
+      "equipment": [
+        "secure_anchor",
+        "mat"
+      ],
+      "regression_id": "full_dragon_negative",
+      "safety": {
+        "en": "Use low repetitions, a secure anchor, and zero neck pressure."
+      }
+    },
+    {
+      "id": "elevated_plank",
+      "name": {
+        "en": "Elevated Plank"
+      },
+      "description": {
+        "en": "Hold a long body line with hands on a secure support and shoulder blades gently spread."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "planche",
+        "push",
+        "bodyline"
+      ],
+      "equipment": [
+        "secure_incline"
+      ],
+      "regression_id": "incline_plank",
+      "safety": {
+        "en": "Keep the support fixed and set an angle that is painless for wrists."
+      }
+    },
+    {
+      "id": "planche_lean",
+      "name": {
+        "en": "Planche Lean"
+      },
+      "description": {
+        "en": "From a protracted plank, shift shoulders slightly beyond the hands while keeping elbows straight."
+      },
+      "category": "skill",
+      "patterns": [
+        "planche",
+        "straight_arm_push"
+      ],
+      "equipment": [
+        "floor_or_parallettes"
+      ],
+      "regression_id": "elevated_plank",
+      "safety": {
+        "en": "Increase lean by millimetres, not ego; stop for wrist or elbow discomfort."
+      }
+    },
+    {
+      "id": "frog_stand",
+      "name": {
+        "en": "Frog Stand"
+      },
+      "description": {
+        "en": "Balance knees lightly on the upper arms with hands planted and a cushion ahead."
+      },
+      "category": "skill",
+      "patterns": [
+        "planche",
+        "balance"
+      ],
+      "equipment": [
+        "mat_or_cushion"
+      ],
+      "regression_id": "planche_lean",
+      "safety": {
+        "en": "Practice low, look slightly forward, and keep a clear padded fall zone."
+      }
+    },
+    {
+      "id": "tuck_planche",
+      "name": {
+        "en": "Tuck Planche"
+      },
+      "description": {
+        "en": "With straight elbows and protracted shoulders, lift tucked feet from the floor."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "planche",
+        "straight_arm_push"
+      ],
+      "equipment": [
+        "parallettes_or_floor",
+        "mat"
+      ],
+      "regression_id": "frog_stand",
+      "safety": {
+        "en": "Use parallettes if wrists prefer neutral grip and stop before elbow lock changes."
+      }
+    },
+    {
+      "id": "advanced_tuck_planche",
+      "name": {
+        "en": "Advanced-Tuck Planche"
+      },
+      "description": {
+        "en": "Open the hips from tuck while shoulders stay protracted and elbows remain straight."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "planche",
+        "straight_arm_push"
+      ],
+      "equipment": [
+        "parallettes_or_floor",
+        "mat"
+      ],
+      "regression_id": "tuck_planche",
+      "safety": {
+        "en": "Regress on any wrist, elbow, or anterior shoulder discomfort."
+      }
+    },
+    {
+      "id": "straddle_planche",
+      "name": {
+        "en": "Straddle Planche"
+      },
+      "description": {
+        "en": "Hold a straight-arm horizontal position with the legs opened for leverage."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "planche",
+        "straight_arm_push"
+      ],
+      "equipment": [
+        "parallettes_or_floor",
+        "mat"
+      ],
+      "regression_id": "advanced_tuck_planche",
+      "safety": {
+        "en": "Attempt only after repeatable advanced-tuck holds; keep efforts brief and submaximal."
+      }
+    },
+    {
+      "id": "full_planche",
+      "name": {
+        "en": "Full Planche"
+      },
+      "description": {
+        "en": "Hold the body horizontal on straight arms with no foot support."
+      },
+      "category": "mastery_skill",
+      "patterns": [
+        "planche",
+        "straight_arm_push"
+      ],
+      "equipment": [
+        "parallettes_or_floor",
+        "mat"
+      ],
+      "regression_id": "straddle_planche",
+      "safety": {
+        "en": "Attempt this only after long-term prerequisite development; otherwise perform the listed regression for the assigned sets."
+      }
+    },
+    {
+      "id": "forearm_stretch",
+      "name": {
+        "en": "Gentle Forearm Stretch"
+      },
+      "description": {
+        "en": "With a soft elbow, lightly extend or flex the wrist until a mild stretch appears."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "wrist",
+        "forearm"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "No bouncing, tingling, or strong pull."
+      }
+    },
+    {
+      "id": "lat_stretch",
+      "name": {
+        "en": "Supported Lat Stretch"
+      },
+      "description": {
+        "en": "Hold a secure support, send hips back, and breathe into the sides of the ribs."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "shoulder",
+        "lat"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep shoulders comfortable and avoid hanging bodyweight from the arms."
+      }
+    },
+    {
+      "id": "chest_stretch",
+      "name": {
+        "en": "Doorway Chest Stretch"
+      },
+      "description": {
+        "en": "Place the forearm on a support and turn away slightly while breathing calmly."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "chest",
+        "shoulder"
+      ],
+      "equipment": [
+        "doorway_or_post"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the elbow below a painful angle and use only mild tension."
+      }
+    },
+    {
+      "id": "hip_flexor_stretch",
+      "name": {
+        "en": "Half-Kneeling Hip-Flexor Stretch"
+      },
+      "description": {
+        "en": "Tuck the pelvis gently and shift forward until the front of the rear hip stretches mildly."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "hip"
+      ],
+      "equipment": [
+        "mat"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Pad the knee and avoid arching the low back."
+      }
+    },
+    {
+      "id": "hamstring_stretch",
+      "name": {
+        "en": "Supported Hamstring Stretch"
+      },
+      "description": {
+        "en": "Hinge from the hips over a slightly bent leg while holding a support."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "hamstring",
+        "hip"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the spine long and avoid nerve-like tingling."
+      }
+    },
+    {
+      "id": "quad_stretch",
+      "name": {
+        "en": "Supported Quadriceps Stretch"
+      },
+      "description": {
+        "en": "Hold support, bring one heel gently toward the seat, and keep knees close."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "quadriceps",
+        "hip"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Do not pull the ankle hard or arch the back."
+      }
+    },
+    {
+      "id": "calf_stretch",
+      "name": {
+        "en": "Wall Calf Stretch"
+      },
+      "description": {
+        "en": "Keep the rear heel down and lean forward gently into a wall."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "calf",
+        "ankle"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the foot pointing forward and use mild tension."
+      }
+    },
+    {
+      "id": "child_pose",
+      "name": {
+        "en": "Supported Child's Pose"
+      },
+      "description": {
+        "en": "Sit hips back toward heels and rest the arms or chest on support while breathing slowly."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "spine",
+        "shoulder"
+      ],
+      "equipment": [
+        "support"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Widen knees or raise the support for knee and hip comfort."
+      }
+    },
+    {
+      "id": "supine_twist",
+      "name": {
+        "en": "Gentle Supine Twist"
+      },
+      "description": {
+        "en": "Let bent knees drift slightly to one side while shoulders stay relaxed."
+      },
+      "category": "static_stretch",
+      "patterns": [
+        "spine"
+      ],
+      "equipment": [
+        "mat"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Use a small range and stop for back or hip pain."
+      }
+    },
+    {
+      "id": "slow_breathing",
+      "name": {
+        "en": "Slow Recovery Breathing"
+      },
+      "description": {
+        "en": "Breathe quietly through the nose with a slightly longer exhale."
+      },
+      "category": "recovery",
+      "patterns": [
+        "breathing"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Return to normal breathing if light-headed."
+      }
+    },
+    {
+      "id": "adductor_stretch",
+      "name": {
+        "en": "Adductor Stretch"
+      },
+      "description": {
+        "en": "Shift gently to one side until the inner thigh lengthens, keeping the supported foot flat."
+      },
+      "category": "static_cooldown",
+      "patterns": [
+        "mobility",
+        "adductors"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Use a comfortable range and never bounce into the stretch."
+      }
+    },
+    {
+      "id": "bear_crawl",
+      "name": {
+        "en": "Controlled Bear Crawl"
+      },
+      "description": {
+        "en": "Crawl with knees hovering low, opposite hand and foot moving together, and the trunk quiet."
+      },
+      "category": "conditioning",
+      "patterns": [
+        "locomotion",
+        "core",
+        "push"
+      ],
+      "equipment": [],
+      "regression_id": "plank",
+      "safety": {
+        "en": "Take short steps and stop if the wrists or lower back lose a comfortable position."
+      }
+    },
+    {
+      "id": "deep_squat_hold",
+      "name": {
+        "en": "Supported Deep-Squat Hold"
+      },
+      "description": {
+        "en": "Hold a post if needed, sit into a comfortable deep squat, and keep the whole foot grounded."
+      },
+      "category": "mobility",
+      "patterns": [
+        "squat",
+        "ankle_mobility",
+        "hip_mobility"
+      ],
+      "equipment": [
+        "post"
+      ],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Reduce depth if the heels lift or the knees feel pinched."
+      }
+    },
+    {
+      "id": "hollow_arch_swing",
+      "name": {
+        "en": "Small Hollow-to-Arch Swing"
+      },
+      "description": {
+        "en": "From an active hang, alternate a small hollow and arch shape without bending the arms."
+      },
+      "category": "skill_drill",
+      "patterns": [
+        "bar_swing",
+        "bodyline"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "active_hang",
+      "safety": {
+        "en": "Keep the swing small and shoulder-led; do not chase height or kick aggressively."
+      }
+    },
+    {
+      "id": "negative_muscleup",
+      "name": {
+        "en": "Negative Muscle-Up"
+      },
+      "description": {
+        "en": "Begin in straight-bar support and lower slowly through the transition into a controlled hang."
+      },
+      "category": "advanced_skill",
+      "patterns": [
+        "muscle_up",
+        "eccentric_pull",
+        "bar_dip"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "pullover_lowbar",
+      "safety": {
+        "en": "Use a safe way into support and stop before the shoulders roll forward or one side drops first."
+      }
+    },
+    {
+      "id": "ninety_ninety_hip_stretch",
+      "name": {
+        "en": "90/90 Hip Stretch"
+      },
+      "description": {
+        "en": "Sit in a 90/90 position and lean forward gently over the front shin with a long spine."
+      },
+      "category": "static_cooldown",
+      "patterns": [
+        "hip_mobility"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Support the hands and reduce the angles if either knee feels uncomfortable."
+      }
+    },
+    {
+      "id": "ninety_ninety_hip_switch",
+      "name": {
+        "en": "90/90 Hip Switch"
+      },
+      "description": {
+      "en": "Rotate both knees from one 90/90 side to the other under control; each arrival counts as one alternating repetition unless the workout explicitly says per side."
+      },
+      "category": "mobility",
+      "patterns": [
+        "hip_rotation"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Place the hands behind the body when needed and use only a pain-free range."
+      }
+    },
+    {
+      "id": "parallel_bar_walk",
+      "name": {
+        "en": "Parallel-Bar Support Walk"
+      },
+      "description": {
+        "en": "From a stable support, take short alternating hand steps along the parallel bars."
+      },
+      "category": "skill_drill",
+      "patterns": [
+        "support",
+        "locomotion",
+        "push"
+      ],
+      "equipment": [
+        "parallel_bars"
+      ],
+      "regression_id": "support_hold",
+      "safety": {
+        "en": "Keep shoulders depressed, steps short, and feet ready to land safely."
+      }
+    },
+    {
+      "id": "pseudo_planche_pushup",
+      "name": {
+        "en": "Pseudo-Planche Push-Up"
+      },
+      "description": {
+        "en": "Lean shoulders slightly beyond the hands and perform a controlled push-up while keeping the body rigid."
+      },
+      "category": "advanced_strength",
+      "patterns": [
+        "horizontal_push",
+        "planche"
+      ],
+      "equipment": [],
+      "regression_id": "pushup",
+      "safety": {
+        "en": "Turn the hands only as comfortable, limit the lean, and stop for wrist or front-shoulder pain."
+      }
+    },
+    {
+      "id": "step_up",
+      "name": {
+        "en": "Step-Up"
+      },
+      "description": {
+        "en": "Place the whole foot on a stable step, stand tall through that leg, and lower with control."
+      },
+      "category": "strength",
+      "patterns": [
+        "single_leg",
+        "squat"
+      ],
+      "equipment": [
+        "stable_step"
+      ],
+      "regression_id": "box_squat",
+      "safety": {
+        "en": "Use a low stable surface and prevent the working knee from collapsing inward."
+      }
+    },
+    {
+      "id": "straight_bar_dip",
+      "name": {
+        "en": "Straight-Bar Dip"
+      },
+      "description": {
+        "en": "From straight-bar support, lower the chest toward the bar and press to a stable lockout."
+      },
+      "category": "strength",
+      "patterns": [
+        "vertical_push",
+        "bar_support"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "straight_bar_support",
+      "safety": {
+        "en": "Use only a controlled depth that keeps both shoulders comfortable and level."
+      }
+    },
+    {
+      "id": "wall_pushup",
+      "name": {
+        "en": "Wall Push-Up"
+      },
+      "description": {
+        "en": "Keep a straight body line, lower the chest toward a wall, and press away smoothly."
+      },
+      "category": "strength_regression",
+      "patterns": [
+        "horizontal_push"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Use secure footing and keep elbows at a comfortable angle from the torso."
+      }
+    },
+    {
+      "id": "wall_slide",
+      "name": {
+        "en": "Wall Slide"
+      },
+      "description": {
+        "en": "Slide the arms upward against a wall while keeping ribs quiet and shoulders comfortable."
+      },
+      "category": "mobility",
+      "patterns": [
+        "shoulder_mobility",
+        "scapular_control"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": null,
+      "safety": {
+        "en": "Use a smaller range rather than arching the lower back or forcing the shoulders."
+      }
+    },
+    {
+      "id": "assisted_pistol_squat", "name": {"en": "Supported Pistol Squat"},
+      "description": {"en": "Hold a secure support and descend on one leg only as far as balance and knee control allow."},
+      "category": "fundamental", "patterns": ["single_leg_squat"], "equipment": ["secure_support"], "regression_id": "split_squat",
+      "safety": {"en": "Keep the knee aligned with the foot and use the support rather than twisting."}
+    },
+    {
+      "id": "pistol_squat", "name": {"en": "Pistol Squat"},
+      "description": {"en": "Perform a controlled single-leg squat while the free leg reaches forward and the working heel stays grounded."},
+      "category": "advanced_fundamental", "patterns": ["single_leg_squat"], "equipment": [], "regression_id": "assisted_pistol_squat",
+      "safety": {"en": "Use only a depth that preserves foot pressure, knee alignment, and balance."}
+    },
+    {
+      "id": "hanging_leg_raise", "name": {"en": "Hanging Straight-Leg Raise"},
+      "description": {"en": "From an active hang, raise straight legs without swinging and lower with trunk control."},
+      "category": "fundamental", "patterns": ["hanging_core", "compression"], "equipment": ["high_bar"], "regression_id": "knee_raise",
+      "safety": {"en": "Bend the knees or stop the set when the back arches or grip fades."}
+    },
+    {
+      "id": "toes_to_bar", "name": {"en": "Strict Toes-to-Bar"},
+      "description": {"en": "Raise the feet toward the bar from a controlled active hang without a kip, then lower slowly."},
+      "category": "advanced_fundamental", "patterns": ["hanging_core", "compression"], "equipment": ["high_bar"], "regression_id": "hanging_leg_raise",
+      "safety": {"en": "Use a smaller range before swinging begins and step down before grip failure."}
+    }
+  ]
+}

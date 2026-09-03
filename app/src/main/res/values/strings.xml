@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Street Gymnastic</string>
+    <string name="logo_content_description">Street Gymnastic logo</string>
+    <string name="scaffold_ready">Your training revival is loading…</string>
+</resources>

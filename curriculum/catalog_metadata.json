@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1",
+  "language": "en",
+  "level_definitions": [
+    {
+      "number": 1,
+      "name": {"en": "Foundations"},
+      "description": {"en": "Build clean pulling, pushing, leg strength, trunk control, mobility, and resilient joints."}
+    },
+    {
+      "number": 2,
+      "name": {"en": "Bar Strength"},
+      "description": {"en": "Develop pull-over control, high pulls, support strength, and assisted transitions."}
+    },
+    {
+      "number": 3,
+      "name": {"en": "Skill Transition"},
+      "description": {"en": "Consolidate strict muscle-ups and introduce structured lever, dragon flag, and planche work."}
+    },
+    {
+      "number": 4,
+      "name": {"en": "Skill Foundations"},
+      "description": {"en": "Own the tuck shapes, protect the joints, and keep the basic strength engine."}
+    },
+    {
+      "number": 5,
+      "name": {"en": "Lever Strength"},
+      "description": {"en": "Build longer levers, cleaner muscle-ups, stronger dragon flags, and planche control."}
+    },
+    {
+      "number": 6,
+      "name": {"en": "Mastery Consolidation"},
+      "description": {"en": "Practice advanced shapes in successive waves while fundamentals remain permanent."}
+    }
+  ],
+  "authentic_title_prefix": {"en": "Workout"},
+  "authentic_description": {
+    "en": "Authentic workout extracted from the supplied Base APK, with a newly authored preparation and stretching overlay."
+  },
+  "catalog_notice": {
+    "en": "Replacement and extension sessions are newly authored and are not recovered Street Gymnastic PRO data. The app uses a balanced six-level sequence of 100 assigned workouts per level."
+  }
+}

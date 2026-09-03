@@ -1,0 +1,904 @@
+{
+  "programs": [
+    {
+      "id":"new-l6-w001","origin":"new_level","level":6,"number":1,
+      "title":{"en":"Clean Transition Bridge"},
+      "description":{"en":"Bridge into the mastery block with eight reserved muscle-ups and modest pulling and dipping support."},
+      "schedule":{"week":1,"day":1,"day_type":"muscleup_bridge","minutes":40,"rpe":6,"focus":["muscle_up","pull_up","bar_dip"]},
+      "warmup":[["low_jack",1,50,null,20,"easy",null],["arm_swings",2,15,null,10,"controlled",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,150,"clean_reserve","band_muscleup"],["chest_to_bar",3,2,null,105,"easy_power","pullup"],["pullup",2,6,null,90,"2111","assisted_pullup"],["straight_bar_dip",2,8,null,75,"2111","straight_bar_support"],["hollow_hold",3,null,25,40,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w002","origin":"new_level","level":6,"number":2,
+      "title":{"en":"Front-Lever Geometry"},
+      "description":{"en":"Find the longest front-lever shape that keeps shoulders, hips, and feet aligned."},
+      "schedule":{"week":1,"day":2,"day_type":"front_lever_baseline","minutes":57,"rpe":7,"focus":["front_lever","pull_up","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,18,30,null,"dead_hang"]],
+      "main":[["advanced_tuck_front",5,null,10,105,null,"tuck_front_hold"],["one_leg_front",5,null,"6/side",120,null,"advanced_tuck_front"],["tuck_front_row",5,8,null,90,"2111","inverted_row"],["pullup",4,8,null,120,"21X1","assisted_pullup"],["reverse_lunge",4,"12/side",null,60,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w003","origin":"new_level","level":6,"number":3,
+      "title":{"en":"Forward-Line Baseline"},
+      "description":{"en":"Measure planche progress through a protracted shoulder line, not through forced hand balance."},
+      "schedule":{"week":1,"day":3,"day_type":"planche_baseline","minutes":62,"rpe":7,"focus":["planche","push_up","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["elevated_plank",3,null,40,45,null,"incline_plank"],["planche_lean",6,null,20,75,null,"elevated_plank"],["tuck_planche",5,null,6,105,null,"frog_stand"],["parallel_dip",5,13,null,105,"2111","assisted_dip"],["pushup",4,20,null,60,"2010","incline_pushup"],["squat",3,30,null,55,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["quad_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w004","origin":"new_level","level":6,"number":4,
+      "title":{"en":"Mastery Recovery Walk"},
+      "description":{"en":"Easy walking and joint mobility absorb three baseline sessions without adding fatigue."},
+      "schedule":{"week":1,"day":4,"day_type":"active_recovery","minutes":45,"rpe":3,"focus":["walking","mobility","recovery"]},
+      "warmup":[["easy_walk",1,null,900,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["shoulder_cars",3,6,null,20,"slow",null],["cat_cow",3,10,null,25,"slow",null],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null],["foot_assisted_hang",3,null,30,45,null,null],["deep_squat_hold",3,null,40,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null],["slow_breathing",1,null,300,0,null,null]]
+    },
+    {
+      "id":"new-l6-w005","origin":"new_level","level":6,"number":5,
+      "title":{"en":"Back-Lever Compass"},
+      "description":{"en":"Complete partial skin-the-cat reps, advanced-tuck holds, and one-leg holds before the prescribed chin-ups and support work."},
+      "schedule":{"week":1,"day":5,"day_type":"back_lever_baseline","minutes":48,"rpe":7,"focus":["back_lever","chin_up","support"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,18,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",4,3,null,105,"slow","straight_bar_support"],["advanced_tuck_back",5,null,10,120,null,"tuck_back_hold"],["one_leg_back",5,null,"6/side",135,null,"advanced_tuck_back"],["chinup",4,8,null,105,"21X1","assisted_pullup"],["support_hold",3,null,35,60,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w006","origin":"new_level","level":6,"number":6,
+      "title":{"en":"Dragon Foundation Recheck"},
+      "description":{"en":"Controlled negatives verify the dragon line before any full repetitions are pursued."},
+      "schedule":{"week":1,"day":6,"day_type":"dragon_baseline","minutes":43,"rpe":7,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,20,30,null,"dead_bug"]],
+      "main":[["one_leg_dragon_negative",3,"1/side",null,120,"7000","bent_dragon_negative"],["full_dragon_negative",2,1,null,135,"7000","one_leg_dragon_negative"],["hollow_hold",4,null,40,45,null,"dead_bug"],["pushup",4,18,null,60,"2010","incline_pushup"],["split_squat",4,"12/side",null,60,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null],["supine_twist",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w007","origin":"new_level","level":6,"number":7,
+      "title":{"en":"Foundation Reserve Circuit"},
+      "description":{"en":"A compact circuit closes the week with every basic pattern and enough reserve for the next mastery block."},
+      "schedule":{"week":1,"day":7,"day_type":"fundamentals_reserve","minutes":35,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["pullup",3,6,null,60,"2111","assisted_pullup"],["parallel_dip",3,9,null,60,"2111","assisted_dip"],["pushup",3,12,null,45,"2010","incline_pushup"],["squat",3,18,null,45,"3010","box_squat"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["quad_stretch",2,null,40,10,null,null],["slow_breathing",1,null,210,0,null,null]]
+    },
+    {
+      "id":"new-l6-w008","origin":"new_level","level":6,"number":8,
+      "title":{"en":"Muscle-up Tempo Doubles"},
+      "description":{"en":"Four smooth doubles and two controlled negatives improve transition timing without burying the pull and dip basics."},
+      "schedule":{"week":2,"day":1,"day_type":"muscleup_tempo","minutes":44,"rpe":7,"focus":["muscle_up","pull_up","bar_support"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,180,"11X2","band_muscleup"],["negative_muscleup",2,1,null,150,"6000","pullover_lowbar"],["pullup",3,7,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,75,"21X2","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w009","origin":"new_level","level":6,"number":9,
+      "title":{"en":"One-Leg Front Ledger"},
+      "description":{"en":"Alternate legs and record only level holds so both front-lever sides develop evenly."},
+      "schedule":{"week":2,"day":2,"day_type":"front_lever_unilateral","minutes":44,"rpe":8,"focus":["one_leg_front","front_row","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["one_leg_front",4,null,6,120,"alternate_legs","advanced_tuck_front"],["tuck_front_row",4,8,null,90,"2111","inverted_row"],["chinup",4,9,null,105,"21X1","assisted_pullup"],["reverse_lunge",4,"13/side",null,60,"3010","box_squat"],["hollow_hold",3,null,30,40,null,"dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w010","origin":"new_level","level":6,"number":10,
+      "title":{"en":"Planche Lean Pressure"},
+      "description":{"en":"Three measured leans lead into three tuck holds, light presses, dips, and squats in one exact sequence."},
+      "schedule":{"week":2,"day":3,"day_type":"planche_tension","minutes":40,"rpe":8,"focus":["planche_lean","tuck_planche","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["planche_lean",3,null,22,75,"controlled","elevated_plank"],["tuck_planche",3,null,7,105,"isometric","frog_stand"],["pseudo_planche_pushup",3,7,null,80,"31X1","pushup"],["parallel_dip",3,10,null,85,"2111","assisted_dip"],["pause_squat",3,18,null,50,"32X0","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["quad_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w011","origin":"new_level","level":6,"number":11,
+      "title":{"en":"Wrist-and-Shoulder Reset"},
+      "description":{"en":"A gentle mobility day restores the joints used by levers, transitions, and forward supports."},
+      "schedule":{"week":2,"day":4,"day_type":"joint_recovery","minutes":46,"rpe":3,"focus":["wrists","shoulders","walking"]},
+      "warmup":[["easy_walk",1,null,960,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["wrist_rocks",3,10,null,25,"gentle",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["foot_assisted_hang",3,null,30,45,null,null],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["slow_breathing",1,null,300,0,null,null]]
+    },
+    {
+      "id":"new-l6-w012","origin":"new_level","level":6,"number":12,
+      "title":{"en":"One-Leg Back Ledger"},
+      "description":{"en":"Alternate back-lever legs and keep the shoulder line identical on both sides."},
+      "schedule":{"week":2,"day":5,"day_type":"back_lever_unilateral","minutes":44,"rpe":8,"focus":["one_leg_back","back_lever","pull_up"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,3,null,95,"slow","straight_bar_support"],["one_leg_back",4,null,6,125,"alternate_legs","advanced_tuck_back"],["pullup",4,9,null,110,"21X1","assisted_pullup"],["support_hold",4,null,35,55,null,"foot_assisted_support"],["bird_dog",3,"7/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w013","origin":"new_level","level":6,"number":13,
+      "title":{"en":"Dragon Eccentric Clock"},
+      "description":{"en":"Count slow lowering seconds rather than repetitions to sharpen dragon-flag control."},
+      "schedule":{"week":2,"day":6,"day_type":"dragon_eccentric","minutes":44,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["full_dragon_negative",3,1,null,135,"8000","one_leg_dragon_negative"],["one_leg_dragon_negative",2,"1/side",null,120,"7000","bent_dragon_negative"],["hollow_hold",4,null,42,45,null,"dead_bug"],["pushup",4,20,null,60,"2010","incline_pushup"],["split_squat",4,"13/side",null,60,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null],["supine_twist",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w014","origin":"new_level","level":6,"number":14,
+      "title":{"en":"Foundation Wave"},
+      "description":{"en":"Five even, submaximal stations revisit every basic pattern without an ambiguous ladder dose."},
+      "schedule":{"week":2,"day":7,"day_type":"fundamentals_wave","minutes":42,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["pullup",4,7,null,45,"21X1","assisted_pullup"],["parallel_dip",4,10,null,45,"2111","assisted_dip"],["pushup",4,14,null,40,"2010","incline_pushup"],["squat",4,20,null,40,"3010","box_squat"],["knee_raise",4,10,null,55,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["quad_stretch",2,null,40,10,null,null],["slow_breathing",1,null,210,0,null,null]]
+    },
+    {
+      "id":"new-l6-w015","origin":"new_level","level":6,"number":15,
+      "title":{"en":"Muscle-up Symmetry Check"},
+      "description":{"en":"Low-volume singles check an even turnover while the assistance option remains ready."},
+      "schedule":{"week":3,"day":1,"day_type":"muscleup_deload","minutes":38,"rpe":6,"focus":["muscle_up","symmetry","deload"]},
+      "warmup":[["low_jack",1,35,null,15,"easy",null],["arm_swings",1,12,null,10,"controlled",null],["chest_to_bar",2,1,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",5,1,null,195,"clean_single","band_muscleup"],["band_muscleup",3,2,null,165,"controlled","jump_muscleup"],["pullup",3,7,null,120,"2111","assisted_pullup"],["straight_bar_dip",3,8,null,90,"2111","straight_bar_support"],["hollow_hold",2,null,35,45,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w016","origin":"new_level","level":6,"number":16,
+      "title":{"en":"Front-Lever Snapshot"},
+      "description":{"en":"Brief holds record the strongest level front-lever shape without testing maximum duration."},
+      "schedule":{"week":3,"day":2,"day_type":"front_lever_deload","minutes":36,"rpe":5,"focus":["front_lever","quality","legs"]},
+      "warmup":[["march",1,null,90,0,null,null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["advanced_tuck_front",4,null,8,105,null,"tuck_front_hold"],["one_leg_front",4,null,4,120,null,"advanced_tuck_front"],["tuck_front_row",3,6,null,90,"2111","inverted_row"],["chinup",3,7,null,105,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,55,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w017","origin":"new_level","level":6,"number":17,
+      "title":{"en":"Planche Line Deload"},
+      "description":{"en":"Easy leans and tuck supports refresh the forward line without demanding a harder planche."},
+      "schedule":{"week":3,"day":3,"day_type":"planche_deload","minutes":35,"rpe":5,"focus":["planche_lean","tuck_planche","push_up"]},
+      "warmup":[["march",1,null,90,0,null,null],["wrist_rocks",2,8,null,15,"gentle",null],["scapular_pushup",2,6,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["elevated_plank",3,null,35,45,null,"incline_plank"],["planche_lean",4,null,16,75,null,"elevated_plank"],["tuck_planche",4,null,5,105,null,"frog_stand"],["pushup",3,16,null,60,"2111","incline_pushup"],["squat",3,24,null,55,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null],["quad_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w018","origin":"new_level","level":6,"number":18,
+      "title":{"en":"Long Mobility Day"},
+      "description":{"en":"A longer recovery sequence restores wrists, shoulders, spine, hips, and ankles."},
+      "schedule":{"week":3,"day":4,"day_type":"long_recovery","minutes":50,"rpe":2,"focus":["walking","full_mobility","breathing"]},
+      "warmup":[["easy_walk",1,null,1200,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["shoulder_cars",3,6,null,20,"slow",null],["cat_cow",3,10,null,25,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null],["deep_squat_hold",3,null,45,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,360,0,null,null]]
+    },
+    {
+      "id":"new-l6-w019","origin":"new_level","level":6,"number":19,
+      "title":{"en":"Back-Lever Snapshot"},
+      "description":{"en":"Controlled entries and short holds document the back line without forcing extension."},
+      "schedule":{"week":3,"day":5,"day_type":"back_lever_deload","minutes":37,"rpe":5,"focus":["back_lever","control","support"]},
+      "warmup":[["low_jack",1,30,null,15,"easy",null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,105,"slow","straight_bar_support"],["advanced_tuck_back",4,null,8,120,null,"tuck_back_hold"],["one_leg_back",4,null,4,135,null,"advanced_tuck_back"],["pullup",3,7,null,120,"2111","assisted_pullup"],["support_hold",3,null,30,60,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null],["hip_flexor_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w020","origin":"new_level","level":6,"number":20,
+      "title":{"en":"Dragon Control Check"},
+      "description":{"en":"A few slow negatives check trunk rigidity while basic pushing stays light."},
+      "schedule":{"week":3,"day":6,"day_type":"dragon_deload","minutes":36,"rpe":5,"focus":["dragon_flag","core","push_up"]},
+      "warmup":[["march",1,null,90,0,null,null],["cat_cow",2,7,null,15,"slow",null],["hollow_hold",2,null,18,30,null,"dead_bug"]],
+      "main":[["full_dragon_negative",2,1,null,135,"7000","one_leg_dragon_negative"],["one_leg_dragon_negative",3,"1/side",null,120,"6000","bent_dragon_negative"],["hollow_hold",3,null,35,45,null,"dead_bug"],["pushup",3,16,null,55,"2111","incline_pushup"],["split_squat",3,"10/side",null,55,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null],["supine_twist",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w021","origin":"new_level","level":6,"number":21,
+      "title":{"en":"Foundation Quality Relay"},
+      "description":{"en":"Short relaxed stations confirm clean basics before the next three-week build."},
+      "schedule":{"week":3,"day":7,"day_type":"basics_deload","minutes":37,"rpe":5,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"8/side",null,10,"controlled",null],["arm_swings",1,12,null,10,"controlled",null]],
+      "main":[["chinup",4,7,null,25,"2111","assisted_pullup"],["parallel_dip",4,10,null,25,"2111","assisted_dip"],["pushup",4,14,null,25,"2111","incline_pushup"],["squat",4,22,null,25,"3010","box_squat"],["dead_bug",4,"10/side",null,105,"slow",null]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["quad_stretch",2,null,35,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w022","origin":"new_level","level":6,"number":22,
+      "title":{"en":"Muscle-up Triple Reserve"},
+      "description":{"en":"Three crisp triples leave clear reserve while smaller pull and dip blocks protect elbows and the session clock."},
+      "schedule":{"week":4,"day":1,"day_type":"muscleup_triplets","minutes":43,"rpe":8,"focus":["muscle_up","pull_up","bar_dip"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",3,3,null,195,"clean_triple","band_muscleup"],["chest_to_bar",3,3,null,120,"10X1","pullup"],["pullup",2,7,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,80,"2111","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w023","origin":"new_level","level":6,"number":23,
+      "title":{"en":"Straddle Front Introduction"},
+      "description":{"en":"Four brief straddle-front holds lead into rows, chin-ups, lunges, and trunk work; use the listed regression if alignment changes."},
+      "schedule":{"week":4,"day":2,"day_type":"front_lever_straddle_intro","minutes":43,"rpe":8,"focus":["straddle_front","front_row","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",4,null,3,125,"isometric","one_leg_front"],["tuck_front_row",4,8,null,85,"2111","inverted_row"],["chinup",4,9,null,100,"21X1","assisted_pullup"],["reverse_lunge",4,"12/side",null,55,"3010","box_squat"],["hollow_hold",3,null,32,40,null,"dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w024","origin":"new_level","level":6,"number":24,
+      "title":{"en":"Advanced-Tuck Planche Holds"},
+      "description":{"en":"Three leans prepare three assigned advanced-tuck holds before modest dips, squats, and push-ups; regress the hold if needed."},
+      "schedule":{"week":4,"day":3,"day_type":"planche_advanced_tuck","minutes":40,"rpe":8,"focus":["advanced_tuck_planche","planche_lean","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["planche_lean",3,null,20,70,"controlled","elevated_plank"],["advanced_tuck_planche",3,null,3,115,"isometric","tuck_planche"],["parallel_dip",3,10,null,85,"2111","assisted_dip"],["pause_squat",3,18,null,50,"32X0","box_squat"],["pushup",2,12,null,45,"2010","incline_pushup"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["quad_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w025","origin":"new_level","level":6,"number":25,
+      "title":{"en":"Recovery Through Rotation"},
+      "description":{"en":"Gentle rotations and walking restore range before the back-line half of the week."},
+      "schedule":{"week":4,"day":4,"day_type":"rotation_recovery","minutes":46,"rpe":3,"focus":["spine_mobility","hips","walking"]},
+      "warmup":[["easy_walk",1,null,960,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["thoracic_rotation",3,"10/side",null,25,"slow",null],["cat_cow",3,10,null,25,"slow",null],["ninety_ninety_hip_switch",3,12,null,30,"controlled",null],["wall_slide",3,10,null,30,"slow",null],["foot_assisted_hang",3,null,30,45,null,null]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null],["slow_breathing",1,null,300,0,null,null]]
+    },
+    {
+      "id":"new-l6-w026","origin":"new_level","level":6,"number":26,
+      "title":{"en":"Straddle Back Introduction"},
+      "description":{"en":"Four short straddle-back holds follow reversible shoulder entries, then strict pulling and support work complete the sequence."},
+      "schedule":{"week":4,"day":5,"day_type":"back_lever_straddle_intro","minutes":43,"rpe":8,"focus":["straddle_back","pull_up","support"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,95,"slow","straight_bar_support"],["straddle_back",4,null,3,135,"isometric","one_leg_back"],["pullup",4,9,null,110,"21X1","assisted_pullup"],["support_hold",4,null,35,55,null,"foot_assisted_support"],["bird_dog",3,"7/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w027","origin":"new_level","level":6,"number":27,
+      "title":{"en":"Full Dragon Negative"},
+      "description":{"en":"Long full-body descents build the dragon flag while regressions preserve a rigid trunk."},
+      "schedule":{"week":4,"day":6,"day_type":"dragon_full_eccentric","minutes":40,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["full_dragon_negative",4,2,null,125,"7000","one_leg_dragon_negative"],["hollow_hold",3,null,35,40,null,"dead_bug"],["single_leg_bridge",3,"12/side",null,40,"2111","glute_bridge"],["pushup",3,15,null,50,"2010","incline_pushup"],["split_squat",3,"10/side",null,50,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w028","origin":"new_level","level":6,"number":28,
+      "title":{"en":"Basics Density Reset"},
+      "description":{"en":"Moderate basics close the week with clean rhythm and interrupt the run of hard training days."},
+      "schedule":{"week":4,"day":7,"day_type":"basics_moderate_strength","minutes":37,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["pullup",3,7,null,70,"2111","assisted_pullup"],["parallel_dip",3,9,null,70,"2111","assisted_dip"],["close_pushup",3,12,null,45,"2010","pushup"],["squat",3,18,null,45,"3010","box_squat"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["quad_stretch",2,null,45,10,null,null],["slow_breathing",1,null,210,0,null,null]]
+    },
+    {
+      "id":"new-l6-w029","origin":"new_level","level":6,"number":29,
+      "title":{"en":"Crisp Muscle-up Doubles"},
+      "description":{"en":"Four clean doubles build repeatability without a maximal ladder; use the band before turnover speed changes."},
+      "schedule":{"week":5,"day":1,"day_type":"muscleup_quality","minutes":42,"rpe":8,"focus":["muscle_up","pull_power","bar_dip"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,180,"clean_double","band_muscleup"],["chest_to_bar",3,3,null,120,"10X1","pullup"],["pullup",2,7,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,8,null,75,"2111","straight_bar_support"],["hollow_hold",3,null,30,40,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w030","origin":"new_level","level":6,"number":30,
+      "title":{"en":"Front-Lever Extension Exchange"},
+      "description":{"en":"Four assigned straddle holds lead into rows, chin-ups, lunges, and trunk work; regress immediately if alignment changes."},
+      "schedule":{"week":5,"day":2,"day_type":"front_lever_exchange","minutes":44,"rpe":8,"focus":["straddle_front","row","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",4,null,4,130,"isometric","one_leg_front"],["tuck_front_row",4,8,null,85,"2111","inverted_row"],["chinup",4,9,null,100,"21X1","assisted_pullup"],["reverse_lunge",4,"12/side",null,55,"3010","box_squat"],["hollow_hold",3,null,34,40,null,"dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w031","origin":"new_level","level":6,"number":31,
+      "title":{"en":"Tuck Planche Press Day"},
+      "description":{"en":"Three assigned advanced-tuck holds lead into light pseudo-planche presses, dips, squats, and trunk work."},
+      "schedule":{"week":5,"day":3,"day_type":"planche_press","minutes":39,"rpe":8,"focus":["advanced_tuck_planche","push_up","dip"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",3,null,4,115,"isometric","tuck_planche"],["pseudo_planche_pushup",3,6,null,80,"31X1","pushup"],["parallel_dip",3,10,null,85,"2111","assisted_dip"],["squat",3,20,null,50,"3010","box_squat"],["hollow_hold",2,null,30,40,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w032","origin":"new_level","level":6,"number":32,
+      "title":{"en":"Elbow-and-Wrist Recharge"},
+      "description":{"en":"Walking and gentle upper-limb mobility unload the joints after a dense skill sequence."},
+      "schedule":{"week":5,"day":4,"day_type":"upper_limb_recovery","minutes":47,"rpe":3,"focus":["elbows","wrists","walking"]},
+      "warmup":[["easy_walk",1,null,1020,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["wrist_rocks",3,10,null,25,"gentle",null],["scapular_pull",3,5,null,35,"2111","dead_hang"],["bird_dog",3,"8/side",null,30,"slow","dead_bug"],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["slow_breathing",1,null,330,0,null,null]]
+    },
+    {
+      "id":"new-l6-w033","origin":"new_level","level":6,"number":33,
+      "title":{"en":"Back-Lever Extension Exchange"},
+      "description":{"en":"Four assigned straddle-back holds follow reversible entries, then pulling, support, and trunk work complete the day."},
+      "schedule":{"week":5,"day":5,"day_type":"back_lever_exchange","minutes":44,"rpe":8,"focus":["straddle_back","pull_up","support"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,95,"slow","straight_bar_support"],["straddle_back",4,null,4,140,"isometric","one_leg_back"],["pullup",4,9,null,110,"21X1","assisted_pullup"],["support_hold",4,null,38,55,null,"foot_assisted_support"],["bird_dog",3,"7/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w034","origin":"new_level","level":6,"number":34,
+      "title":{"en":"Dragon Quality Singles"},
+      "description":{"en":"Complete three separated dragon-flag singles while the line stays rigid; use the listed negative regression if the line softens."},
+      "schedule":{"week":5,"day":6,"day_type":"dragon_quality","minutes":38,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["dragon_flag",3,1,null,150,"controlled","full_dragon_negative"],["hollow_hold",3,null,30,40,null,"dead_bug"],["pushup",3,14,null,50,"2010","incline_pushup"],["split_squat",3,"10/side",null,50,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w035","origin":"new_level","level":6,"number":35,
+      "title":{"en":"Park Strength Medley"},
+      "description":{"en":"A changing station order preserves pull, push, legs, and core in an enjoyable format."},
+      "schedule":{"week":5,"day":7,"day_type":"strength_medley","minutes":57,"rpe":7,"focus":["pull_up","dip","push_up","legs","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["chinup",5,9,null,25,"21X1","assisted_pullup"],["parallel_dip",5,13,null,25,"2111","assisted_dip"],["pause_pushup",5,16,null,25,"22X1","incline_pushup"],["cossack_squat",5,"10/side",null,25,"3010","squat"],["knee_raise",5,13,null,120,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["adductor_stretch",2,null,40,10,null,null],["slow_breathing",1,null,210,0,null,null]]
+    },
+    {
+      "id":"new-l6-w036","origin":"new_level","level":6,"number":36,
+      "title":{"en":"Turnover Deload"},
+      "description":{"en":"Fresh singles and light pulling retain muscle-up timing while elbows recover."},
+      "schedule":{"week":6,"day":1,"day_type":"muscleup_deload","minutes":39,"rpe":6,"focus":["muscle_up","transition","recovery"]},
+      "warmup":[["low_jack",1,35,null,15,"easy",null],["wrist_circles",1,10,null,10,"each_direction",null],["chest_to_bar",2,1,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",5,1,null,195,"clean_single","band_muscleup"],["band_muscleup",3,2,null,165,"controlled","jump_muscleup"],["pullup",3,8,null,120,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,90,"2111","straight_bar_support"],["hollow_hold",2,null,38,45,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w037","origin":"new_level","level":6,"number":37,
+      "title":{"en":"Front-Lever Technique Audit"},
+      "description":{"en":"Audit scapular depression and hip height at an easy front-lever progression."},
+      "schedule":{"week":6,"day":2,"day_type":"front_lever_deload","minutes":37,"rpe":5,"focus":["front_lever","position","legs"]},
+      "warmup":[["march",1,null,90,0,null,null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["advanced_tuck_front",4,null,8,105,null,"tuck_front_hold"],["one_leg_front",3,null,"4/side",120,null,"advanced_tuck_front"],["tuck_front_row",3,6,null,90,"2111","inverted_row"],["chinup",3,8,null,105,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,55,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w038","origin":"new_level","level":6,"number":38,
+      "title":{"en":"Controlled Planche Deload"},
+      "description":{"en":"Complete the elevated plank, lean, and tuck sequence at easy effort, then finish the prescribed push-ups and squats."},
+      "schedule":{"week":6,"day":3,"day_type":"planche_deload","minutes":36,"rpe":5,"focus":["planche_lean","wrist_control","push_up"]},
+      "warmup":[["march",1,null,90,0,null,null],["wrist_rocks",2,8,null,15,"gentle",null],["scapular_pushup",2,6,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["elevated_plank",3,null,40,45,null,"incline_plank"],["planche_lean",4,null,18,75,null,"elevated_plank"],["tuck_planche",3,null,6,105,null,"frog_stand"],["pushup",3,17,null,60,"2111","incline_pushup"],["squat",3,25,null,55,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null],["quad_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w039","origin":"new_level","level":6,"number":39,
+      "title":{"en":"Full Reset"},
+      "description":{"en":"Long walking, gentle mobility, and slow breathing close the first half of the mastery block."},
+      "schedule":{"week":6,"day":4,"day_type":"full_recovery","minutes":52,"rpe":2,"focus":["walking","mobility","breathing"]},
+      "warmup":[["easy_walk",1,null,1320,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["foot_assisted_hang",3,null,30,45,null,null],["wall_slide",3,10,null,30,"slow",null],["cat_cow",3,10,null,25,"slow",null],["ninety_ninety_hip_switch",3,12,null,30,"controlled",null],["bird_dog",3,"8/side",null,30,"slow","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,420,0,null,null]]
+    },
+    {
+      "id":"new-l6-w040","origin":"new_level","level":6,"number":40,
+      "title":{"en":"Back-Lever Technique Audit"},
+      "description":{"en":"Audit entry depth, shoulder comfort, and hip line at a deliberately easy progression."},
+      "schedule":{"week":6,"day":5,"day_type":"back_lever_deload","minutes":38,"rpe":5,"focus":["back_lever","position","support"]},
+      "warmup":[["low_jack",1,30,null,15,"easy",null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,105,"slow","straight_bar_support"],["advanced_tuck_back",4,null,8,120,null,"tuck_back_hold"],["one_leg_back",3,null,"4/side",135,null,"advanced_tuck_back"],["pullup",3,8,null,120,"2111","assisted_pullup"],["support_hold",3,null,32,60,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null],["hip_flexor_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w041","origin":"new_level","level":6,"number":41,
+      "title":{"en":"Dragon Negative Deload"},
+      "description":{"en":"Reduced eccentric volume refreshes the trunk while push-ups and lunges stay easy."},
+      "schedule":{"week":6,"day":6,"day_type":"dragon_deload","minutes":41,"rpe":5,"focus":["dragon_flag","core","basics"]},
+      "warmup":[["march",1,null,90,0,null,null],["cat_cow",2,7,null,15,"slow",null],["hollow_hold",2,null,18,30,null,"dead_bug"]],
+      "main":[["full_dragon_negative",4,2,null,135,"7000","one_leg_dragon_negative"],["hollow_hold",3,null,36,45,null,"dead_bug"],["single_leg_bridge",3,"12/side",null,45,"2111","glute_bridge"],["pushup",3,17,null,55,"2111","incline_pushup"],["reverse_lunge",3,"10/side",null,55,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null],["supine_twist",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w042","origin":"new_level","level":6,"number":42,
+      "title":{"en":"Basics and Balance"},
+      "description":{"en":"Balanced stations keep every foundation active while the mastery skills unload."},
+      "schedule":{"week":6,"day":7,"day_type":"balanced_basics","minutes":46,"rpe":6,"focus":["pull_up","dip","push_up","legs","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"8/side",null,10,"controlled",null],["arm_swings",1,12,null,10,"controlled",null]],
+      "main":[["high_inverted_row",4,12,null,25,"2111",null],["parallel_dip",4,11,null,25,"2111","assisted_dip"],["pause_pushup",4,15,null,25,"22X1","incline_pushup"],["cossack_squat",4,"8/side",null,25,"3010","squat"],["side_plank",4,null,"28/side",105,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["adductor_stretch",2,null,35,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w043","origin":"new_level","level":6,"number":43,
+      "title":{"en":"Eight-Rep Muscle-up Quality Bank"},
+      "description":{"en":"Bank eight technically identical muscle-ups, then use small pull and dip accessories without draining transition speed."},
+      "schedule":{"week":7,"day":1,"day_type":"muscleup_quality","minutes":44,"rpe":8,"focus":["muscle_up","pull_up","bar_dip"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,180,"clean_double","band_muscleup"],["chest_to_bar",3,3,null,120,"10X1","pullup"],["pullup",2,7,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,8,null,75,"2111","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w044","origin":"new_level","level":6,"number":44,
+      "title":{"en":"Front Lever, Pull, and Legs"},
+      "description":{"en":"Four measured straddle-front holds lead into rows, strict pulls, lunges, and trunk work."},
+      "schedule":{"week":7,"day":2,"day_type":"front_lever_strength","minutes":45,"rpe":8,"focus":["front_lever","pull_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",4,null,5,130,"isometric","one_leg_front"],["tuck_front_row",4,8,null,85,"2111","inverted_row"],["pullup",4,8,null,105,"21X1","assisted_pullup"],["reverse_lunge",4,"12/side",null,55,"3010","box_squat"],["hollow_hold",3,null,36,40,null,"dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w045","origin":"new_level","level":6,"number":45,
+      "title":{"en":"Advanced-Tuck Press Sequence"},
+      "description":{"en":"Three assigned advanced-tuck holds lead into measured planche presses, dips, squats, and push-ups."},
+      "schedule":{"week":7,"day":3,"day_type":"planche_dip_strength","minutes":39,"rpe":8,"focus":["planche","dip","push_up","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",3,null,5,115,"isometric","tuck_planche"],["pseudo_planche_pushup",3,7,null,80,"31X1","pushup"],["parallel_dip",3,10,null,85,"2111","assisted_dip"],["pause_squat",3,20,null,50,"32X0","box_squat"],["pushup",2,12,null,45,"2010","incline_pushup"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w046","origin":"new_level","level":6,"number":46,
+      "title":{"en":"Shoulder-Extension Recovery"},
+      "description":{"en":"Gentle range work and walking restore the shoulders before back-lever practice."},
+      "schedule":{"week":7,"day":4,"day_type":"shoulder_recovery","minutes":47,"rpe":3,"focus":["shoulder_mobility","walking","breathing"]},
+      "warmup":[["easy_walk",1,null,1020,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["shoulder_cars",3,6,null,25,"slow",null],["foot_assisted_hang",3,null,30,45,null,null],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null],["bird_dog",3,"8/side",null,30,"slow","dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["slow_breathing",1,null,330,0,null,null]]
+    },
+    {
+      "id":"new-l6-w047","origin":"new_level","level":6,"number":47,
+      "title":{"en":"Back Lever Holds and Pull-ups"},
+      "description":{"en":"Back-lever shapes stay level before strict pull-ups reinforce general pulling strength."},
+      "schedule":{"week":7,"day":5,"day_type":"back_lever_strength","minutes":44,"rpe":8,"focus":["back_lever","pull_up","support"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,95,"slow","straight_bar_support"],["straddle_back",4,null,5,140,"isometric","one_leg_back"],["pullup",4,8,null,110,"21X1","assisted_pullup"],["support_hold",4,null,40,55,null,"foot_assisted_support"],["bird_dog",3,"8/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w048","origin":"new_level","level":6,"number":48,
+      "title":{"en":"Dragon Flag and Push-ups"},
+      "description":{"en":"Four controlled dragon singles lead into hollow holds, ordinary push-ups, lunges, and trunk control."},
+      "schedule":{"week":7,"day":6,"day_type":"dragon_push_strength","minutes":39,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["dragon_flag",4,1,null,145,"controlled","full_dragon_negative"],["hollow_hold",3,null,36,40,null,"dead_bug"],["pushup",3,15,null,50,"2010","incline_pushup"],["split_squat",3,"11/side",null,50,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w049","origin":"new_level","level":6,"number":49,
+      "title":{"en":"Five-Skill Calibration Circuit"},
+      "description":{"en":"Complete two measured sets for all five mastery skills, using each listed regression when the assigned shape is not yet clean."},
+      "schedule":{"week":7,"day":7,"day_type":"five_skill_circuit","minutes":38,"rpe":6,"focus":["five_skills","basics","fun"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["arm_swings",1,15,null,10,"controlled",null],["wrist_rocks",1,10,null,15,"gentle",null]],
+      "main":[["strict_muscleup",2,1,null,90,"easy_single","band_muscleup"],["one_leg_front",2,null,5,75,"alternate_legs","advanced_tuck_front"],["planche_lean",2,null,18,60,"controlled","elevated_plank"],["one_leg_back",2,null,5,85,"alternate_legs","advanced_tuck_back"],["one_leg_dragon_negative",2,"2/side",null,90,"6000","bent_dragon_negative"],["squat",2,18,null,50,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,40,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w050","origin":"new_level","level":6,"number":50,
+      "title":{"en":"Efficient Triple Practice"},
+      "description":{"en":"Three reserved triples reward an economical turnover; accessories stay deliberately small."},
+      "schedule":{"week":8,"day":1,"day_type":"muscleup_efficiency","minutes":43,"rpe":8,"focus":["muscle_up","efficiency","pull_up"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",3,3,null,195,"smooth_triple","band_muscleup"],["chest_to_bar",3,3,null,120,"10X1","pullup"],["pullup",2,6,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,80,"2111","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w051","origin":"new_level","level":6,"number":51,
+      "title":{"en":"Fresh Full-Front Glimpses"},
+      "description":{"en":"Take only two fresh full-front samples after three short straddles, regressing at the first broken line."},
+      "schedule":{"week":8,"day":2,"day_type":"full_front_intro","minutes":42,"rpe":8,"focus":["full_front","straddle_front","pull_up","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",3,null,4,120,null,"one_leg_front"],["full_front",2,null,2,150,null,"straddle_front"],["tuck_front_row",3,6,null,75,"2111","inverted_row"],["pullup",3,7,null,105,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,50,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w052","origin":"new_level","level":6,"number":52,
+      "title":{"en":"Brief Straddle Planche Samples"},
+      "description":{"en":"Complete three controlled advanced-tuck holds, two brief straddle holds, and the prescribed lean, dip, and squat work."},
+      "schedule":{"week":8,"day":3,"day_type":"straddle_planche_intro","minutes":40,"rpe":8,"focus":["straddle_planche","advanced_tuck_planche","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,12,null,15,"controlled",null],["scapular_pushup",3,10,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",3,null,5,105,null,"tuck_planche"],["straddle_planche",2,null,2,135,null,"advanced_tuck_planche"],["planche_lean",3,null,18,60,null,"elevated_plank"],["parallel_dip",3,9,null,90,"2111","assisted_dip"],["pause_squat",3,18,null,50,"32X0","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w053","origin":"new_level","level":6,"number":53,
+      "title":{"en":"Walking Recovery Circuit"},
+      "description":{"en":"Alternate easy walking with mobility stops to recover without becoming sedentary."},
+      "schedule":{"week":8,"day":4,"day_type":"walking_recovery","minutes":48,"rpe":3,"focus":["walking","mobility","recovery"]},
+      "warmup":[["easy_walk",1,null,1080,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",3,12,null,30,"controlled",null],["foot_assisted_hang",3,null,30,45,null,null],["deep_squat_hold",3,null,45,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,330,0,null,null]]
+    },
+    {
+      "id":"new-l6-w054","origin":"new_level","level":6,"number":54,
+      "title":{"en":"Fresh Full-Back Glimpses"},
+      "description":{"en":"Take only two fresh full-back samples after comfortable short straddles and regress before shoulder position shifts."},
+      "schedule":{"week":8,"day":5,"day_type":"full_back_intro","minutes":42,"rpe":8,"focus":["full_back","straddle_back","pull_up"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",2,2,null,90,"slow","straight_bar_support"],["straddle_back",3,null,4,135,null,"one_leg_back"],["full_back",2,null,2,150,null,"straddle_back"],["pullup",3,7,null,105,"2111","assisted_pullup"],["support_hold",3,null,30,50,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w055","origin":"new_level","level":6,"number":55,
+      "title":{"en":"Dragon Line Quality"},
+      "description":{"en":"Complete four clean dragon-flag singles, using the listed negative regression if needed, then finish the low-volume basics with ample reserve."},
+      "schedule":{"week":8,"day":6,"day_type":"dragon_quality","minutes":38,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["dragon_flag",4,1,null,150,"controlled","full_dragon_negative"],["hollow_hold",3,null,30,40,null,"dead_bug"],["pushup",3,14,null,50,"2010","incline_pushup"],["split_squat",3,"10/side",null,50,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w056","origin":"new_level","level":6,"number":56,
+      "title":{"en":"Foundation Landing Circuit"},
+      "description":{"en":"Even, moderate sets retain every basic pattern while letting the peak-skill week land softly."},
+      "schedule":{"week":8,"day":7,"day_type":"fundamentals_moderate_strength","minutes":39,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["pullup",3,7,null,70,"2111","assisted_pullup"],["parallel_dip",3,10,null,70,"2111","assisted_dip"],["pushup",3,14,null,50,"2010","incline_pushup"],["squat",3,20,null,50,"3010","box_squat"],["knee_raise",3,10,null,55,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["quad_stretch",2,null,45,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w057","origin":"new_level","level":6,"number":57,
+      "title":{"en":"Muscle-up Low-Volume Review"},
+      "description":{"en":"A few smooth sets review efficiency while leaving the elbows and shoulders fresh."},
+      "schedule":{"week":9,"day":1,"day_type":"muscleup_deload","minutes":40,"rpe":6,"focus":["muscle_up","efficiency","deload"]},
+      "warmup":[["low_jack",1,35,null,15,"easy",null],["wrist_circles",1,10,null,10,"each_direction",null],["chest_to_bar",2,1,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,195,"smooth","band_muscleup"],["band_muscleup",3,2,null,165,"controlled","jump_muscleup"],["pullup",3,8,null,120,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,90,"2111","straight_bar_support"],["hollow_hold",2,null,38,45,null,"dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w058","origin":"new_level","level":6,"number":58,
+      "title":{"en":"Front-Lever Line Review"},
+      "description":{"en":"Complete the prescribed one-leg and advanced-tuck front-lever holds, then reinforce the line with rows, chin-ups, and lunges."},
+      "schedule":{"week":9,"day":2,"day_type":"front_lever_deload","minutes":38,"rpe":5,"focus":["front_lever","alignment","legs"]},
+      "warmup":[["march",1,null,90,0,null,null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["one_leg_front",4,null,6,120,null,"advanced_tuck_front"],["advanced_tuck_front",3,null,9,105,null,"tuck_front_hold"],["tuck_front_row",3,7,null,90,"2111","inverted_row"],["chinup",3,8,null,105,"2111","assisted_pullup"],["reverse_lunge",3,"11/side",null,55,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w059","origin":"new_level","level":6,"number":59,
+      "title":{"en":"Wrist-Friendly Planche Review"},
+      "description":{"en":"Complete the elevated plank, planche lean, and frog-stand sequence before easy push-ups and squats."},
+      "schedule":{"week":9,"day":3,"day_type":"planche_deload","minutes":37,"rpe":5,"focus":["elevated_plank","planche_lean","push_up"]},
+      "warmup":[["march",1,null,90,0,null,null],["wrist_rocks",2,8,null,15,"gentle",null],["scapular_pushup",2,6,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["elevated_plank",4,null,40,45,null,"incline_plank"],["planche_lean",4,null,18,75,null,"elevated_plank"],["frog_stand",3,null,10,90,null,"elevated_plank"],["pushup",3,18,null,60,"2111","incline_pushup"],["squat",3,26,null,55,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,35,10,null,null],["quad_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w060","origin":"new_level","level":6,"number":60,
+      "title":{"en":"Deep Recovery Day"},
+      "description":{"en":"A deliberately quiet day lowers fatigue before the final three-week mastery block."},
+      "schedule":{"week":9,"day":4,"day_type":"deep_recovery","minutes":53,"rpe":2,"focus":["walking","mobility","breathing"]},
+      "warmup":[["easy_walk",1,null,1380,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["shoulder_cars",3,6,null,20,"slow",null],["wall_slide",3,10,null,30,"slow",null],["foot_assisted_hang",3,null,30,45,null,null],["deep_squat_hold",3,null,45,30,null,"box_squat"],["dead_bug",3,"8/side",null,30,"slow",null]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,420,0,null,null]]
+    },
+    {
+      "id":"new-l6-w061","origin":"new_level","level":6,"number":61,
+      "title":{"en":"Back-Lever Line Review"},
+      "description":{"en":"Review one comfortable back-lever shape and keep every entry slow and reversible."},
+      "schedule":{"week":9,"day":5,"day_type":"back_lever_deload","minutes":39,"rpe":5,"focus":["back_lever","alignment","support"]},
+      "warmup":[["low_jack",1,30,null,15,"easy",null],["shoulder_cars",2,5,null,15,"slow",null],["active_hang",2,null,15,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",3,2,null,105,"slow","straight_bar_support"],["one_leg_back",4,null,6,135,null,"advanced_tuck_back"],["advanced_tuck_back",3,null,9,120,null,"tuck_back_hold"],["pullup",3,8,null,120,"2111","assisted_pullup"],["support_hold",3,null,35,60,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,40,10,null,null],["chest_stretch",2,null,35,10,null,null],["hip_flexor_stretch",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w062","origin":"new_level","level":6,"number":62,
+      "title":{"en":"Dragon Flag Review"},
+      "description":{"en":"Controlled negatives maintain the flag line while the trunk and legs recover."},
+      "schedule":{"week":9,"day":6,"day_type":"dragon_deload","minutes":42,"rpe":5,"focus":["dragon_flag","core","basics"]},
+      "warmup":[["march",1,null,90,0,null,null],["cat_cow",2,7,null,15,"slow",null],["hollow_hold",2,null,18,30,null,"dead_bug"]],
+      "main":[["full_dragon_negative",4,2,null,135,"7000","one_leg_dragon_negative"],["hollow_hold",3,null,38,45,null,"dead_bug"],["single_leg_bridge",3,"12/side",null,45,"2111","glute_bridge"],["pushup",3,18,null,55,"2111","incline_pushup"],["split_squat",3,"11/side",null,55,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,40,10,null,null],["hamstring_stretch",2,null,35,10,null,null],["supine_twist",2,null,35,10,null,null]]
+    },
+    {
+      "id":"new-l6-w063","origin":"new_level","level":6,"number":63,
+      "title":{"en":"Basics Technique Stations"},
+      "description":{"en":"Unhurried stations polish the fundamental patterns without turning deload into conditioning."},
+      "schedule":{"week":9,"day":7,"day_type":"basics_technique","minutes":47,"rpe":5,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"8/side",null,10,"controlled",null],["arm_swings",1,12,null,10,"controlled",null]],
+      "main":[["high_inverted_row",4,12,null,25,"2111",null],["parallel_dip",4,11,null,25,"2111","assisted_dip"],["pause_pushup",4,15,null,25,"22X1","incline_pushup"],["squat",4,24,null,25,"3010","box_squat"],["dead_bug",4,"10/side",null,105,"slow",null]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["quad_stretch",2,null,35,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w064","origin":"new_level","level":6,"number":64,
+      "title":{"en":"Peak Muscle-up Doubles"},
+      "description":{"en":"Perform four clean doubles with full rest, then halve the old accessory load and stop before symmetry changes."},
+      "schedule":{"week":10,"day":1,"day_type":"muscleup_peak_quality","minutes":44,"rpe":8,"focus":["muscle_up","pull_power","bar_dip"]},
+      "warmup":[["low_jack",1,55,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,180,"clean_double","band_muscleup"],["chest_to_bar",3,3,null,120,"10X1","pullup"],["pullup",2,6,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,80,"2111","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w065","origin":"new_level","level":6,"number":65,
+      "title":{"en":"Front-Lever Peak Restraint"},
+      "description":{"en":"Use three short straddles and only two full-front samples, regressing immediately when the line bends."},
+      "schedule":{"week":10,"day":2,"day_type":"front_lever_peak_quality","minutes":42,"rpe":8,"focus":["full_front","straddle_front","pull_up","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",3,null,5,120,null,"one_leg_front"],["full_front",2,null,2,150,null,"straddle_front"],["tuck_front_row",3,7,null,75,"2111","inverted_row"],["pullup",3,8,null,105,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,50,"3010","box_squat"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w066","origin":"new_level","level":6,"number":66,
+      "title":{"en":"Two Fresh Planche Singles"},
+      "description":{"en":"Complete two fresh full-planche singles with the listed straddle regression if needed, then perform the exact light back-off sequence."},
+      "schedule":{"week":10,"day":3,"day_type":"planche_peak_quality","minutes":42,"rpe":8,"focus":["planche","push_up","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,10,null,15,"controlled",null],["scapular_pushup",2,8,null,25,"2111","elevated_scapular_pushup"],["planche_lean",2,null,12,45,"easy_line","elevated_plank"]],
+      "main":[["full_planche",2,null,1,180,"fresh_single","straddle_planche"],["advanced_tuck_planche",3,null,4,105,"backoff","tuck_planche"],["planche_lean",3,null,18,60,"controlled","elevated_plank"],["parallel_dip",2,8,null,75,"2111","assisted_dip"],["pushup",2,12,null,45,"2010","incline_pushup"],["pause_squat",3,18,null,50,"32X0","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w067","origin":"new_level","level":6,"number":67,
+      "title":{"en":"Peak Recovery Walk"},
+      "description":{"en":"A long easy walk and joint-care sequence separate the two halves of peak week."},
+      "schedule":{"week":10,"day":4,"day_type":"peak_recovery","minutes":52,"rpe":2,"focus":["walking","mobility","recovery"]},
+      "warmup":[["easy_walk",1,null,1320,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["cat_cow",3,10,null,25,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["foot_assisted_hang",3,null,30,45,null,null],["deep_squat_hold",3,null,45,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,420,0,null,null]]
+    },
+    {
+      "id":"new-l6-w068","origin":"new_level","level":6,"number":68,
+      "title":{"en":"Back-Lever Peak Restraint"},
+      "description":{"en":"Use three comfortable straddles and only two full-back samples, stopping before shoulder position changes."},
+      "schedule":{"week":10,"day":5,"day_type":"back_lever_peak_quality","minutes":42,"rpe":8,"focus":["full_back","straddle_back","pull_up"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",2,2,null,90,"slow","straight_bar_support"],["straddle_back",3,null,5,135,null,"one_leg_back"],["full_back",2,null,2,150,null,"straddle_back"],["pullup",3,8,null,105,"2111","assisted_pullup"],["support_hold",2,null,30,50,null,"foot_assisted_support"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w069","origin":"new_level","level":6,"number":69,
+      "title":{"en":"Dragon Line Technique Reset"},
+      "description":{"en":"Use easy candlesticks and bent-knee negatives to rehearse the dragon line while the peak-week fatigue falls."},
+      "schedule":{"week":10,"day":6,"day_type":"dragon_technique_recovery","minutes":32,"rpe":4,"focus":["dragon_flag_regression","core","push_up","legs","recovery"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["candlestick",2,4,null,60,"controlled","lying_knee_raise"],["bent_dragon_negative",2,2,null,75,"5000","candlestick"],["incline_pushup",2,10,null,45,"2010","wall_pushup"],["box_squat",2,12,null,45,"3010",null],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w070","origin":"new_level","level":6,"number":70,
+      "title":{"en":"Easy Strength Reserve Circuit"},
+      "description":{"en":"Moderate basic sets retain every foundation without restoring the hard-day cluster before bridge week."},
+      "schedule":{"week":10,"day":7,"day_type":"fundamentals_reserve","minutes":36,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"10/side",null,10,"controlled",null],["arm_swings",1,15,null,10,"controlled",null]],
+      "main":[["pullup",3,7,null,70,"2111","assisted_pullup"],["parallel_dip",3,9,null,70,"2111","assisted_dip"],["pause_pushup",3,12,null,45,"22X1","incline_pushup"],["squat",3,18,null,45,"3010","box_squat"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["quad_stretch",2,null,45,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w071","origin":"new_level","level":6,"number":71,
+      "title":{"en":"Muscle-up Mastery Bridge"},
+      "description":{"en":"Four clean doubles and two controlled negatives bridge peak work to testing without carrying fatigue forward."},
+      "schedule":{"week":11,"day":1,"day_type":"muscleup_bridge","minutes":44,"rpe":7,"focus":["muscle_up","pull_up","bar_dip"]},
+      "warmup":[["low_jack",1,50,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,2,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,180,"clean_double","band_muscleup"],["negative_muscleup",2,1,null,150,"6000","pullover_lowbar"],["pullup",3,7,null,90,"2111","assisted_pullup"],["straight_bar_dip",3,9,null,75,"2111","straight_bar_support"],["knee_raise",3,10,null,50,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w072","origin":"new_level","level":6,"number":72,
+      "title":{"en":"Front-Lever Tier Bridge"},
+      "description":{"en":"Complete three submaximal straddle front-lever holds with the listed one-leg regression if needed, then perform the exact row, chin-up, lunge, and core sequence."},
+      "schedule":{"week":11,"day":2,"day_type":"front_lever_bridge","minutes":38,"rpe":7,"focus":["front_lever","row","pull_up","legs"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["straddle_front",3,null,4,120,"isometric","one_leg_front"],["tuck_front_row",3,7,null,75,"2111","inverted_row"],["chinup",3,7,null,90,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,50,"3010","box_squat"],["hollow_hold",2,null,30,40,null,"dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w073","origin":"new_level","level":6,"number":73,
+      "title":{"en":"Planche Technique Bridge"},
+      "description":{"en":"Complete two submaximal advanced-tuck holds followed by three measured leans, then finish the prescribed dips, squats, and push-ups."},
+      "schedule":{"week":11,"day":3,"day_type":"planche_bridge","minutes":36,"rpe":6,"focus":["planche","wrist_control","dip","squat"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,10,null,15,"controlled",null],["scapular_pushup",3,8,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",2,null,4,120,"isometric","tuck_planche"],["planche_lean",3,null,18,60,"controlled","elevated_plank"],["parallel_dip",3,9,null,75,"2111","assisted_dip"],["pause_squat",3,18,null,50,"32X0","box_squat"],["pushup",2,12,null,45,"2010","incline_pushup"]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["quad_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w074","origin":"new_level","level":6,"number":74,
+      "title":{"en":"Long Recovery Before Gates"},
+      "description":{"en":"A quiet walk and complete mobility sequence lower fatigue before the final mastery checks."},
+      "schedule":{"week":11,"day":4,"day_type":"pre_gate_recovery","minutes":54,"rpe":2,"focus":["walking","mobility","breathing"]},
+      "warmup":[["easy_walk",1,null,1440,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["shoulder_cars",3,6,null,20,"slow",null],["cat_cow",3,10,null,25,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",3,12,null,30,"controlled",null],["deep_squat_hold",3,null,45,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,420,0,null,null]]
+    },
+    {
+      "id":"new-l6-w075","origin":"new_level","level":6,"number":75,
+      "title":{"en":"Back-Lever Mastery Bridge"},
+      "description":{"en":"Three assigned straddle-back holds follow reversible entries, then strict pulling, support, and trunk work finish the bridge."},
+      "schedule":{"week":11,"day":5,"day_type":"back_lever_bridge","minutes":40,"rpe":8,"focus":["back_lever","pull_up","support"]},
+      "warmup":[["low_jack",1,40,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,20,30,null,"dead_hang"]],
+      "main":[["skin_cat_partial",2,2,null,90,"slow","straight_bar_support"],["straddle_back",3,null,5,135,"isometric","one_leg_back"],["pullup",3,8,null,105,"21X1","assisted_pullup"],["support_hold",3,null,35,50,null,"foot_assisted_support"],["bird_dog",2,"8/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null],["hip_flexor_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w076","origin":"new_level","level":6,"number":76,
+      "title":{"en":"Dragon Mastery Bridge"},
+      "description":{"en":"Three controlled dragon singles lead into hollow holds, push-ups, lunges, and trunk work for the assigned bridge."},
+      "schedule":{"week":11,"day":6,"day_type":"dragon_bridge","minutes":39,"rpe":8,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,null,"dead_bug"]],
+      "main":[["dragon_flag",3,1,null,150,"controlled","full_dragon_negative"],["hollow_hold",3,null,35,40,null,"dead_bug"],["pushup",3,15,null,50,"2010","incline_pushup"],["split_squat",3,"10/side",null,50,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w077","origin":"new_level","level":6,"number":77,
+      "title":{"en":"Fundamentals Reserve"},
+      "description":{"en":"Complete the prescribed submaximal basics with a generous reserve so the final checks begin fresh."},
+      "schedule":{"week":11,"day":7,"day_type":"fundamentals_taper","minutes":42,"rpe":6,"focus":["pull_up","dip","push_up","squat","core"]},
+      "warmup":[["easy_walk",1,null,180,0,null,null],["leg_swings",1,"8/side",null,10,"controlled",null],["arm_swings",1,12,null,10,"controlled",null]],
+      "main":[["pullup",3,9,null,90,"2111","assisted_pullup"],["parallel_dip",3,12,null,75,"2111","assisted_dip"],["pushup",3,17,null,55,"2111","incline_pushup"],["squat",3,25,null,50,"3010","box_squat"],["knee_raise",3,13,null,55,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,35,10,null,null],["quad_stretch",2,null,40,10,null,null],["slow_breathing",1,null,240,0,null,null]]
+    },
+    {
+      "id":"new-l6-w078","origin":"new_level","level":6,"number":78,
+      "title":{"en":"Muscle-up Quality Check"},
+      "description":{"en":"Complete one set of five quality muscle-ups, then sets of three and two, followed by exactly ten pull-ups and ten straight-bar dips."},
+      "schedule":{"week":12,"day":1,"day_type":"muscleup_gate","minutes":38,"rpe":8,"focus":["muscle_up_test","pull_up_test","quality_gate"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["chest_to_bar",3,1,null,105,"easy_power","pullup"]],
+      "main":[["strict_muscleup",1,5,null,240,"clean","band_muscleup"],["strict_muscleup",1,3,null,210,"clean","band_muscleup"],["strict_muscleup",1,2,null,210,"clean","band_muscleup"],["pullup",1,10,null,180,"strict","assisted_pullup"],["straight_bar_dip",1,10,null,150,"strict","straight_bar_support"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w079","origin":"new_level","level":6,"number":79,
+      "title":{"en":"Front-Lever Quality Check"},
+      "description":{"en":"Complete two submaximal straddle front-lever holds with the listed one-leg regression if needed, then perform the exact row, pull-up, lunge, and core sequence."},
+      "schedule":{"week":12,"day":2,"day_type":"front_lever_gate","minutes":35,"rpe":6,"focus":["front_lever_test","pull_up","quality_gate"]},
+      "warmup":[["march",1,null,120,0,null,null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,18,30,null,"dead_hang"]],
+      "main":[["straddle_front",2,null,4,180,"isometric","one_leg_front"],["tuck_front_row",2,6,null,75,"2111","inverted_row"],["pullup",2,7,null,90,"2111","assisted_pullup"],["reverse_lunge",2,"10/side",null,50,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["child_pose",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w080","origin":"new_level","level":6,"number":80,
+      "title":{"en":"Planche Technique Check"},
+      "description":{"en":"Complete two easy advanced-tuck holds followed by two measured leans, then perform the exact dip, push-up, and squat sequence."},
+      "schedule":{"week":12,"day":3,"day_type":"planche_technique","minutes":34,"rpe":5,"focus":["planche_technique","push_up","dip","quality_check"]},
+      "warmup":[["march",1,null,120,0,null,null],["wrist_rocks",3,10,null,15,"controlled",null],["scapular_pushup",3,8,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",2,null,4,120,"isometric","tuck_planche"],["planche_lean",2,null,18,60,"controlled","elevated_plank"],["parallel_dip",2,8,null,75,"2111","assisted_dip"],["pushup",2,12,null,45,"2111","incline_pushup"],["squat",2,15,null,45,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w081","origin":"new_level","level":6,"number":81,
+      "title":{"en":"Recovery Between Skill Checks"},
+      "description":{"en":"Complete the prescribed walking, mobility, and breathing sequence to lower fatigue between skill checks."},
+      "schedule":{"week":12,"day":4,"day_type":"intertest_recovery","minutes":52,"rpe":2,"focus":["walking","mobility","recovery"]},
+      "warmup":[["easy_walk",1,null,1320,0,null,null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",3,10,null,30,"slow",null],["shoulder_cars",3,6,null,25,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",3,12,null,30,"controlled",null],["deep_squat_hold",3,null,45,30,null,"box_squat"]],
+      "cooldown":[["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,420,0,null,null]]
+    },
+    {
+      "id":"new-l6-w082","origin":"new_level","level":6,"number":82,
+      "title":{"en":"Back-Lever Quality Check"},
+      "description":{"en":"Complete two submaximal straddle back-lever holds with the listed one-leg regression if needed, then perform the exact pull-up, support, lunge, and core sequence."},
+      "schedule":{"week":12,"day":5,"day_type":"back_lever_gate","minutes":36,"rpe":7,"focus":["back_lever_test","pull_up","quality_gate"]},
+      "warmup":[["low_jack",1,40,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",3,null,18,30,null,"dead_hang"],["skin_cat_partial",2,2,null,75,"easy_range","straight_bar_support"]],
+      "main":[["straddle_back",2,null,4,180,"isometric","one_leg_back"],["pullup",2,7,null,90,"2111","assisted_pullup"],["support_hold",2,null,30,50,null,"foot_assisted_support"],["reverse_lunge",2,"8/side",null,45,"3010","box_squat"],["bird_dog",2,"6/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w083","origin":"new_level","level":6,"number":83,
+      "title":{"en":"Dragon Quality Check"},
+      "description":{"en":"Complete two clean dragon-flag singles with the listed negative regression if needed, then perform the exact core, push-up, and split-squat sequence."},
+      "schedule":{"week":12,"day":6,"day_type":"dragon_gate","minutes":34,"rpe":7,"focus":["dragon_flag_test","core","quality_gate"]},
+      "warmup":[["march",1,null,120,0,null,null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,20,30,null,"dead_bug"]],
+      "main":[["dragon_flag",2,1,null,180,"controlled","full_dragon_negative"],["hollow_hold",2,null,30,40,null,"dead_bug"],["pushup",2,12,null,45,"2111","incline_pushup"],["split_squat",2,"8/side",null,45,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w084","origin":"new_level","level":6,"number":84,
+      "title":{"en":"Mastery Review and Renewal"},
+      "description":{"en":"Complete the prescribed easy fundamentals and mobility review, record the week, and begin the next linear phase refreshed."},
+      "schedule":{"week":12,"day":7,"day_type":"review_recovery","minutes":50,"rpe":4,"focus":["review","fundamentals","mobility","recovery"]},
+      "warmup":[["easy_walk",1,null,900,0,null,null],["arm_swings",1,12,null,10,"controlled",null],["leg_swings",1,"8/side",null,10,"controlled",null]],
+      "main":[["pullup",2,7,null,75,"2111","assisted_pullup"],["parallel_dip",2,10,null,75,"2111","assisted_dip"],["pushup",2,14,null,50,"2111","incline_pushup"],["squat",2,20,null,50,"3010","box_squat"],["dead_bug",2,"10/side",null,45,"slow",null],["foot_assisted_hang",2,null,30,45,null,null]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["lat_stretch",2,null,45,10,null,null],["slow_breathing",1,null,360,0,null,null]]
+    },
+    {
+      "id":"new-l6-w085","origin":"new_level","level":6,"number":85,
+      "title":{"en":"Turnover Rebuild Ladder"},
+      "description":{"en":"Rebuild crisp bar turnover with three assisted triples, then complete the exact chest-to-bar, straight-bar dip, squat, and core sequence."},
+      "schedule":{"week":13,"day":1,"day_type":"muscleup_rebuild","minutes":46,"rpe":7,"focus":["muscle_up","pull_up","dip","squat","core"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["wrist_circles",2,10,null,10,"each_direction",null],["active_hang",2,null,20,30,"controlled","dead_hang"],["hollow_arch_swing",2,6,null,40,"small","hollow_hold"]],
+      "main":[["band_muscleup",3,3,null,120,"crisp","jump_muscleup"],["chest_to_bar",3,4,null,105,"explosive","pullup"],["straight_bar_dip",3,8,null,90,"2111","straight_bar_support"],["squat",3,22,null,50,"3010","box_squat"],["dead_bug",2,"10/side",null,40,"slow",null]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null],["chest_stretch",2,null,40,10,null,null]]
+    },
+    {
+      "id":"new-l6-w086","origin":"new_level","level":6,"number":86,
+      "title":{"en":"Long-Line Front Lever Steps"},
+      "description":{"en":"Complete advanced-tuck holds before two one-leg samples, then reinforce the same body line with rows, pull-ups, lunges, and side planks."},
+      "schedule":{"week":13,"day":2,"day_type":"front_lever_steps","minutes":48,"rpe":7,"focus":["front_lever","row","pull_up","lunge","core"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["shoulder_cars",2,6,null,15,"slow",null],["scapular_pull",2,8,null,30,"controlled","active_hang"],["hollow_hold",2,null,20,30,"braced","dead_bug"]],
+      "main":[["advanced_tuck_front",3,null,8,120,"isometric","tuck_front_hold"],["one_leg_front",2,null,5,135,"isometric","advanced_tuck_front"],["tuck_front_row",3,7,null,75,"2111","inverted_row"],["pullup",3,7,null,90,"2111","assisted_pullup"],["reverse_lunge",3,"10/side",null,50,"3010","box_squat"],["side_plank",2,null,"30/side",35,"alternate_sides","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w087","origin":"new_level","level":6,"number":87,
+      "title":{"en":"Lean-to-Tuck Press Craft"},
+      "description":{"en":"Link measured planche leans to two advanced-tuck holds, then complete controlled planche push-ups, dips, paused squats, and hollow work."},
+      "schedule":{"week":13,"day":3,"day_type":"planche_press_craft","minutes":45,"rpe":6,"focus":["planche","push_up","dip","squat","core"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["wrist_rocks",3,10,null,15,"controlled",null],["scapular_pushup",2,8,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["planche_lean",3,null,20,75,"controlled","elevated_plank"],["advanced_tuck_planche",2,null,4,120,"isometric","tuck_planche"],["pseudo_planche_pushup",3,6,null,90,"3110","pushup"],["parallel_dip",3,9,null,75,"2111","assisted_dip"],["pause_squat",3,18,null,50,"32X0","box_squat"],["hollow_hold",2,null,30,40,"braced","dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w088","origin":"new_level","level":6,"number":88,
+      "title":{"en":"Joint-Space Recovery Walk"},
+      "description":{"en":"Follow a relaxed walk with a complete shoulder, spine, hip, squat, and trunk mobility sequence to restore training range."},
+      "schedule":{"week":13,"day":4,"day_type":"full_mobility_recovery","minutes":48,"rpe":3,"focus":["walking","shoulder_mobility","spine_mobility","hip_mobility"]},
+      "warmup":[["easy_walk",1,null,900,0,"relaxed",null],["wrist_circles",2,10,null,10,"each_direction",null],["ankle_rocks",2,"10/side",null,10,"controlled",null]],
+      "main":[["wall_slide",2,10,null,30,"slow",null],["shoulder_cars",2,6,null,25,"slow",null],["thoracic_rotation",2,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",2,10,null,30,"controlled",null],["deep_squat_hold",2,null,40,30,"relaxed","box_squat"],["bird_dog",2,"6/side",null,30,"pause","dead_bug"]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,300,0,"nasal",null]]
+    },
+    {
+      "id":"new-l6-w089","origin":"new_level","level":6,"number":89,
+      "title":{"en":"Shoulder-Open Back Lever Steps"},
+      "description":{"en":"Prepare shoulder extension with partial skin-the-cat reps, complete advanced-tuck and one-leg holds, then finish the prescribed chin-up, support, and split-squat work."},
+      "schedule":{"week":13,"day":5,"day_type":"back_lever_steps","minutes":49,"rpe":7,"focus":["back_lever","chin_up","support","legs"]},
+      "warmup":[["low_jack",1,40,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",2,null,20,30,"controlled","dead_hang"],["skin_cat_partial",2,2,null,75,"easy_range","straight_bar_support"]],
+      "main":[["skin_cat_partial",3,3,null,90,"slow","straight_bar_support"],["advanced_tuck_back",3,null,8,120,"isometric","tuck_back_hold"],["one_leg_back",2,null,5,135,"isometric","advanced_tuck_back"],["chinup",3,7,null,90,"2111","assisted_pullup"],["support_hold",3,null,30,50,"locked","foot_assisted_support"],["split_squat",3,"10/side",null,50,"3010","box_squat"]],
+      "cooldown":[["chest_stretch",2,null,50,10,null,null],["lat_stretch",2,null,45,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w090","origin":"new_level","level":6,"number":90,
+      "title":{"en":"Dragon Descent Staircase"},
+      "description":{"en":"Descend through bent, one-leg, and full dragon negatives with exact low volume, then reinforce the trunk with hollow holds, push-ups, and lunges."},
+      "schedule":{"week":13,"day":6,"day_type":"dragon_descent_staircase","minutes":46,"rpe":7,"focus":["dragon_flag","core","push_up","lunge"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,20,30,"braced","dead_bug"]],
+      "main":[["bent_dragon_negative",3,3,null,90,"five_second_lower","candlestick"],["one_leg_dragon_negative",2,"2/side",null,120,"five_second_lower","bent_dragon_negative"],["full_dragon_negative",2,2,null,150,"five_second_lower","one_leg_dragon_negative"],["hollow_hold",3,null,28,40,"braced","dead_bug"],["pushup",3,14,null,50,"2111","incline_pushup"],["reverse_lunge",3,"10/side",null,50,"3010","box_squat"]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w091","origin":"new_level","level":6,"number":91,
+      "title":{"en":"Six-Station Foundation Circuit"},
+      "description":{"en":"Cycle through pull-ups, dips, push-ups, tempo squats, step-ups, and knee raises at a steady pace with clean reserve on every set."},
+      "schedule":{"week":13,"day":7,"day_type":"fundamentals_circuit","minutes":47,"rpe":6,"focus":["pull_up","dip","push_up","squat","lunge","core"]},
+      "warmup":[["easy_walk",1,null,180,0,"relaxed",null],["arm_swings",1,12,null,10,"controlled",null],["leg_swings",1,"8/side",null,10,"controlled",null],["hip_circles",1,10,null,10,"each_direction",null]],
+      "main":[["pullup",3,8,null,90,"2111","assisted_pullup"],["parallel_dip",3,10,null,75,"2111","assisted_dip"],["pushup",3,15,null,55,"2111","incline_pushup"],["tempo_squat",3,18,null,55,"4010","box_squat"],["step_up",3,"10/side",null,50,"controlled","box_squat"],["knee_raise",3,12,null,55,"2020","lying_knee_raise"]],
+      "cooldown":[["forearm_stretch",2,null,40,10,null,null],["quad_stretch",2,null,45,10,null,null],["lat_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w092","origin":"new_level","level":6,"number":92,
+      "title":{"en":"Four-Double Muscle-up Rhythm"},
+      "description":{"en":"Complete four strict muscle-up doubles with the listed band regression if needed, then perform three assisted triples and the exact pull, dip, squat, and hollow work."},
+      "schedule":{"week":14,"day":1,"day_type":"muscleup_repeatability","minutes":50,"rpe":8,"focus":["muscle_up","pull_up","dip","squat","core"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["wrist_circles",2,12,null,10,"each_direction",null],["active_hang",2,null,22,30,"controlled","dead_hang"],["chest_to_bar",2,2,null,90,"easy_power","pullup"]],
+      "main":[["strict_muscleup",4,2,null,150,"clean","band_muscleup"],["band_muscleup",3,3,null,105,"crisp","jump_muscleup"],["chest_to_bar",3,4,null,105,"explosive","pullup"],["straight_bar_dip",3,8,null,90,"2111","straight_bar_support"],["pause_squat",2,18,null,50,"32X0","box_squat"],["hollow_hold",2,null,28,40,"braced","dead_bug"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w093","origin":"new_level","level":6,"number":93,
+      "title":{"en":"Straddle Line Row Echo"},
+      "description":{"en":"Complete three straddle and two one-leg front-lever holds, then echo the body line through elevated rows, chin-ups, lunges, and hollow holds."},
+      "schedule":{"week":14,"day":2,"day_type":"front_lever_repeatability","minutes":49,"rpe":7,"focus":["front_lever","row","chin_up","lunge","core"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["shoulder_cars",2,6,null,15,"slow",null],["scapular_pull",2,8,null,30,"controlled","active_hang"],["arch_hold",2,null,20,30,"braced","bird_dog"]],
+      "main":[["straddle_front",3,null,4,135,"isometric","one_leg_front"],["one_leg_front",2,null,5,120,"isometric","advanced_tuck_front"],["feet_elevated_row",3,8,null,75,"2111","inverted_row"],["chinup",3,7,null,90,"2111","assisted_pullup"],["reverse_lunge",3,"11/side",null,50,"3010","box_squat"],["hollow_hold",3,null,30,40,"braced","dead_bug"]],
+      "cooldown":[["lat_stretch",2,null,50,10,null,null],["hamstring_stretch",2,null,50,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w094","origin":"new_level","level":6,"number":94,
+      "title":{"en":"Straddle Planche Touchpoints"},
+      "description":{"en":"Complete two advanced-tuck holds and two brief straddle touchpoints, then finish measured leans, planche push-ups, dips, Cossack squats, and trunk work."},
+      "schedule":{"week":14,"day":3,"day_type":"planche_touchpoints","minutes":48,"rpe":7,"focus":["planche","push_up","dip","lateral_legs","core"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["wrist_rocks",3,10,null,15,"controlled",null],["scapular_pushup",2,8,null,25,"2111","elevated_scapular_pushup"]],
+      "main":[["advanced_tuck_planche",2,null,5,120,"isometric","tuck_planche"],["straddle_planche",2,null,2,150,"fresh_hold","advanced_tuck_planche"],["planche_lean",3,null,20,75,"controlled","elevated_plank"],["pseudo_planche_pushup",3,6,null,90,"3110","pushup"],["parallel_dip",2,9,null,75,"2111","assisted_dip"],["cossack_squat",3,"8/side",null,55,"controlled","box_squat"],["dead_bug",2,"10/side",null,40,"slow",null]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["adductor_stretch",2,null,50,10,null,null]]
+    },
+    {
+      "id":"new-l6-w095","origin":"new_level","level":6,"number":95,
+      "title":{"en":"Spine-and-Hip Unload Flow"},
+      "description":{"en":"Use an easy walk and a slow six-movement mobility flow to unload the wrists, shoulders, spine, hips, knees, and ankles."},
+      "schedule":{"week":14,"day":4,"day_type":"mobility_unload","minutes":50,"rpe":3,"focus":["walking","mobility","breathing","recovery"]},
+      "warmup":[["easy_walk",1,null,1080,0,"relaxed",null],["arm_swings",1,12,null,10,"controlled",null],["hip_circles",1,10,null,10,"each_direction",null]],
+      "main":[["cat_cow",3,10,null,25,"slow",null],["wall_slide",3,10,null,30,"slow",null],["thoracic_rotation",3,"8/side",null,25,"slow",null],["ninety_ninety_hip_switch",3,10,null,30,"controlled",null],["deep_squat_hold",2,null,45,30,"relaxed","box_squat"],["calf_raise",2,15,null,30,"slow",null]],
+      "cooldown":[["ninety_ninety_hip_stretch",2,null,50,10,null,null],["calf_stretch",2,null,45,10,null,null],["slow_breathing",1,null,300,0,"nasal",null]]
+    },
+    {
+      "id":"new-l6-w096","origin":"new_level","level":6,"number":96,
+      "title":{"en":"Straddle Back Lever Anchor"},
+      "description":{"en":"Open the shoulders with partial skin-the-cat reps, complete straddle and advanced-tuck holds, then anchor the session with chin-ups, supports, squats, and bird dogs."},
+      "schedule":{"week":14,"day":5,"day_type":"back_lever_repeatability","minutes":50,"rpe":7,"focus":["back_lever","chin_up","support","squat","core"]},
+      "warmup":[["low_jack",1,40,null,20,"easy",null],["shoulder_cars",2,6,null,15,"slow",null],["active_hang",2,null,22,30,"controlled","dead_hang"],["skin_cat_partial",2,2,null,75,"easy_range","straight_bar_support"]],
+      "main":[["skin_cat_partial",3,3,null,90,"slow","straight_bar_support"],["straddle_back",3,null,4,135,"isometric","one_leg_back"],["advanced_tuck_back",2,null,8,120,"isometric","tuck_back_hold"],["chinup",3,8,null,90,"2111","assisted_pullup"],["support_hold",3,null,32,50,"locked","foot_assisted_support"],["tempo_squat",3,16,null,55,"4010","box_squat"],["bird_dog",2,"7/side",null,35,"pause","dead_bug"]],
+      "cooldown":[["chest_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["quad_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w097","origin":"new_level","level":6,"number":97,
+      "title":{"en":"Flag Single and Lower Pair"},
+      "description":{"en":"Complete three dragon-flag singles followed by two full negative pairs, then reinforce the trunk and legs with exact hanging raises, push-ups, split squats, and bridges."},
+      "schedule":{"week":14,"day":6,"day_type":"dragon_repeatability","minutes":47,"rpe":7,"focus":["dragon_flag","core","push_up","legs"]},
+      "warmup":[["march",1,null,120,0,"brisk",null],["cat_cow",2,8,null,15,"slow",null],["hollow_hold",2,null,22,30,"braced","dead_bug"]],
+      "main":[["dragon_flag",3,1,null,150,"controlled","full_dragon_negative"],["full_dragon_negative",2,2,null,135,"five_second_lower","one_leg_dragon_negative"],["hanging_leg_raise",3,8,null,75,"2020","knee_raise"],["pushup",3,15,null,55,"2111","incline_pushup"],["split_squat",3,"10/side",null,50,"3010","box_squat"],["glute_bridge",3,15,null,45,"2111",null]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["hamstring_stretch",2,null,50,10,null,null],["supine_twist",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w098","origin":"new_level","level":6,"number":98,
+      "title":{"en":"Paused Basics Mosaic"},
+      "description":{"en":"Assemble a varied foundation day from chin-ups, dips, paused pushes and squats, lateral legs, hanging core work, and controlled crawling."},
+      "schedule":{"week":14,"day":7,"day_type":"fundamentals_mosaic","minutes":49,"rpe":6,"focus":["chin_up","dip","push_up","squat","core","conditioning"]},
+      "warmup":[["easy_walk",1,null,180,0,"relaxed",null],["leg_swings",1,"8/side",null,10,"controlled",null],["arm_swings",1,12,null,10,"controlled",null],["ankle_rocks",1,"10/side",null,10,"controlled",null]],
+      "main":[["chinup",3,8,null,90,"2111","assisted_pullup"],["parallel_dip",3,11,null,75,"2111","assisted_dip"],["pause_pushup",3,12,null,60,"22X0","incline_pushup"],["pause_squat",3,18,null,55,"32X0","box_squat"],["cossack_squat",2,"8/side",null,50,"controlled","box_squat"],["hanging_leg_raise",3,9,null,60,"2020","knee_raise"],["bear_crawl",2,null,20,40,"controlled",null]],
+      "cooldown":[["forearm_stretch",2,null,45,10,null,null],["adductor_stretch",2,null,50,10,null,null],["lat_stretch",2,null,45,10,null,null]]
+    },
+    {
+      "id":"new-l6-w099","origin":"new_level","level":6,"number":99,
+      "title":{"en":"Five-Line Mastery Relay"},
+      "description":{"en":"Complete two exact sets for muscle-up, front lever, planche, back lever, and dragon flag in sequence, then close with pull-up, dip, push-up, and squat basics."},
+      "schedule":{"week":15,"day":1,"day_type":"five_skill_relay","minutes":56,"rpe":7,"focus":["muscle_up","front_lever","planche","back_lever","dragon_flag","fundamentals"]},
+      "warmup":[["low_jack",1,45,null,20,"easy",null],["wrist_rocks",2,10,null,15,"controlled",null],["active_hang",2,null,20,30,"controlled","dead_hang"],["hollow_hold",2,null,20,30,"braced","dead_bug"]],
+      "main":[["strict_muscleup",2,2,null,150,"clean","band_muscleup"],["straddle_front",2,null,4,135,"isometric","one_leg_front"],["advanced_tuck_planche",2,null,5,135,"isometric","tuck_planche"],["straddle_back",2,null,4,135,"isometric","one_leg_back"],["dragon_flag",2,1,null,150,"controlled","full_dragon_negative"],["pullup",2,6,null,90,"2111","assisted_pullup"],["parallel_dip",2,8,null,75,"2111","assisted_dip"],["pushup",2,12,null,50,"2111","incline_pushup"],["squat",2,18,null,50,"3010","box_squat"]],
+      "cooldown":[["forearm_stretch",2,null,50,10,null,null],["lat_stretch",2,null,50,10,null,null],["hip_flexor_stretch",2,null,45,10,null,null],["slow_breathing",1,null,240,0,"nasal",null]]
+    },
+    {
+      "id":"new-l6-w100","origin":"new_level","level":6,"number":100,
+      "title":{"en":"Hundredth Session Reset"},
+      "description":{"en":"Mark the hundredth session with easy full-body fundamentals, gentle mobility, and unhurried breathing that closes the guided catalog."},
+      "schedule":{"week":15,"day":2,"day_type":"century_recovery","minutes":50,"rpe":4,"focus":["fundamentals","mobility","recovery","reflection"]},
+      "warmup":[["easy_walk",1,null,900,0,"relaxed",null],["arm_swings",1,12,null,10,"controlled",null],["leg_swings",1,"8/side",null,10,"controlled",null],["wrist_circles",1,10,null,10,"each_direction",null]],
+      "main":[["assisted_pullup",2,8,null,60,"controlled",null],["assisted_dip",2,10,null,60,"controlled",null],["incline_pushup",2,12,null,45,"2111","wall_pushup"],["box_squat",2,15,null,45,"3010",null],["reverse_lunge",2,"8/side",null,45,"3010","box_squat"],["dead_bug",2,"8/side",null,35,"slow",null],["wall_slide",2,10,null,30,"slow",null]],
+      "cooldown":[["child_pose",2,null,50,10,null,null],["chest_stretch",2,null,45,10,null,null],["hamstring_stretch",2,null,45,10,null,null],["slow_breathing",1,null,360,0,"nasal",null]]
+    }
+  ]
+}

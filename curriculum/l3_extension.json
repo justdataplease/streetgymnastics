@@ -1,0 +1,888 @@
+{
+  "schema_version": "2.0.0",
+  "content_origin": "llm_extension",
+  "truth_notice": {
+    "en": "These Level 3 extension sessions are newly authored for the revival and are not recovered Street Gymnastic PRO data."
+  },
+  "step_tuple": ["movement_id", "sets", "reps", "seconds", "rest_seconds", "tempo", "regression_id"],
+  "programs": [
+    {
+      "id": "extension-l3-w071",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 71,
+      "title": {"en": "Re-enter the Bar Rhythm"},
+      "description": {"en": "Resume after the assigned recovery with controlled assisted turnovers, strict basics, and the listed regression at the first unclean repetition."},
+      "schedule": {"week": 8, "day": 2, "day_type": "muscleup_technique", "minutes": 38, "rpe": 6, "focus": ["muscle_up", "pull_up", "bar_dip", "core"]},
+      "warmup": [
+        ["low_jack", 1, 40, null, 20, "easy", "march"],
+        ["arm_swings", 1, 12, null, 10, "controlled", "shoulder_cars"],
+        ["chest_to_bar", 2, 2, null, 75, "easy_power", "pullup"]
+      ],
+      "main": [
+        ["band_muscleup", 3, 2, null, 120, "clean", "jump_muscleup"],
+        ["low_bar_transition", 3, 3, null, 90, "controlled", "straight_bar_support"],
+        ["pullup", 3, 6, null, 90, "21X1", "assisted_pullup"],
+        ["straight_bar_dip", 3, 7, null, 75, "2111", "straight_bar_support"],
+        ["dead_bug", 2, "7/side", null, 30, "slow", null]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 30, 10, "relaxed", null],
+        ["forearm_stretch", 2, null, 25, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w072",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 72,
+      "title": {"en": "Front Lever Line Builder"},
+      "description": {"en": "Build the front line through timed tucks and rows, using each listed regression as soon as the pelvis drops or the elbows lose position."},
+      "schedule": {"week": 8, "day": 3, "day_type": "front_lever_pull", "minutes": 43, "rpe": 7, "focus": ["front_lever", "horizontal_pull", "pull_up", "legs"]},
+      "warmup": [
+        ["march", 1, null, 120, 0, "easy", null],
+        ["shoulder_cars", 1, 6, null, 10, "slow", null],
+        ["active_hang", 2, null, 15, 30, "quiet", "foot_assisted_hang"]
+      ],
+      "main": [
+        ["tuck_front_hold", 4, null, 10, 75, "isometric", "tuck_front_row"],
+        ["advanced_tuck_front", 3, null, 5, 90, "isometric", "tuck_front_hold"],
+        ["tuck_front_row", 3, 6, null, 75, "2111", "inverted_row"],
+        ["pullup", 3, 7, null, 105, "21X1", "assisted_pullup"],
+        ["reverse_lunge", 3, "10/side", null, 60, "3010", "split_squat"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hamstring_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w073",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 73,
+      "title": {"en": "Planche Press and Steps"},
+      "description": {"en": "Pair measured forward lean and pressing with single-leg strength; use the listed regression whenever wrist comfort or bodyline quality changes."},
+      "schedule": {"week": 8, "day": 4, "day_type": "planche_push_legs", "minutes": 42, "rpe": 7, "focus": ["planche", "dip", "single_leg", "core"]},
+      "warmup": [
+        ["low_jack", 1, 40, null, 20, "easy", "march"],
+        ["wrist_rocks", 2, 8, null, 15, "controlled", "wrist_circles"],
+        ["scapular_pushup", 2, 6, null, 25, "2111", "elevated_scapular_pushup"]
+      ],
+      "main": [
+        ["planche_lean", 4, null, 12, 75, "isometric", "elevated_plank"],
+        ["pseudo_planche_pushup", 3, 5, null, 90, "31X1", "pushup"],
+        ["parallel_dip", 3, 9, null, 90, "2111", "assisted_dip"],
+        ["step_up", 3, "10/side", null, 60, "3010", "box_squat"],
+        ["hollow_hold", 3, null, 25, 45, "isometric", "dead_bug"]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 30, 10, "relaxed", null],
+        ["forearm_stretch", 2, null, 25, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w074",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 74,
+      "title": {"en": "Back-Line Recovery Practice"},
+      "description": {"en": "Use low-dose back-lever entries and dragon negatives as restorative technique, applying the listed regression before any shoulder or trunk strain."},
+      "schedule": {"week": 8, "day": 5, "day_type": "back_dragon_technique_recovery", "minutes": 34, "rpe": 4, "focus": ["recovery", "back_lever", "dragon_flag", "mobility"]},
+      "warmup": [
+        ["easy_walk", 1, null, 180, 0, "easy", "march"],
+        ["thoracic_rotation", 1, "8/side", null, 10, "slow", "cat_cow"],
+        ["hip_circles", 1, "8/side", null, 10, "controlled", null],
+        ["candlestick", 2, 4, null, 45, "controlled", "lying_knee_raise"]
+      ],
+      "main": [
+        ["skin_cat_partial", 2, 2, null, 75, "slow", "straight_bar_support"],
+        ["tuck_back_entry", 2, 2, null, 60, "controlled", "skin_cat_partial"],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["bird_dog", 2, "6/side", null, 30, "slow", "dead_bug"],
+        ["deep_squat_hold", 2, null, 30, 30, "relaxed", "box_squat"]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 30, 10, "relaxed", null],
+        ["supine_twist", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w075",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 75,
+      "title": {"en": "Foundation Strength Return"},
+      "description": {"en": "Rebuild the basic pull, dip, push, squat, and hanging-core patterns with fixed submaximal sets and each listed regression at form loss."},
+      "schedule": {"week": 8, "day": 6, "day_type": "fundamentals_strength", "minutes": 44, "rpe": 7, "focus": ["pull_up", "dip", "push_up", "legs", "core"]},
+      "warmup": [
+        ["march", 1, null, 150, 0, "easy", null],
+        ["leg_swings", 1, "8/side", null, 10, "controlled", "hip_circles"],
+        ["arm_swings", 1, 14, null, 10, "controlled", "shoulder_cars"]
+      ],
+      "main": [
+        ["pullup", 4, 7, null, 105, "21X1", "assisted_pullup"],
+        ["parallel_dip", 4, 9, null, 90, "2111", "assisted_dip"],
+        ["pushup", 3, 15, null, 60, "2010", "incline_pushup"],
+        ["squat", 3, 22, null, 55, "3010", "box_squat"],
+        ["knee_raise", 3, 10, null, 55, "2020", "lying_knee_raise"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 30, 10, "relaxed", null],
+        ["quad_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w076",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 76,
+      "title": {"en": "Five-Skill Connection Day"},
+      "description": {"en": "Complete one concise dose for every goal in sequence, retain the foundational push-up, and use the listed regression immediately whenever a shape or turnover is not clean."},
+      "schedule": {"week": 8, "day": 7, "day_type": "all_goal_technique", "minutes": 45, "rpe": 6, "focus": ["muscle_up", "front_lever", "back_lever", "dragon_flag", "planche", "push_up"]},
+      "warmup": [
+        ["easy_walk", 1, null, 150, 0, "easy", "march"],
+        ["shoulder_cars", 1, 6, null, 10, "slow", null],
+        ["wrist_circles", 1, 10, null, 10, "each_direction", null]
+      ],
+      "main": [
+        ["band_muscleup", 2, 2, null, 105, "clean", "jump_muscleup"],
+        ["tuck_front_hold", 2, null, 8, 60, "isometric", "tuck_front_row"],
+        ["tuck_back_hold", 2, null, 8, 75, "isometric", "tuck_back_entry"],
+        ["planche_lean", 2, null, 10, 60, "isometric", "elevated_plank"],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["pushup", 2, 10, null, 45, "2111", "incline_pushup"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 30, 10, "relaxed", null],
+        ["hip_flexor_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w077",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 77,
+      "title": {"en": "Clean Muscle-up Pairs"},
+      "description": {"en": "Accumulate four clean muscle-up pairs before balanced pulling, support, and leg work; use the listed regression at the first slow transition."},
+      "schedule": {"week": 9, "day": 1, "day_type": "muscleup_strength", "minutes": 45, "rpe": 7, "focus": ["muscle_up", "vertical_pull", "bar_support", "legs"]},
+      "warmup": [
+        ["low_jack", 1, 45, null, 20, "easy", "march"],
+        ["arm_swings", 1, 14, null, 10, "controlled", "shoulder_cars"],
+        ["hollow_arch_swing", 2, 6, null, 40, "small", "active_hang"]
+      ],
+      "main": [
+        ["strict_muscleup", 4, 2, null, 165, "clean_pair", "band_muscleup"],
+        ["chest_to_bar", 4, 3, null, 120, "10X1", "pullup"],
+        ["straight_bar_dip", 3, 8, null, 90, "2111", "straight_bar_support"],
+        ["pullup", 3, 7, null, 105, "21X1", "assisted_pullup"],
+        ["split_squat", 3, "10/side", null, 60, "3010", "box_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 30, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w078",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 78,
+      "title": {"en": "One-Leg Front Introduction"},
+      "description": {"en": "Touch the one-leg front lever only after stable advanced tucks, then complete the listed rows, pulls, and core work with prescribed regressions."},
+      "schedule": {"week": 9, "day": 2, "day_type": "front_lever_progression", "minutes": 44, "rpe": 7, "focus": ["front_lever", "horizontal_pull", "vertical_pull", "core"]},
+      "warmup": [
+        ["march", 1, null, 120, 0, "easy", null],
+        ["shoulder_cars", 1, 6, null, 10, "slow", null],
+        ["scapular_pull", 2, 6, null, 30, "2111", "active_hang"]
+      ],
+      "main": [
+        ["advanced_tuck_front", 4, null, 7, 90, "isometric", "tuck_front_hold"],
+        ["one_leg_front", 3, null, "3/side", 105, "isometric", "advanced_tuck_front"],
+        ["tuck_front_row", 3, 6, null, 75, "2111", "inverted_row"],
+        ["assisted_pullup", 3, 7, null, 75, "21X1", "inverted_row"],
+        ["knee_raise", 3, 11, null, 55, "2020", "lying_knee_raise"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hamstring_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w079",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 79,
+      "title": {"en": "Planche Lean Ladder"},
+      "description": {"en": "Move from frog balance to measured leans and pressing, keeping the assigned leg work and using the listed regression at any wrist or bodyline change."},
+      "schedule": {"week": 9, "day": 3, "day_type": "planche_push_strength", "minutes": 43, "rpe": 7, "focus": ["planche", "balance", "dip", "legs"]},
+      "warmup": [
+        ["low_jack", 1, 42, null, 20, "easy", "march"],
+        ["wrist_rocks", 2, 9, null, 15, "controlled", "wrist_circles"],
+        ["scapular_pushup", 2, 7, null, 25, "2111", "elevated_scapular_pushup"]
+      ],
+      "main": [
+        ["frog_stand", 3, null, 15, 60, "isometric", "planche_lean"],
+        ["planche_lean", 4, null, 15, 75, "isometric", "elevated_plank"],
+        ["pseudo_planche_pushup", 3, 6, null, 90, "31X1", "pushup"],
+        ["parallel_dip", 3, 10, null, 90, "2111", "assisted_dip"],
+        ["reverse_lunge", 3, "11/side", null, 60, "3010", "split_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 30, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w080",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 80,
+      "title": {"en": "Shoulders and Back-Line Restore"},
+      "description": {"en": "Restore shoulder range while rehearsing low-dose back-lever and dragon positions, applying the listed regression before effort rises above recovery pace."},
+      "schedule": {"week": 9, "day": 4, "day_type": "back_dragon_mobility_recovery", "minutes": 35, "rpe": 4, "focus": ["recovery", "back_lever", "dragon_flag", "shoulder_mobility"]},
+      "warmup": [
+        ["easy_walk", 1, null, 240, 0, "easy", "march"],
+        ["cat_cow", 2, 8, null, 15, "slow", null],
+        ["thoracic_rotation", 1, "8/side", null, 10, "slow", "cat_cow"]
+      ],
+      "main": [
+        ["wall_slide", 2, 10, null, 30, "slow", null],
+        ["skin_cat_partial", 2, 2, null, 75, "slow", "straight_bar_support"],
+        ["tuck_back_hold", 2, null, 8, 60, "isometric", "tuck_back_entry"],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["dead_bug", 2, "6/side", null, 30, "slow", null]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["supine_twist", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w081",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 81,
+      "title": {"en": "Muscle-up Quality Bank"},
+      "description": {"en": "Bank five clean muscle-up pairs without grinding, then finish the assigned pull, dip, and bodyline work using each listed regression at form loss."},
+      "schedule": {"week": 9, "day": 5, "day_type": "muscleup_quality", "minutes": 55, "rpe": 8, "focus": ["muscle_up", "vertical_pull", "bar_dip", "core"]},
+      "warmup": [
+        ["low_jack", 1, 45, null, 20, "easy", "march"],
+        ["arm_swings", 1, 14, null, 10, "controlled", "shoulder_cars"],
+        ["hollow_arch_swing", 2, 7, null, 40, "small", "active_hang"]
+      ],
+      "main": [
+        ["strict_muscleup", 5, 2, null, 180, "clean_pair", "band_muscleup"],
+        ["band_muscleup", 3, 2, null, 135, "clean", "jump_muscleup"],
+        ["chest_to_bar", 4, 3, null, 135, "10X1", "pullup"],
+        ["straight_bar_dip", 4, 9, null, 90, "2111", "straight_bar_support"],
+        ["hollow_hold", 3, null, 30, 45, "isometric", "dead_bug"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w082",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 82,
+      "title": {"en": "Back Lever and Dragon Control"},
+      "description": {"en": "Alternate back-lever positions with controlled dragon negatives, then complete pulling and squats using the listed regressions whenever shape changes."},
+      "schedule": {"week": 9, "day": 6, "day_type": "back_lever_dragon_strength", "minutes": 45, "rpe": 7, "focus": ["back_lever", "dragon_flag", "pull_up", "legs"]},
+      "warmup": [
+        ["march", 1, null, 130, 0, "easy", null],
+        ["shoulder_cars", 1, 7, null, 10, "slow", null],
+        ["active_hang", 2, null, 16, 30, "quiet", "foot_assisted_hang"]
+      ],
+      "main": [
+        ["tuck_back_entry", 3, 3, null, 75, "controlled", "skin_cat_partial"],
+        ["advanced_tuck_back", 4, null, 6, 105, "isometric", "tuck_back_hold"],
+        ["one_leg_dragon_negative", 3, "2/side", null, 105, "7000", "bent_dragon_negative"],
+        ["chinup", 3, 7, null, 90, "21X1", "assisted_pullup"],
+        ["squat", 3, 20, null, 55, "3010", "box_squat"]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hip_flexor_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w083",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 83,
+      "title": {"en": "Park Basics Relay"},
+      "description": {"en": "Complete the assigned row, dip, push-up, lateral-leg, and side-core stations at an even pace, using each listed regression before technique fades."},
+      "schedule": {"week": 9, "day": 7, "day_type": "fundamentals_relay", "minutes": 42, "rpe": 6, "focus": ["horizontal_pull", "dip", "push_up", "legs", "core"]},
+      "warmup": [
+        ["easy_walk", 1, null, 180, 0, "easy", "march"],
+        ["leg_swings", 1, "9/side", null, 10, "controlled", "hip_circles"],
+        ["arm_swings", 1, 15, null, 10, "controlled", "shoulder_cars"]
+      ],
+      "main": [
+        ["feet_elevated_row", 3, 10, null, 75, "2111", "inverted_row"],
+        ["assisted_dip", 3, 10, null, 75, "2111", "support_hold"],
+        ["pause_pushup", 3, 12, null, 60, "22X1", "incline_pushup"],
+        ["cossack_squat", 3, "7/side", null, 55, "3010", "split_squat"],
+        ["side_plank", 3, null, "25/side", 45, "isometric", "dead_bug"]
+      ],
+      "cooldown": [
+        ["adductor_stretch", 2, null, 30, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w084",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 84,
+      "title": {"en": "Front Lever Hold and Row"},
+      "description": {"en": "Combine controlled front-lever holds and rows with strict pulling and squats, moving to each listed regression at the first lost bodyline."},
+      "schedule": {"week": 10, "day": 1, "day_type": "front_lever_strength", "minutes": 45, "rpe": 7, "focus": ["front_lever", "horizontal_pull", "pull_up", "legs"]},
+      "warmup": [
+        ["march", 1, null, 130, 0, "easy", null],
+        ["shoulder_cars", 1, 7, null, 10, "slow", null],
+        ["scapular_pull", 2, 7, null, 30, "2111", "active_hang"]
+      ],
+      "main": [
+        ["tuck_front_hold", 3, null, 12, 75, "isometric", "tuck_front_row"],
+        ["advanced_tuck_front", 4, null, 6, 90, "isometric", "tuck_front_hold"],
+        ["tuck_front_row", 4, 6, null, 75, "2111", "inverted_row"],
+        ["pullup", 3, 8, null, 105, "21X1", "assisted_pullup"],
+        ["squat", 3, 20, null, 55, "3010", "box_squat"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hamstring_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w085",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 85,
+      "title": {"en": "Planche Push Foundation"},
+      "description": {"en": "Build wrist-tolerant straight-arm pressing from elevated support through frog and lean work, using each listed regression before alignment changes."},
+      "schedule": {"week": 10, "day": 2, "day_type": "planche_push_progression", "minutes": 44, "rpe": 7, "focus": ["planche", "balance", "push_up", "legs"]},
+      "warmup": [
+        ["low_jack", 1, 44, null, 20, "easy", "march"],
+        ["wrist_rocks", 2, 10, null, 15, "controlled", "wrist_circles"],
+        ["scapular_pushup", 2, 7, null, 25, "2111", "elevated_scapular_pushup"]
+      ],
+      "main": [
+        ["elevated_plank", 3, null, 25, 45, "isometric", "incline_plank"],
+        ["frog_stand", 3, null, 18, 60, "isometric", "planche_lean"],
+        ["planche_lean", 3, null, 14, 75, "isometric", "elevated_plank"],
+        ["pseudo_planche_pushup", 3, 6, null, 90, "31X1", "pushup"],
+        ["split_squat", 3, "12/side", null, 60, "3010", "box_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 30, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w086",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 86,
+      "title": {"en": "Strict Turnover Practice"},
+      "description": {"en": "Complete five clean muscle-up pairs and the assigned bar-strength work with one rep in reserve, using the listed regression at the first slow turnover."},
+      "schedule": {"week": 10, "day": 3, "day_type": "muscleup_strength", "minutes": 55, "rpe": 8, "focus": ["muscle_up", "vertical_pull", "bar_dip", "dip", "core"]},
+      "warmup": [
+        ["low_jack", 1, 46, null, 20, "easy", "march"],
+        ["arm_swings", 1, 15, null, 10, "controlled", "shoulder_cars"],
+        ["hollow_arch_swing", 2, 7, null, 40, "small", "active_hang"]
+      ],
+      "main": [
+        ["strict_muscleup", 5, 2, null, 180, "clean_pair", "band_muscleup"],
+        ["band_muscleup", 3, 3, null, 135, "clean", "jump_muscleup"],
+        ["chest_to_bar", 4, 3, null, 135, "10X1", "pullup"],
+        ["straight_bar_dip", 4, 9, null, 90, "2111", "straight_bar_support"],
+        ["knee_raise", 3, 12, null, 55, "2020", "lying_knee_raise"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w087",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 87,
+      "title": {"en": "Midweek Back-Line Restore"},
+      "description": {"en": "Use gentle back-lever entries, short holds, and dragon negatives to restore positions, taking the listed regression before recovery effort rises."},
+      "schedule": {"week": 10, "day": 4, "day_type": "back_dragon_technique_recovery", "minutes": 35, "rpe": 4, "focus": ["recovery", "back_lever", "dragon_flag", "bodyline"]},
+      "warmup": [
+        ["easy_walk", 1, null, 240, 0, "easy", "march"],
+        ["cat_cow", 2, 9, null, 15, "slow", null],
+        ["shoulder_cars", 1, 6, null, 10, "slow", null]
+      ],
+      "main": [
+        ["wall_slide", 2, 11, null, 30, "slow", null],
+        ["tuck_back_entry", 2, 2, null, 60, "controlled", "skin_cat_partial"],
+        ["tuck_back_hold", 2, null, 9, 60, "isometric", "tuck_back_entry"],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["bird_dog", 2, "7/side", null, 30, "slow", "dead_bug"]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["supine_twist", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w088",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 88,
+      "title": {"en": "One-Leg Back Control"},
+      "description": {"en": "Build one-leg back-lever control through measured partial skin-the-cat work, advanced-tuck holds, and brief one-leg shapes, taking the listed regression at the first loss of shoulder position."},
+      "schedule": {
+        "week": 10,
+        "day": 5,
+        "day_type": "back_lever_strength",
+        "minutes": 45,
+        "rpe": 7,
+        "focus": ["back_lever", "vertical_pull", "legs"]
+      },
+      "warmup": [
+        ["march", 1, null, 140, 0, "easy", null],
+        ["shoulder_cars", 1, "7/side", null, 10, "slow", null],
+        ["active_hang", 2, null, 16, 30, "controlled", "foot_assisted_hang"]
+      ],
+      "main": [
+        ["skin_cat_partial", 3, 3, null, 90, "slow", "straight_bar_support"],
+        ["advanced_tuck_back", 4, null, 7, 105, "isometric", "tuck_back_hold"],
+        ["one_leg_back", 3, null, "3/side", 120, "isometric", "advanced_tuck_back"],
+        ["chinup", 3, 8, null, 90, "controlled", "assisted_pullup"],
+        ["reverse_lunge", 3, "11/side", null, 60, "controlled", "split_squat"]
+      ],
+      "cooldown": [
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hip_flexor_stretch", 2, null, 30, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w089",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 89,
+      "title": {"en": "Dragon Flag Leg Drive"},
+      "description": {"en": "Strengthen the dragon-flag lowering line with bent-leg and one-leg negatives, then reinforce trunk tension, pushing, and single-leg strength at controlled speed."},
+      "schedule": {
+        "week": 10,
+        "day": 6,
+        "day_type": "dragon_flag_strength",
+        "minutes": 43,
+        "rpe": 7,
+        "focus": ["dragon_flag", "core", "push_up", "legs"]
+      },
+      "warmup": [
+        ["march", 1, null, 150, 0, "easy", null],
+        ["leg_swings", 1, "9/side", null, 10, "controlled", null],
+        ["cat_cow", 2, 8, null, 15, "slow", null]
+      ],
+      "main": [
+        ["bent_dragon_negative", 2, 2, null, 105, "7000", "candlestick"],
+        ["one_leg_dragon_negative", 2, "1/side", null, 120, "7000", "bent_dragon_negative"],
+        ["hollow_hold", 3, null, 30, 45, "isometric", "dead_bug"],
+        ["step_up", 3, "10/side", null, 60, "controlled", "box_squat"],
+        ["pushup", 3, 16, null, 60, "controlled", "incline_pushup"]
+      ],
+      "cooldown": [
+        ["hip_flexor_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hamstring_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w090",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 90,
+      "title": {"en": "Five-Goal Fundamentals Circuit"},
+      "description": {"en": "Rehearse one concise dose of every Level 3 skill goal, then finish with squat, row, and push-up fundamentals so the full sequence stays balanced without chasing fatigue."},
+      "schedule": {
+        "week": 10,
+        "day": 7,
+        "day_type": "five_skill_fundamentals",
+        "minutes": 48,
+        "rpe": 6,
+        "focus": ["muscle_up", "front_lever", "back_lever", "dragon_flag", "planche", "legs", "horizontal_pull", "push_up"]
+      },
+      "warmup": [
+        ["easy_walk", 1, null, 180, 0, "easy", "march"],
+        ["shoulder_cars", 1, "7/side", null, 10, "slow", null],
+        ["wrist_circles", 1, "10/side", null, 10, "slow", null]
+      ],
+      "main": [
+        ["jump_muscleup", 2, 3, null, 90, "controlled", "low_bar_transition"],
+        ["tuck_front_hold", 2, null, 9, 60, "isometric", "tuck_front_row"],
+        ["tuck_back_hold", 2, null, 9, 75, "isometric", "tuck_back_entry"],
+        ["planche_lean", 2, null, 11, 60, "isometric", "elevated_plank"],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["squat", 2, 16, null, 45, "controlled", "box_squat"],
+        ["inverted_row", 2, 10, null, 60, "controlled", "high_inverted_row"],
+        ["pushup", 2, 12, null, 45, "2111", "incline_pushup"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["quad_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w091",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 91,
+      "title": {"en": "Muscle-up Strength Reserve"},
+      "description": {"en": "Perform crisp muscle-up pairs while keeping one clean repetition in reserve, then develop the pull, dip, and leg strength that supports repeatable transitions."},
+      "schedule": {
+        "week": 11,
+        "day": 1,
+        "day_type": "muscle_up_strength",
+        "minutes": 55,
+        "rpe": 8,
+        "focus": ["muscle_up", "vertical_pull", "dip", "legs"]
+      },
+      "warmup": [
+        ["low_jack", 1, 48, null, 0, "easy", "march"],
+        ["arm_swings", 1, 15, null, 10, "controlled", null],
+        ["hollow_arch_swing", 2, 8, null, 30, "controlled", "hollow_hold"]
+      ],
+      "main": [
+        ["strict_muscleup", 5, 2, null, 180, "explosive", "band_muscleup"],
+        ["chest_to_bar", 4, 3, null, 135, "explosive", "pullup"],
+        ["pullup", 3, 8, null, 105, "controlled", "assisted_pullup"],
+        ["straight_bar_dip", 4, 10, null, 90, "controlled", "straight_bar_support"],
+        ["split_squat", 3, "10/side", null, 60, "controlled", "box_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w092",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 92,
+      "title": {"en": "Dual Lever Positions"},
+      "description": {"en": "Alternate front- and back-lever shapes in short exact holds, using the listed regression whenever the hips or shoulders leave the intended line, then retain pulling and squat basics."},
+      "schedule": {
+        "week": 11,
+        "day": 2,
+        "day_type": "dual_lever_technique",
+        "minutes": 46,
+        "rpe": 7,
+        "focus": ["front_lever", "back_lever", "vertical_pull", "legs"]
+      },
+      "warmup": [
+        ["march", 1, null, 140, 0, "easy", null],
+        ["shoulder_cars", 1, "7/side", null, 10, "slow", null],
+        ["active_hang", 2, null, 17, 30, "controlled", "foot_assisted_hang"]
+      ],
+      "main": [
+        ["advanced_tuck_front", 2, null, 7, 90, "isometric", "tuck_front_hold"],
+        ["one_leg_front", 2, null, 3, 105, "isometric", "advanced_tuck_front"],
+        ["advanced_tuck_back", 2, null, 7, 105, "isometric", "tuck_back_hold"],
+        ["one_leg_back", 2, null, 3, 120, "isometric", "advanced_tuck_back"],
+        ["tuck_front_row", 3, 7, null, 75, "controlled", "inverted_row"],
+        ["chinup", 3, 8, null, 90, "controlled", "assisted_pullup"],
+        ["squat", 3, 20, null, 55, "controlled", "box_squat"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w093",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 93,
+      "title": {"en": "Planche Dip Balance"},
+      "description": {"en": "Pair measured planche positions with pressing strength, keeping every lean and frog stand below form failure before finishing with dips and unilateral leg work."},
+      "schedule": {
+        "week": 11,
+        "day": 3,
+        "day_type": "planche_dip_strength",
+        "minutes": 45,
+        "rpe": 7,
+        "focus": ["planche", "push_up", "dip", "legs"]
+      },
+      "warmup": [
+        ["low_jack", 1, 46, null, 0, "easy", "march"],
+        ["wrist_rocks", 2, 10, null, 15, "slow", "wrist_circles"],
+        ["scapular_pushup", 2, 8, null, 30, "controlled", "elevated_scapular_pushup"]
+      ],
+      "main": [
+        ["frog_stand", 3, null, 20, 60, "isometric", "planche_lean"],
+        ["planche_lean", 4, null, 16, 75, "isometric", "elevated_plank"],
+        ["pseudo_planche_pushup", 3, 6, null, 90, "controlled", "pushup"],
+        ["parallel_dip", 4, 10, null, 90, "controlled", "assisted_dip"],
+        ["reverse_lunge", 3, "12/side", null, 60, "controlled", "split_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w094",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 94,
+      "title": {"en": "Dragon Mobility Recovery"},
+      "description": {"en": "Restore trunk and hip motion with easy dragon-flag mechanics, dead-bug control, and relaxed mobility; every repetition remains comfortably below strain."},
+      "schedule": {
+        "week": 11,
+        "day": 4,
+        "day_type": "dragon_mobility_recovery",
+        "minutes": 35,
+        "rpe": 4,
+        "focus": ["recovery", "dragon_flag", "core", "mobility"]
+      },
+      "warmup": [
+        ["easy_walk", 1, null, 240, 0, "easy", "march"],
+        ["cat_cow", 2, 10, null, 15, "slow", null],
+        ["thoracic_rotation", 1, "9/side", null, 10, "slow", null]
+      ],
+      "main": [
+        ["wall_slide", 2, 12, null, 30, "slow", null],
+        ["bent_dragon_negative", 2, 2, null, 75, "7000", "candlestick"],
+        ["dead_bug", 2, "7/side", null, 30, "slow", null],
+        ["deep_squat_hold", 2, null, 35, 30, "relaxed", "box_squat"],
+        ["ninety_ninety_hip_switch", 2, "8/side", null, 30, "slow", null]
+      ],
+      "cooldown": [
+        ["hip_flexor_stretch", 2, null, 35, 10, "relaxed", null],
+        ["supine_twist", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w095",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 95,
+      "title": {"en": "Bar Transition Repeats"},
+      "description": {"en": "Practice repeatable assisted turnovers and low-bar transitions, then reinforce high pulling, straight-bar support strength, and controlled hanging knee raises."},
+      "schedule": {
+        "week": 11,
+        "day": 5,
+        "day_type": "muscle_up_transition_volume",
+        "minutes": 46,
+        "rpe": 7,
+        "focus": ["muscle_up", "vertical_pull", "dip", "core"]
+      },
+      "warmup": [
+        ["low_jack", 1, 47, null, 0, "easy", "march"],
+        ["arm_swings", 1, 16, null, 10, "controlled", null],
+        ["hollow_arch_swing", 2, 8, null, 30, "controlled", "hollow_hold"]
+      ],
+      "main": [
+        ["band_muscleup", 4, 2, null, 135, "controlled", "jump_muscleup"],
+        ["low_bar_transition", 3, 4, null, 90, "controlled", "straight_bar_support"],
+        ["chest_to_bar", 4, 3, null, 135, "explosive", "pullup"],
+        ["straight_bar_dip", 3, 9, null, 90, "controlled", "straight_bar_support"],
+        ["knee_raise", 3, 12, null, 55, "controlled", "lying_knee_raise"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w096",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 96,
+      "title": {"en": "Lever and Dragon Triad"},
+      "description": {"en": "Train brief one-leg front-lever, back-lever, and dragon-flag positions in one precise session, ending each set before shape changes and using every listed regression immediately when needed."},
+      "schedule": {
+        "week": 11,
+        "day": 6,
+        "day_type": "lever_dragon_strength",
+        "minutes": 52,
+        "rpe": 8,
+        "focus": ["front_lever", "back_lever", "dragon_flag", "core", "support"]
+      },
+      "warmup": [
+        ["march", 1, null, 140, 0, "easy", null],
+        ["shoulder_cars", 1, "8/side", null, 10, "slow", null],
+        ["active_hang", 2, null, 18, 30, "controlled", "foot_assisted_hang"]
+      ],
+      "main": [
+        ["one_leg_front", 3, null, "4/side", 120, "isometric", "advanced_tuck_front"],
+        ["one_leg_back", 3, null, "4/side", 135, "isometric", "advanced_tuck_back"],
+        ["one_leg_dragon_negative", 2, "1/side", null, 120, "7000", "bent_dragon_negative"],
+        ["tuck_lsit", 3, null, 20, 60, "isometric", "straight_bar_support"],
+        ["arch_hold", 3, null, 30, 45, "isometric", "bird_dog"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w097",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 97,
+      "title": {"en": "Fundamentals Capacity Polish"},
+      "description": {"en": "Consolidate strict pulling, dips, push-ups, squats, and hollow-body endurance at a sustainable pace so the advanced work rests on dependable basics."},
+      "schedule": {
+        "week": 11,
+        "day": 7,
+        "day_type": "fundamentals_capacity",
+        "minutes": 43,
+        "rpe": 6,
+        "focus": ["vertical_pull", "dip", "push_up", "legs", "core"]
+      },
+      "warmup": [
+        ["easy_walk", 1, null, 180, 0, "easy", "march"],
+        ["leg_swings", 1, "10/side", null, 10, "controlled", null],
+        ["arm_swings", 1, 16, null, 10, "controlled", null]
+      ],
+      "main": [
+        ["pullup", 3, 8, null, 105, "controlled", "assisted_pullup"],
+        ["parallel_dip", 3, 10, null, 90, "controlled", "assisted_dip"],
+        ["pushup", 3, 15, null, 60, "controlled", "incline_pushup"],
+        ["squat", 3, 22, null, 55, "controlled", "box_squat"],
+        ["hollow_hold", 3, null, 30, 45, "isometric", "dead_bug"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 30, 10, "relaxed", null],
+        ["quad_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w098",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 98,
+      "title": {"en": "Front and Back Lever Rehearsal"},
+      "description": {"en": "Rehearse the strongest clean tuck and advanced-tuck lever positions accumulated so far, applying the listed regression as soon as the body line or shoulder position changes."},
+      "schedule": {
+        "week": 12,
+        "day": 1,
+        "day_type": "dual_lever_rehearsal",
+        "minutes": 45,
+        "rpe": 7,
+        "focus": ["front_lever", "back_lever", "vertical_pull"]
+      },
+      "warmup": [
+        ["march", 1, null, 140, 0, "easy", null],
+        ["shoulder_cars", 1, "8/side", null, 10, "slow", null],
+        ["scapular_pull", 2, 7, null, 30, "controlled", "active_hang"]
+      ],
+      "main": [
+        ["tuck_front_hold", 3, null, 12, 75, "isometric", "tuck_front_row"],
+        ["advanced_tuck_front", 3, null, 7, 90, "isometric", "tuck_front_hold"],
+        ["tuck_back_entry", 3, 3, null, 75, "controlled", "skin_cat_partial"],
+        ["advanced_tuck_back", 3, null, 7, 105, "isometric", "tuck_back_hold"],
+        ["pullup", 3, 8, null, 105, "controlled", "assisted_pullup"]
+      ],
+      "cooldown": [
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["chest_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w099",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 99,
+      "title": {"en": "Planche and Dragon Pairing"},
+      "description": {"en": "Pair planche leans and forward-biased presses with deliberate dragon-flag negatives, maintaining exact positions before closing with controlled split squats."},
+      "schedule": {
+        "week": 12,
+        "day": 2,
+        "day_type": "planche_dragon_strength",
+        "minutes": 44,
+        "rpe": 7,
+        "focus": ["planche", "dragon_flag", "push_up", "core", "legs"]
+      },
+      "warmup": [
+        ["low_jack", 1, 48, null, 0, "easy", "march"],
+        ["wrist_rocks", 2, 10, null, 15, "slow", "wrist_circles"],
+        ["cat_cow", 2, 8, null, 15, "slow", null]
+      ],
+      "main": [
+        ["planche_lean", 4, null, 16, 75, "isometric", "elevated_plank"],
+        ["pseudo_planche_pushup", 3, 7, null, 90, "controlled", "pushup"],
+        ["bent_dragon_negative", 2, 2, null, 105, "7000", "candlestick"],
+        ["one_leg_dragon_negative", 2, "1/side", null, 120, "7000", "bent_dragon_negative"],
+        ["split_squat", 3, "12/side", null, 60, "controlled", "box_squat"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["hip_flexor_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 90, 0, "calm", null]
+      ]
+    },
+    {
+      "id": "extension-l3-w100",
+      "origin": "llm_extension",
+      "level": 3,
+      "number": 100,
+      "title": {"en": "Hundredth-Day Bar Benchmark"},
+      "description": {"en": "Complete four clean muscle-up pairs, four sets of three chest-to-bar pulls, four sets of eight pull-ups, four sets of ten bar dips, and three sets of twelve knee raises with one repetition in reserve; use the listed regression at the first unclean repetition."},
+      "schedule": {
+        "week": 12,
+        "day": 3,
+        "day_type": "submaximal_bar_benchmark",
+        "minutes": 55,
+        "rpe": 8,
+        "focus": ["muscle_up", "vertical_pull", "dip", "core"]
+      },
+      "warmup": [
+        ["low_jack", 1, 50, null, 0, "easy", "march"],
+        ["arm_swings", 1, 16, null, 10, "controlled", null],
+        ["hollow_arch_swing", 2, 8, null, 30, "controlled", "hollow_hold"]
+      ],
+      "main": [
+        ["strict_muscleup", 4, 2, null, 180, "explosive", "band_muscleup"],
+        ["chest_to_bar", 4, 3, null, 135, "explosive", "pullup"],
+        ["pullup", 4, 8, null, 105, "controlled", "assisted_pullup"],
+        ["straight_bar_dip", 4, 10, null, 90, "controlled", "straight_bar_support"],
+        ["knee_raise", 3, 12, null, 55, "controlled", "lying_knee_raise"]
+      ],
+      "cooldown": [
+        ["forearm_stretch", 2, null, 35, 10, "relaxed", null],
+        ["lat_stretch", 2, null, 35, 10, "relaxed", null],
+        ["slow_breathing", 1, null, 120, 0, "calm", null]
+      ]
+    }
+  ]
+}
