@@ -145,10 +145,10 @@ template("low_bar_transition", 3000,
          apparatus=("mid_bar",))
 
 # pullover: hang -> hips to the bar -> rotate over -> support
-pose("po_tuck", facing=1, torso=200, arms=arm(-3, -9, LEFT), legs=[330, 330], leg_far=[332, 332], feet=330, head=200, pin=MB)
-pose("po_over", facing=1, torso=255, arms=arm(-8, 4, DOWN), legs=[262, 262], leg_far=[264, 264], feet=270, head=240, pin=MB)
+pose("po_tuck", facing=1, torso=200, arms=arm(7, -15, LEFT), legs=[340, 320], leg_far=[342, 322], feet=330, head=200, pin=MB)
+pose("po_over", facing=1, torso=60, arms=arm(-17, 13, DOWN), legs=[250, 245], leg_far=[252, 247], feet=250, head=60, pin=MB)
 pose("po_top", facing=1, torso=340, arms=arm(-3, 24, LEFT), legs=[190, 200], leg_far=[192, 202], feet=190, pin=MB)
-pose("po_knees", facing=1, torso=345, arms=arm(-3, 0, DOWN), legs=[320, 215], leg_far=[322, 217], feet=210, pin=MB)
+pose("po_knees", facing=1, torso=345, arms=arm(-3, 0, DOWN), legs=[35, 150], leg_far=[37, 152], pin=MB)
 template("pullover", 3800,
          [(0, "mu_hang"), (0.18, "po_knees"), (0.38, "po_tuck"), (0.55, "po_over"), (0.75, "po_top"), (0.88, "po_top"), (1, "mu_hang")],
          mode="loop", apparatus=("mid_bar",))
@@ -173,19 +173,20 @@ template("front_lever_raise", 2600, [(0, "hang_active"), (0.5, "fl_raise_mid"), 
 
 # ---------- inverted hang, skin the cat, back lever (chest-height bar so the shape fits) ----------
 pose("inv_tuck", facing=1, torso=180, arms=[0, 0], legs=[305, 130], leg_far=[307, 132], feet=140, head=180, pin=MB)
-pose("inv_hang", facing=1, torso=180, arms=[0, 0], legs=[0, 0], leg_far=[2, 2], feet=0, head=180, pin=MB)
-pose("bl_third", facing=1, torso=215, arms=[0, 0], legs=[35, 35], leg_far=[37, 37], feet=35, head=200, pin=MB)
+pose("inv_hang", facing=-1, torso=180, arms=[0, 0], legs=[0, 0], leg_far=[2, 2], feet=0, head=180, pin=MB)
+pose("inv_tuck_back", facing=-1, torso=180, arms=[0, 0], legs=[125, 315], leg_far=[127, 317], feet=320, head=180, pin=MB)
+pose("bl_third", facing=-1, torso=225, arms=[0, 0], legs=[45, 45], leg_far=[47, 47], feet=45, head=215, pin=MB)
 pose("bl_tuck", facing=-1, torso=270, arms=[0, 0], legs=[215, 45], leg_far=[217, 47], feet=40, head=280, pin=MB)
 pose("bl_tuck_high", base="bl_tuck", torso=245, legs=[195, 30], leg_far=[197, 32], feet=25, head=255)
 pose("bl_adv", base="bl_tuck", legs=[180, 90], leg_far=[182, 90], feet=90)
 pose("bl_one_leg", base="bl_tuck", leg_near=[90, 90], leg_far=[182, 90], foot_near=100, foot_far=90)
 pose("bl_straddle", base="bl_tuck", leg_near=[96, 96], leg_far=[84, 84], feet=100)
 pose("bl_full", base="bl_tuck", legs=[90, 90], leg_far=[92, 92], feet=100)
-pose("gh_partial", facing=-1, torso=235, arms=[0, 0], legs=[190, 30], leg_far=[192, 32], feet=25, head=245, pin=MB)
+pose("gh_partial", facing=1, torso=130, arms=[0, 0], legs=[255, 240], leg_far=[257, 242], feet=250, head=130, pin=MB)
 template("inverted_hang", 2800, [(0, "inv_tuck"), (0.6, "inv_hang"), (1, "inv_hang")], apparatus=("mid_bar",))
 template("inverted_hang_lower", 3000, [(0, "inv_hang"), (0.3, "inv_hang"), (1, "bl_third")], apparatus=("mid_bar",))
 template("skin_the_cat", 3200, [(0, "mu_hang"), (0.35, "po_knees"), (0.7, "inv_tuck"), (1, "gh_partial")], apparatus=("mid_bar", "mat"))
-template("back_lever_entry", 2800, [(0, "inv_tuck"), (0.3, "inv_tuck"), (1, "bl_tuck_high")], apparatus=("mid_bar", "mat"))
+template("back_lever_entry", 2800, [(0, "inv_tuck_back"), (0.3, "inv_tuck_back"), (1, "bl_tuck_high")], apparatus=("mid_bar",))
 template("back_lever_tuck", 2600, [(0, "bl_tuck_high"), (0.7, "bl_tuck"), (1, "bl_tuck")], apparatus=("mid_bar",))
 template("back_lever_adv", 2600, [(0, "bl_tuck"), (0.7, "bl_adv"), (1, "bl_adv")], apparatus=("mid_bar",))
 template("back_lever_one_leg", 2600, [(0, "bl_adv"), (0.7, "bl_one_leg"), (1, "bl_one_leg")], apparatus=("mid_bar",))

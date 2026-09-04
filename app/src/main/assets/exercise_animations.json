@@ -40,19 +40,6 @@
     ]
    }
   ],
-  "mat": [
-   {
-    "type": "round_rect",
-    "role": "floor",
-    "values": [
-     22,
-     102.0,
-     178,
-     108.0
-    ],
-    "filled": true
-   }
-  ],
   "high_bar": [
    {
     "type": "line",
@@ -64,26 +51,22 @@
     ]
    },
    {
-    "type": "polyline",
+    "type": "line",
     "role": "floor",
     "values": [
      38,
      12,
      38,
-     106.0,
-     28,
      106.0
     ]
    },
    {
-    "type": "polyline",
+    "type": "line",
     "role": "floor",
     "values": [
      162,
      12,
      162,
-     106.0,
-     172,
      106.0
     ]
    }
@@ -99,26 +82,22 @@
     ]
    },
    {
-    "type": "polyline",
+    "type": "line",
     "role": "floor",
     "values": [
      38,
      40,
      38,
-     106.0,
-     28,
      106.0
     ]
    },
    {
-    "type": "polyline",
+    "type": "line",
     "role": "floor",
     "values": [
      162,
      40,
      162,
-     106.0,
-     172,
      106.0
     ]
    }
@@ -152,29 +131,9 @@
      114,
      106.0
     ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
-    ]
    }
   ],
   "parallel_bars": [
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     50,
-     47,
-     150,
-     47
-    ]
-   },
    {
     "type": "line",
     "values": [
@@ -201,16 +160,6 @@
      142,
      50,
      142,
-     106.0
-    ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
      106.0
     ]
    }
@@ -244,16 +193,6 @@
      110,
      106.0
     ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
-    ]
    }
   ],
   "box_left": [
@@ -266,16 +205,6 @@
      106.0
     ],
     "filled": true
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
-    ]
    }
   ],
   "box_right": [
@@ -288,16 +217,6 @@
      106.0
     ],
     "filled": true
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
-    ]
    }
   ],
   "box_under": [
@@ -310,16 +229,18 @@
      106.0
     ],
     "filled": true
-   },
+   }
+  ],
+  "box_tall": [
    {
-    "type": "line",
-    "role": "floor",
+    "type": "round_rect",
     "values": [
-     8,
-     106.0,
-     192,
+     86,
+     74,
+     114,
      106.0
-    ]
+    ],
+    "filled": true
    }
   ],
   "wall_right": [
@@ -328,16 +249,6 @@
     "values": [
      150,
      6,
-     150,
-     106.0
-    ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
      150,
      106.0
     ]
@@ -352,16 +263,6 @@
      62,
      106.0
     ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
-    ]
    }
   ],
   "post_right": [
@@ -371,16 +272,6 @@
      138,
      18,
      138,
-     106.0
-    ]
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
      106.0
     ]
    }
@@ -401,28 +292,6 @@
      40,
      78,
      2.5
-    ]
-   }
-  ],
-  "box_tall": [
-   {
-    "type": "round_rect",
-    "values": [
-     86,
-     74,
-     114,
-     106.0
-    ],
-    "filled": true
-   },
-   {
-    "type": "line",
-    "role": "floor",
-    "values": [
-     8,
-     106.0,
-     192,
-     106.0
     ]
    }
   ]
@@ -1861,16 +1730,16 @@
    "facing": 1,
    "torso": 200,
    "arms": [
-    278.5,
-    55.9
+    337.2,
+    78.2
    ],
    "legs": [
-    330.0,
-    330.0
+    340.0,
+    320.0
    ],
    "leg_far": [
-    332.0,
-    332.0
+    342.0,
+    322.0
    ],
    "feet": 330,
    "head": 200,
@@ -1884,21 +1753,21 @@
   },
   "po_over": {
    "facing": 1,
-   "torso": 255,
+   "torso": 60,
    "arms": [
-    179.5,
-    319.5
+    199.5,
+    268.7
    ],
    "legs": [
-    262.0,
-    262.0
+    250.0,
+    245.0
    ],
    "leg_far": [
-    264.0,
-    264.0
+    252.0,
+    247.0
    ],
-   "feet": 270,
-   "head": 240,
+   "feet": 250,
+   "head": 60,
    "pin": {
     "joint": "hand_near",
     "at": [
@@ -1939,14 +1808,13 @@
     13.1
    ],
    "legs": [
-    320.0,
-    215.0
+    35.0,
+    150.0
    ],
    "leg_far": [
-    322.0,
-    217.0
+    37.0,
+    152.0
    ],
-   "feet": 210,
    "pin": {
     "joint": "hand_near",
     "at": [
@@ -2086,7 +1954,7 @@
    }
   },
   "inv_hang": {
-   "facing": 1,
+   "facing": -1,
    "torso": 180,
    "arms": [
     0.0,
@@ -2110,23 +1978,48 @@
     ]
    }
   },
-  "bl_third": {
-   "facing": 1,
-   "torso": 215,
+  "inv_tuck_back": {
+   "facing": -1,
+   "torso": 180,
    "arms": [
     0.0,
     0.0
    ],
    "legs": [
-    35.0,
-    35.0
+    125.0,
+    315.0
    ],
    "leg_far": [
-    37.0,
-    37.0
+    127.0,
+    317.0
    ],
-   "feet": 35,
-   "head": 200,
+   "feet": 320,
+   "head": 180,
+   "pin": {
+    "joint": "hand_near",
+    "at": [
+     100,
+     40
+    ]
+   }
+  },
+  "bl_third": {
+   "facing": -1,
+   "torso": 225,
+   "arms": [
+    0.0,
+    0.0
+   ],
+   "legs": [
+    45.0,
+    45.0
+   ],
+   "leg_far": [
+    47.0,
+    47.0
+   ],
+   "feet": 45,
+   "head": 215,
    "pin": {
     "joint": "hand_near",
     "at": [
@@ -2224,22 +2117,22 @@
    "feet": 100
   },
   "gh_partial": {
-   "facing": -1,
-   "torso": 235,
+   "facing": 1,
+   "torso": 130,
    "arms": [
     0.0,
     0.0
    ],
    "legs": [
-    190.0,
-    30.0
+    255.0,
+    240.0
    ],
    "leg_far": [
-    192.0,
-    32.0
+    257.0,
+    242.0
    ],
-   "feet": 25,
-   "head": 245,
+   "feet": 250,
+   "head": 130,
    "pin": {
     "joint": "hand_near",
     "at": [
@@ -2490,339 +2383,339 @@
   },
   "push_top": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 292.5499999999738,
    "legs": [
-    116.4,
-    116.4
+    112.5,
+    112.5
    ],
    "leg_far": [
-    118.4,
-    118.4
+    114.5,
+    114.5
    ],
-   "feet": 211.44999999996799,
+   "feet": 207.5499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    176.8,
-    183.4
+    161.5,
+    215.6
    ],
    "arm_far": [
-    176.8,
-    183.4
+    161.5,
+    215.6
    ]
   },
   "push_bottom": {
    "facing": -1,
-   "torso": 280.34999999996217,
+   "torso": 274.5499999999447,
    "legs": [
-    100.3,
-    100.3
+    94.5,
+    94.5
    ],
    "leg_far": [
-    102.3,
-    102.3
+    96.5,
+    96.5
    ],
-   "feet": 195.34999999996217,
+   "feet": 189.5499999999447,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    123.7,
-    244.0
+    100.8,
+    244.3
    ],
    "arm_far": [
-    123.7,
-    244.0
+    100.8,
+    244.3
    ]
   },
   "close_top": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 292.5499999999738,
    "legs": [
-    116.4,
-    116.4
+    112.5,
+    112.5
    ],
    "leg_far": [
-    118.4,
-    118.4
+    114.5,
+    114.5
    ],
-   "feet": 211.44999999996799,
+   "feet": 207.5499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    169.7,
-    172.9
+    155.8,
+    211.5
    ],
    "arm_far": [
-    169.7,
-    172.9
+    155.8,
+    211.5
    ]
   },
   "close_bottom": {
    "facing": -1,
-   "torso": 280.34999999996217,
+   "torso": 275.75000000004366,
    "legs": [
-    100.3,
-    100.3
+    95.8,
+    95.8
    ],
    "leg_far": [
-    102.3,
-    102.3
+    97.8,
+    97.8
    ],
-   "feet": 195.34999999996217,
+   "feet": 190.75000000004366,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    97.2,
-    205.6
+    89.5,
+    222.8
    ],
    "arm_far": [
-    97.2,
-    205.6
+    89.5,
+    222.8
    ]
   },
   "incline_top": {
    "facing": -1,
-   "torso": 339.0500000000611,
+   "torso": 329.24999999995634,
    "legs": [
-    159.1,
-    159.1
+    149.2,
+    149.2
    ],
    "leg_far": [
-    161.1,
-    161.1
+    151.2,
+    151.2
    ],
-   "feet": 254.05000000006112,
+   "feet": 244.24999999995634,
    "pin": {
     "joint": "toe_near",
     "at": [
-     150,
+     78.6,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    251.0,
-    252.9
+    149.1,
+    213.7
    ],
    "arm_far": [
-    251.0,
-    252.9
+    149.1,
+    213.7
    ]
   },
   "incline_bottom": {
    "facing": -1,
-   "torso": 311.13425349518366,
+   "torso": 304.84999999993306,
    "legs": [
-    131.1,
-    131.1
+    124.8,
+    124.8
    ],
    "leg_far": [
-    133.1,
-    133.1
+    126.8,
+    126.8
    ],
-   "feet": 226.13425349518366,
+   "feet": 219.84999999993306,
    "pin": {
     "joint": "toe_near",
     "at": [
-     150,
+     97.7,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    255.9,
-    257.9
+    129.2,
+    268.1
    ],
    "arm_far": [
-    255.9,
-    257.9
+    129.2,
+    268.1
    ]
   },
   "scap_sink": {
    "facing": -1,
-   "torso": 293.4499999999389,
+   "torso": 289.56634509457217,
    "legs": [
-    113.4,
-    113.4
+    109.6,
+    109.6
    ],
    "leg_far": [
-    115.4,
-    115.4
+    111.6,
+    111.6
    ],
-   "feet": 208.44999999993888,
+   "feet": 204.56634509457217,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": -2.5,
    "arm_near": [
-    177.0,
-    183.3
+    161.7,
+    215.4
    ],
    "arm_far": [
-    177.0,
-    183.3
+    161.7,
+    215.4
    ]
   },
   "scap_push": {
    "facing": -1,
-   "torso": 300.0083185922267,
+   "torso": 296.050000000032,
    "legs": [
-    120.0,
-    120.0
+    116.1,
+    116.1
    ],
    "leg_far": [
-    122.0,
-    122.0
+    118.1,
+    118.1
    ],
-   "feet": 215.00831859222671,
+   "feet": 211.05000000003201,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 3,
    "arm_near": [
-    178.5,
-    181.7
+    161.7,
+    215.4
    ],
    "arm_far": [
-    178.5,
-    181.7
+    161.7,
+    215.4
    ]
   },
   "scap_sink_incline": {
    "facing": -1,
-   "torso": 335.0499999999738,
+   "torso": 325.75000000004366,
    "legs": [
-    155.0,
-    155.0
+    145.8,
+    145.8
    ],
    "leg_far": [
-    157.0,
-    157.0
+    147.8,
+    147.8
    ],
-   "feet": 250.0499999999738,
+   "feet": 240.75000000004366,
    "pin": {
     "joint": "toe_near",
     "at": [
-     150,
+     79.3,
      106.0
     ]
    },
    "protract": -2.5,
    "arm_near": [
-    250.8,
-    252.6
+    149.4,
+    213.7
    ],
    "arm_far": [
-    250.8,
-    252.6
+    149.4,
+    213.7
    ]
   },
   "scap_push_incline": {
    "facing": -1,
-   "torso": 343.28766716505925,
+   "torso": 333.1499999999505,
    "legs": [
-    163.3,
-    163.3
+    153.1,
+    153.1
    ],
    "leg_far": [
-    165.3,
-    165.3
+    155.1,
+    155.1
    ],
-   "feet": 258.28766716505925,
+   "feet": 248.14999999995052,
    "pin": {
     "joint": "toe_near",
     "at": [
-     150,
+     78.1,
      106.0
     ]
    },
    "protract": 3,
    "arm_near": [
-    251.2,
-    253.0
+    149.2,
+    213.7
    ],
    "arm_far": [
-    251.2,
-    253.0
+    149.2,
+    213.7
    ]
   },
   "chest_down": {
    "facing": -1,
-   "torso": 273.4499999999389,
+   "torso": 272.2816600313672,
    "legs": [
-    93.4,
-    93.4
+    92.3,
+    92.3
    ],
    "leg_far": [
-    95.4,
-    95.4
+    94.3,
+    94.3
    ],
-   "feet": 188.44999999993888,
+   "feet": 187.2816600313672,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    113.4,
-    262.5
+    112.5,
+    266.2
    ],
    "arm_far": [
-    113.4,
-    262.5
+    112.5,
+    266.2
    ]
   },
   "hands_off": {
    "facing": -1,
-   "torso": 273.4499999999389,
+   "torso": 272.2816600313672,
    "legs": [
-    93.4,
-    93.4
+    92.3,
+    92.3
    ],
    "leg_far": [
-    95.4,
-    95.4
+    94.3,
+    94.3
    ],
-   "feet": 188.44999999993888,
+   "feet": 187.2816600313672,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
@@ -2834,78 +2727,78 @@
   },
   "plank_walk_a": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 292.5499999999738,
    "legs": [
-    116.4,
-    116.4
+    112.5,
+    112.5
    ],
    "leg_far": [
-    118.4,
-    118.4
+    114.5,
+    114.5
    ],
-   "feet": 211.44999999996799,
+   "feet": 207.5499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    197.6,
-    200.6
+    183.7,
+    220.6
    ],
    "arm_far": [
-    171.9,
-    175.0
+    146.6,
+    200.7
    ]
   },
   "plank_walk_b": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 292.5499999999738,
    "legs": [
-    116.4,
-    116.4
+    112.5,
+    112.5
    ],
    "leg_far": [
-    118.4,
-    118.4
+    114.5,
+    114.5
    ],
-   "feet": 211.44999999996799,
+   "feet": 207.5499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    171.9,
-    175.0
+    146.6,
+    200.7
    ],
    "arm_far": [
-    197.6,
-    200.6
+    183.7,
+    220.6
    ]
   },
   "plank_arm_raise": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 292.5499999999738,
    "legs": [
-    116.4,
-    116.4
+    112.5,
+    112.5
    ],
    "leg_far": [
-    118.4,
-    118.4
+    114.5,
+    114.5
    ],
-   "feet": 211.44999999996799,
+   "feet": 207.5499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
@@ -2915,8 +2808,8 @@
     275.0
    ],
    "arm_far": [
-    176.8,
-    183.4
+    153.2,
+    209.1
    ]
   },
   "plank_forearm": {
@@ -2934,7 +2827,7 @@
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
@@ -2946,147 +2839,147 @@
   },
   "plank_up_mid": {
    "facing": -1,
-   "torso": 287.5499999999738,
+   "torso": 285.15000000006694,
    "legs": [
-    107.5,
-    107.5
+    105.2,
+    105.2
    ],
    "leg_far": [
-    109.5,
-    109.5
+    107.2,
+    107.2
    ],
-   "feet": 202.5499999999738,
+   "feet": 200.15000000006694,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_far": [
-    138.9,
-    225.3
+    133.5,
+    231.6
    ],
    "arm_near": [
-    145.2,
-    230.9
+    140.5,
+    237.9
    ]
   },
   "lean_neutral": {
    "facing": -1,
-   "torso": 297.65000000006694,
+   "torso": 293.74999999992724,
    "legs": [
-    117.7,
-    117.7
+    113.7,
+    113.7
    ],
    "leg_far": [
-    119.7,
-    119.7
+    115.7,
+    115.7
    ],
-   "feet": 212.65000000006694,
+   "feet": 208.74999999992724,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 1,
    "arm_near": [
-    178.5,
-    181.6
+    158.6,
+    213.6
    ],
    "arm_far": [
-    178.5,
-    181.6
+    158.6,
+    213.6
    ]
   },
   "lean_forward": {
    "facing": -1,
-   "torso": 300.0083185922267,
+   "torso": 293.550000000032,
    "legs": [
-    120.0,
-    120.0
+    113.6,
+    113.6
    ],
    "leg_far": [
-    122.0,
-    122.0
+    115.6,
+    115.6
    ],
-   "feet": 215.00831859222671,
+   "feet": 208.55000000003201,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 3,
    "arm_near": [
-    159.4,
-    162.4
+    129.7,
+    186.4
    ],
    "arm_far": [
-    159.4,
-    162.4
+    129.7,
+    186.4
    ]
   },
   "pp_top": {
    "facing": -1,
-   "torso": 296.449999999968,
+   "torso": 290.0499999999738,
    "legs": [
-    116.4,
-    116.4
+    110.0,
+    110.0
    ],
    "leg_far": [
-    118.4,
-    118.4
+    112.0,
+    112.0
    ],
-   "feet": 211.44999999996799,
+   "feet": 205.0499999999738,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    157.4,
-    160.4
+    129.0,
+    182.2
    ],
    "arm_far": [
-    157.4,
-    160.4
+    129.0,
+    182.2
    ]
   },
   "pp_bottom": {
    "facing": -1,
-   "torso": 281.5500000000611,
+   "torso": 275.75000000004366,
    "legs": [
-    101.6,
-    101.6
+    95.8,
+    95.8
    ],
    "leg_far": [
-    103.6,
-    103.6
+    97.8,
+    97.8
    ],
-   "feet": 196.55000000006112,
+   "feet": 190.75000000004366,
    "pin": {
     "joint": "toe_near",
     "at": [
-     144,
+     146.0,
      106.0
     ]
    },
    "protract": 0.0,
    "arm_near": [
-    96.9,
-    172.6
+    75.8,
+    171.2
    ],
    "arm_far": [
-    96.9,
-    172.6
+    75.8,
+    171.2
    ]
   },
   "pike_top": {
@@ -3101,7 +2994,7 @@
     152.0
    ],
    "feet": 240,
-   "head": 234,
+   "head": 205,
    "pin": {
     "joint": "foot_near",
     "at": [
@@ -3110,12 +3003,12 @@
     ]
    },
    "arm_near": [
-    235.0,
-    237.8
+    209.2,
+    249.9
    ],
    "arm_far": [
-    235.0,
-    237.8
+    209.2,
+    249.9
    ]
   },
   "pike_bottom": {
@@ -3130,7 +3023,7 @@
     149.0
    ],
    "feet": 237,
-   "head": 226,
+   "head": 215,
    "pin": {
     "joint": "foot_near",
     "at": [
@@ -3139,12 +3032,12 @@
     ]
    },
    "arm_near": [
-    240.5,
-    243.5
+    207.7,
+    264.7
    ],
    "arm_far": [
-    240.5,
-    243.5
+    207.7,
+    264.7
    ]
   },
   "wall_push_top": {
@@ -5063,7 +4956,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -5082,6 +4975,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -5101,6 +4995,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "wall_right"
    ],
    "keyframes": [
@@ -5120,7 +5015,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -5158,7 +5053,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -5177,6 +5072,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5196,6 +5092,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5219,6 +5116,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5238,6 +5136,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5257,6 +5156,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5284,6 +5184,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5311,6 +5212,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar",
     "box_under"
    ],
@@ -5347,6 +5249,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5366,6 +5269,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5389,6 +5293,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5428,6 +5333,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "low_bar"
    ],
    "keyframes": [
@@ -5451,6 +5357,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5474,6 +5381,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar",
     "box_right"
    ],
@@ -5498,6 +5406,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5521,6 +5430,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5544,6 +5454,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5567,6 +5478,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5590,6 +5502,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5613,6 +5526,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5640,6 +5554,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5659,6 +5574,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5698,6 +5614,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5737,6 +5654,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5764,6 +5682,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar",
     "box_under"
    ],
@@ -5804,6 +5723,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5835,6 +5755,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -5874,8 +5795,8 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mid_bar",
-    "mat"
+    "floor",
+    "mid_bar"
    ],
    "keyframes": [
     {
@@ -5914,6 +5835,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5937,6 +5859,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5960,6 +5883,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -5983,6 +5907,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -6006,6 +5931,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -6029,6 +5955,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -6056,6 +5983,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6079,6 +6007,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6102,8 +6031,8 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mid_bar",
-    "mat"
+    "floor",
+    "mid_bar"
    ],
    "keyframes": [
     {
@@ -6130,17 +6059,17 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mid_bar",
-    "mat"
+    "floor",
+    "mid_bar"
    ],
    "keyframes": [
     {
      "at": 0,
-     "pose": "inv_tuck"
+     "pose": "inv_tuck_back"
     },
     {
      "at": 0.3,
-     "pose": "inv_tuck"
+     "pose": "inv_tuck_back"
     },
     {
      "at": 1,
@@ -6154,6 +6083,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6177,6 +6107,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6200,6 +6131,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6223,6 +6155,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6246,6 +6179,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6269,6 +6203,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6292,6 +6227,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "high_bar"
    ],
    "keyframes": [
@@ -6312,6 +6248,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6332,6 +6269,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6351,6 +6289,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6378,6 +6317,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6401,6 +6341,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars",
     "box_tall"
    ],
@@ -6437,6 +6378,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars",
     "box_tall"
    ],
@@ -6458,6 +6400,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars",
     "box_tall"
    ],
@@ -6482,6 +6425,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6505,6 +6449,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallel_bars"
    ],
    "keyframes": [
@@ -6528,6 +6473,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6548,6 +6494,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "mid_bar"
    ],
    "keyframes": [
@@ -6571,6 +6518,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "parallettes"
    ],
    "keyframes": [
@@ -6655,6 +6603,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "box_left"
    ],
    "keyframes": [
@@ -6693,6 +6642,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "box_left"
    ],
    "keyframes": [
@@ -6836,6 +6786,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "box_left"
    ],
    "keyframes": [
@@ -6913,6 +6864,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "wall_right"
    ],
    "keyframes": [
@@ -7005,6 +6957,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "box_under"
    ],
    "keyframes": [
@@ -7028,6 +6981,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7089,6 +7043,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7139,6 +7094,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7162,6 +7118,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "box_right"
    ],
    "keyframes": [
@@ -7235,6 +7192,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_right"
    ],
    "keyframes": [
@@ -7324,7 +7282,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7347,7 +7305,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7370,7 +7328,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7474,7 +7432,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7493,7 +7451,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7512,7 +7470,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7535,7 +7493,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7577,7 +7535,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7596,7 +7554,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7619,7 +7577,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat",
+    "floor",
     "anchor_left"
    ],
    "keyframes": [
@@ -7639,7 +7597,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat",
+    "floor",
     "anchor_left"
    ],
    "keyframes": [
@@ -7671,7 +7629,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat",
+    "floor",
     "anchor_left"
    ],
    "keyframes": [
@@ -7703,7 +7661,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat",
+    "floor",
     "anchor_left"
    ],
    "keyframes": [
@@ -7735,7 +7693,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7758,7 +7716,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7781,7 +7739,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7804,7 +7762,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7827,7 +7785,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {
@@ -7873,6 +7831,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7892,6 +7851,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_right"
    ],
    "keyframes": [
@@ -7911,6 +7871,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7930,6 +7891,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "post_left"
    ],
    "keyframes": [
@@ -7949,6 +7911,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
+    "floor",
     "wall_right"
    ],
    "keyframes": [
@@ -7968,7 +7931,7 @@
    "easing": "smooth",
    "reduced_motion_frame": 0.5,
    "apparatus": [
-    "mat"
+    "floor"
    ],
    "keyframes": [
     {

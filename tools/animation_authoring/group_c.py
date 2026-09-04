@@ -6,8 +6,6 @@ PB = {"joint": "hand_near", "at": [X, 50]}     # parallel bars (near rail)
 MB = {"joint": "hand_near", "at": [X, 40]}     # chest-height straight bar
 PL = {"joint": "hand_near", "at": [X, 96]}     # parallettes
 
-APPARATUS["box_tall"] = [{"type": "round_rect", "values": [86, 74, 114, FLOOR], "filled": True},
-                         {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}]
 
 # ---------- support ----------
 pose("support_up", facing=1, torso=0, arms=[180, 180], shrug=-2, legs=[180, 180], leg_far=[182, 178], feet=180, pin=PB)
@@ -51,8 +49,13 @@ pose("lsit_tuck", base="lsit_floor", legs=[60, 150], leg_far=[62, 150], feet=160
 template("tuck_lsit", 2400, [(0, "lsit_floor"), (0.8, "lsit_tuck"), (1, "lsit_tuck")], apparatus=("parallettes",))
 
 # ---------- prone helper ----------
-def prone_pose(name, shoulder_y, toe_x=144, hand_x=None, hand_y=105.0, pref=RIGHT, extra=None, protract=0.0):
-    """Face-down body line (head left) with toes tucked on the floor, solved so the shoulder sits at shoulder_y."""
+def prone_pose(name, shoulder_y, hand_x=None, hand_y=105.0, shoulder_dx=0.0, pref=RIGHT, extra=None, protract=0.0, toe_x=146):
+    """Face-down body line (head left) with toes tucked on the floor.
+
+    The body angle is solved so the shoulder sits at shoulder_y, then the whole figure is
+    shifted so the shoulder sits shoulder_dx to the right of the hand contact (hand_x, hand_y),
+    and finally the arms are solved to reach that contact. Hands therefore always touch the
+    floor or the box they are meant to rest on."""
     extra = dict(extra or {})
     lo, hi = 0.0, 80.0
     for _ in range(40):
@@ -66,73 +69,70 @@ def prone_pose(name, shoulder_y, toe_x=144, hand_x=None, hand_y=105.0, pref=RIGH
             lo = theta
         else:
             hi = theta
-    j = solved(name)
+    sx = solved(name)["shoulder"][0]
     if hand_x is None:
-        hand_x = j["shoulder"][0]
+        hand_x = sx - shoulder_dx
+    shift = (hand_x + shoulder_dx) - sx
+    POSES[name]["pin"] = {"joint": "toe_near", "at": [round(toe_x + shift, 1), FLOOR]}
     if "arms" not in extra and "arm_near" not in extra:
         reach_arm(name, (hand_x, hand_y), pref=pref)
     return name
 
 # push-ups
-prone_pose("push_top", 79)
-prone_pose("push_bottom", 92)
+prone_pose("push_top", 82, shoulder_dx=3)
+prone_pose("push_bottom", 97, shoulder_dx=-2)
 template("pushup", 1800, [(0, "push_top"), (1, "push_bottom")])
 template("pause_pushup", 2600, [(0, "push_top"), (0.6, "push_bottom"), (1, "push_bottom")])
-prone_pose("close_top", 79, hand_x=None)
-j = solved("close_top"); reach_arm("close_top", (j["shoulder"][0] + 4, 105), pref=RIGHT)
-prone_pose("close_bottom", 92)
-j = solved("close_bottom"); reach_arm("close_bottom", (j["shoulder"][0] + 8, 105), pref=RIGHT)
+prone_pose("close_top", 82, shoulder_dx=1)
+prone_pose("close_bottom", 96, shoulder_dx=-5)
 template("close_pushup", 1800, [(0, "close_top"), (1, "close_bottom")])
 # incline push-up: hands on a box (top y = 82)
-prone_pose("incline_top", 57, toe_x=150, hand_x=57, hand_y=82)
-prone_pose("incline_bottom", 69, toe_x=150, hand_x=57, hand_y=82)
+prone_pose("incline_top", 60, hand_x=57, hand_y=82)
+prone_pose("incline_bottom", 73, hand_x=57, hand_y=82, shoulder_dx=2)
 template("incline_pushup", 1800, [(0, "incline_top"), (1, "incline_bottom")], apparatus=("box_left",))
 # scapular push-ups (straight arms, shoulder blades glide)
-prone_pose("scap_sink", 79, protract=-2.5)
-prone_pose("scap_push", 79, protract=3)
+prone_pose("scap_sink", 82, shoulder_dx=3, protract=-2.5)
+prone_pose("scap_push", 82, shoulder_dx=3, protract=3)
 template("scapular_pushup", 1800, [(0, "scap_sink"), (1, "scap_push")])
-prone_pose("scap_sink_incline", 57, toe_x=150, hand_x=57, hand_y=82, protract=-2.5)
-prone_pose("scap_push_incline", 57, toe_x=150, hand_x=57, hand_y=82, protract=3)
+prone_pose("scap_sink_incline", 60, hand_x=57, hand_y=82, protract=-2.5)
+prone_pose("scap_push_incline", 60, hand_x=57, hand_y=82, protract=3)
 template("scapular_pushup_incline", 1800, [(0, "scap_sink_incline"), (1, "scap_push_incline")], apparatus=("box_left",))
 # hand-release push-up (loop): top, chest down, hands lifted, hands down, press
-prone_pose("chest_down", 98)
-prone_pose("hands_off", 98, extra={"arms": [60, 230]})
+prone_pose("chest_down", 99)
+prone_pose("hands_off", 99, extra={"arms": [60, 230]})
 template("hand_release_pushup", 3000,
          [(0, "push_top"), (0.3, "chest_down"), (0.45, "hands_off"), (0.6, "hands_off"), (0.72, "chest_down"), (1, "push_top")],
          mode="loop")
 # plank walk (hands step forward / back alternately)
-prone_pose("plank_walk_a", 79)
+prone_pose("plank_walk_a", 82, shoulder_dx=3)
 j = solved("plank_walk_a"); sx = j["shoulder"][0]
 reach_arm("plank_walk_a", (sx - 9, 105), pref=RIGHT, which=("arm_near",)); reach_arm("plank_walk_a", (sx + 3, 105), pref=RIGHT, which=("arm_far",))
-prone_pose("plank_walk_b", 79)
+prone_pose("plank_walk_b", 82, shoulder_dx=3)
 reach_arm("plank_walk_b", (sx + 3, 105), pref=RIGHT, which=("arm_near",)); reach_arm("plank_walk_b", (sx - 9, 105), pref=RIGHT, which=("arm_far",))
 template("plank_walk", 1600, [(0, "plank_walk_a"), (0.5, "push_top"), (1, "plank_walk_b")])
 # plank with single-arm front raise
-prone_pose("plank_arm_raise", 79, extra={"arm_near": [275, 275]})
+prone_pose("plank_arm_raise", 82, extra={"arm_near": [275, 275]})
 reach_arm("plank_arm_raise", (solved("plank_arm_raise")["shoulder"][0], 105), pref=RIGHT, which=("arm_far",))
 template("plank_arm_raise", 2400, [(0, "push_top"), (0.7, "plank_arm_raise"), (1, "plank_arm_raise")])
 # forearm plank, plank-up, incline plank, planche lean
 prone_pose("plank_forearm", 92, extra={"arms": [180, 270]})
-prone_pose("plank_up_mid", 86, extra={"arm_far": [180, 270]})
+prone_pose("plank_up_mid", 88, extra={"arm_far": [180, 270]})
 reach_arm("plank_up_mid", (solved("plank_up_mid")["shoulder"][0] - 2, 105), pref=RIGHT, which=("arm_near",))
 template("plank_forearm", 3000, [(0, "plank_forearm"), (1, {"pose": "plank_forearm", "protract": 2})])
 template("plank_up", 2400, [(0, "plank_forearm"), (0.5, "plank_up_mid"), (1, "push_top")])
 template("incline_plank", 3000, [(0, "incline_top"), (1, {"pose": "incline_top", "protract": 2.5})], apparatus=("box_left",))
-prone_pose("lean_neutral", 79, protract=1)
-prone_pose("lean_forward", 79, protract=3)
-j = solved("lean_forward"); reach_arm("lean_forward", (j["shoulder"][0] + 9, 105), pref=RIGHT)
+prone_pose("lean_neutral", 82, shoulder_dx=2, protract=1)
+prone_pose("lean_forward", 84, protract=3, shoulder_dx=-9)
 template("planche_lean", 2400, [(0, "lean_neutral"), (1, "lean_forward")])
 # pseudo-planche push-up: hands beside the hips, shoulders ahead of the hands
-prone_pose("pp_top", 79)
-j = solved("pp_top"); reach_arm("pp_top", (j["shoulder"][0] + 10, 105), pref=RIGHT)
-prone_pose("pp_bottom", 91)
-j = solved("pp_bottom"); reach_arm("pp_bottom", (j["shoulder"][0] + 15, 105), pref=RIGHT)
+prone_pose("pp_top", 84, shoulder_dx=-10)
+prone_pose("pp_bottom", 96, shoulder_dx=-15)
 template("pseudo_planche_pushup", 2000, [(0, "pp_top"), (1, "pp_bottom")])
 # pike push-up
-pose("pike_top", facing=-1, torso=234, legs=[150, 150], leg_far=[152, 152], feet=240, head=234, pin={"joint": "foot_near", "at": [134, ANKLE]})
-reach_arm("pike_top", (78, 105), pref=RIGHT)
-pose("pike_bottom", facing=-1, torso=226, legs=[147, 147], leg_far=[149, 149], feet=237, head=226, pin={"joint": "foot_near", "at": [134, ANKLE]})
-reach_arm("pike_bottom", (78, 105), pref=RIGHT)
+pose("pike_top", facing=-1, torso=234, legs=[150, 150], leg_far=[152, 152], feet=240, head=205, pin={"joint": "foot_near", "at": [134, ANKLE]})
+reach_arm("pike_top", (84, 105), pref=RIGHT)
+pose("pike_bottom", facing=-1, torso=226, legs=[147, 147], leg_far=[149, 149], feet=237, head=215, pin={"joint": "foot_near", "at": [134, ANKLE]})
+reach_arm("pike_bottom", (84, 105), pref=RIGHT)
 template("pike_pushup", 1900, [(0, "pike_top"), (1, "pike_bottom")])
 # wall push-up
 pose("wall_push_top", facing=1, torso=10, legs=[190, 190], leg_far=[192, 192], pin={"joint": "foot_near", "at": [118, ANKLE]})

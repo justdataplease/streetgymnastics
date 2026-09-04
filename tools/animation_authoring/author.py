@@ -96,54 +96,46 @@ def template(name, duration, keyframes, mode="ping_pong", apparatus=("floor",), 
             frames.append({"at": at, "pose": p})
         else:
             fr = {"at": at}; fr.update(p); frames.append(fr)
+    scene = ["floor"] + [a for a in apparatus if a not in ("floor", "mat")]
     TEMPLATES[name] = {"duration_ms": duration, "mode": mode, "easing": easing,
-                       "reduced_motion_frame": reduced, "apparatus": list(apparatus), "keyframes": frames}
+                       "reduced_motion_frame": reduced, "apparatus": scene, "keyframes": frames}
     return name
 
 APPARATUS = {
+    # Minimal scene: every template gets the single grey floor line; apparatus is simple lines and boxes.
     "floor": [{"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
-    "mat": [{"type": "round_rect", "role": "floor", "values": [22, FLOOR - 4, 178, FLOOR + 2], "filled": True}],
     "high_bar": [
         {"type": "line", "values": [34, 12, 166, 12]},
-        {"type": "polyline", "role": "floor", "values": [38, 12, 38, FLOOR, 28, FLOOR]},
-        {"type": "polyline", "role": "floor", "values": [162, 12, 162, FLOOR, 172, FLOOR]},
+        {"type": "line", "role": "floor", "values": [38, 12, 38, FLOOR]},
+        {"type": "line", "role": "floor", "values": [162, 12, 162, FLOOR]},
     ],
     "mid_bar": [
         {"type": "line", "values": [34, 40, 166, 40]},
-        {"type": "polyline", "role": "floor", "values": [38, 40, 38, FLOOR, 28, FLOOR]},
-        {"type": "polyline", "role": "floor", "values": [162, 40, 162, FLOOR, 172, FLOOR]},
+        {"type": "line", "role": "floor", "values": [38, 40, 38, FLOOR]},
+        {"type": "line", "role": "floor", "values": [162, 40, 162, FLOOR]},
     ],
     "low_bar": [
         {"type": "line", "values": [42, 66, 118, 66]},
         {"type": "line", "role": "floor", "values": [46, 66, 46, FLOOR]},
         {"type": "line", "role": "floor", "values": [114, 66, 114, FLOOR]},
-        {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]},
     ],
     "parallel_bars": [
-        {"type": "line", "role": "floor", "values": [50, 47, 150, 47]},
         {"type": "line", "values": [50, 50, 150, 50]},
         {"type": "line", "role": "floor", "values": [58, 50, 58, FLOOR]},
         {"type": "line", "role": "floor", "values": [142, 50, 142, FLOOR]},
-        {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]},
     ],
     "parallettes": [
         {"type": "line", "values": [86, 96, 114, 96]},
         {"type": "line", "role": "floor", "values": [90, 96, 90, FLOOR]},
         {"type": "line", "role": "floor", "values": [110, 96, 110, FLOOR]},
-        {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]},
     ],
-    "box_left": [{"type": "round_rect", "values": [40, 82, 74, FLOOR], "filled": True},
-                 {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
-    "box_right": [{"type": "round_rect", "values": [118, 80, 154, FLOOR], "filled": True},
-                  {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
-    "box_under": [{"type": "round_rect", "values": [84, 92, 116, FLOOR], "filled": True},
-                  {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
-    "wall_right": [{"type": "line", "values": [150, 6, 150, FLOOR]},
-                   {"type": "line", "role": "floor", "values": [8, FLOOR, 150, FLOOR]}],
-    "post_left": [{"type": "line", "values": [62, 18, 62, FLOOR]},
-                  {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
-    "post_right": [{"type": "line", "values": [138, 18, 138, FLOOR]},
-                   {"type": "line", "role": "floor", "values": [8, FLOOR, 192, FLOOR]}],
+    "box_left": [{"type": "round_rect", "values": [40, 82, 74, FLOOR], "filled": True}],
+    "box_right": [{"type": "round_rect", "values": [118, 80, 154, FLOOR], "filled": True}],
+    "box_under": [{"type": "round_rect", "values": [84, 92, 116, FLOOR], "filled": True}],
+    "box_tall": [{"type": "round_rect", "values": [86, 74, 114, FLOOR], "filled": True}],
+    "wall_right": [{"type": "line", "values": [150, 6, 150, FLOOR]}],
+    "post_left": [{"type": "line", "values": [62, 18, 62, FLOOR]}],
+    "post_right": [{"type": "line", "values": [138, 18, 138, FLOOR]}],
     "anchor_left": [{"type": "line", "values": [40, 80, 40, FLOOR]},
                     {"type": "circle", "values": [40, 78, 2.5]}],
 }
