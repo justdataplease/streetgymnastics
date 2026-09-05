@@ -670,7 +670,7 @@ open class RevivalActivity : Activity() {
                         orientation = LinearLayout.VERTICAL
                         setPadding(dp(12), 0, 0, 0)
                         addView(titleText(exerciseName, 18f))
-                        addView(bodyText(getString(R.string.sets_count, exercise.sets.size), 13f))
+                        addView(bodyText(resources.getQuantityString(R.plurals.sets_count, exercise.sets.size, exercise.sets.size), 13f))
                     },
                     LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f),
                 )
@@ -1149,6 +1149,7 @@ open class RevivalActivity : Activity() {
             val notes = buildList {
                 add(getString(R.string.readiness_note))
                 if (program.practice.isNotEmpty()) add(getString(R.string.skill_practice_note))
+                add(getString(R.string.flexibility_note))
                 program.readiness.resolve().takeIf(String::isNotBlank)?.let(::add)
                 program.safety.resolve().takeIf(String::isNotBlank)?.let(::add)
             }.joinToString("\n\n")

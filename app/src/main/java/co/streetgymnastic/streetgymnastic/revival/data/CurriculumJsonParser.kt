@@ -89,6 +89,8 @@ object CurriculumJsonParser {
         val morningRecovery = json.optBoolean("morning_recovery", false)
         val mainExercises = when {
             morningRecovery -> parseCompactSteps(json.optJSONArray("main"), programId, "main", movementLibrary)
+            json.optJSONArray("training_main") != null ->
+                parseCompactSteps(json.optJSONArray("training_main"), programId, "main", movementLibrary)
             content?.optJSONArray("exercises") != null ->
                 content.optJSONArray("exercises").mapObjects(::parseExpandedExercise)
             json.optJSONArray("exercises") != null ->

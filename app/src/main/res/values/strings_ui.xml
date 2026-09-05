@@ -40,15 +40,19 @@
     <string name="animation_tempo_note">Movement guide. Follow the written tempo and hold time.</string>
     <string name="animation_variation">Preview %1$d/%2$d: %3$s - tap to change</string>
     <string name="class_guidance_title">Your morning class</string>
-    <string name="class_guidance_summary">Warm up, practise with control, then cool down. Keep 2-3 repetitions in reserve and use an easier variation when needed. Recovery mornings count. There is no deadline for a skill.</string>
+    <string name="class_guidance_summary">A varied mix of calisthenics, skill practice and flexibility. Build control as the levels progress, keep a few good repetitions in reserve, and use an easier variation when needed. Follow the easy recovery mornings too.</string>
     <string name="class_guidance_details">Technique, scaling &amp; progression</string>
     <string name="skill_practice">Skill practice</string>
     <string name="skill_practice_note">Keep skill practice easy, around RPE 5 or below. The listed variation is a ceiling: use its regression until control is repeatable. One short practice set is enough today; do not add max attempts. Keep the prescribed rest before strength work.</string>
+    <string name="flexibility_note">Flexibility supports your calisthenics. Warm up with controlled movement, then finish with the assigned stretches at mild tension while breathing normally. For a one-sided stretch, each timed set is for one side: alternate sides between sets. Start on the other side next time when the set count is odd. Increase comfortable range gradually; never force it.</string>
     <string name="warm_up">Warm-up</string>
-    <string name="main_training">Main training</string>
-    <string name="cool_down">Cool-down</string>
+    <string name="main_training">Calisthenics</string>
+    <string name="cool_down">Flexibility &amp; cooldown</string>
     <string name="exercise_number">Exercise %1$d</string>
-    <string name="sets_count">%1$d sets</string>
+    <plurals name="sets_count">
+        <item quantity="one">%1$d set</item>
+        <item quantity="other">%1$d sets</item>
+    </plurals>
     <string name="repetitions_format">%1$d reps</string>
     <string name="maximum_repetitions">Maximum quality reps</string>
     <string name="seconds_format">%1$d sec</string>

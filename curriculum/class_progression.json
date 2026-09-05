@@ -1,0 +1,11 @@
+{
+  "purpose": "One varied calisthenics sequence, with complementary flexibility. These are workload ceilings, not targets to fill or automatic skill-readiness tests.",
+  "levels": [
+    { "level": 1, "main_sets_including_practice": 14, "sets_per_exercise": 3 },
+    { "level": 2, "main_sets_including_practice": 16, "sets_per_exercise": 3 },
+    { "level": 3, "main_sets_including_practice": 18, "sets_per_exercise": 4 },
+    { "level": 4, "main_sets_including_practice": 18, "sets_per_exercise": 4 },
+    { "level": 5, "main_sets_including_practice": 20, "sets_per_exercise": 4 },
+    { "level": 6, "main_sets_including_practice": 20, "sets_per_exercise": 4 }
+  ]
+}

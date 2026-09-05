@@ -13,7 +13,7 @@ The app is English-only and contains exactly 600 assigned workouts: six levels w
 - Parallel development of muscle-up, front lever, back lever, dragon flag, and planche/elevated-plank control from Level 3 onward.
 - A consistent workout presentation throughout the app, without source classifications or route selection.
 
-The unavailable paid catalog was not bundled in the supplied app, so its missing names, descriptions, exercises, sets, and videos could not be recovered. Sessions needed to complete this sequence are individually written as static JSON using coaching judgment; no Python or procedural workout generator selects movements or doses. A separate technical export records the supplied data exactly for audit purposes.
+The unavailable paid catalog was not bundled in the supplied app, so its missing names, descriptions, exercises, sets, and videos could not be recovered. Sessions needed to complete this sequence are individually written as static JSON using coaching judgment. Assembly applies documented workload ceilings to those prescriptions; it does not create workouts or select new exercises. A separate technical export records the supplied data exactly for audit purposes.
 
 ## Six levels
 
@@ -46,11 +46,30 @@ The intended audience is recreational athletes building from fundamentals throug
 
 Open Today and follow one assigned class. There are no goal routes or skill deadlines. The shared curriculum develops front lever, back lever, muscle-up, human flag and handstand, with planche and dragon-flag work retained as additional strength practice.
 
-Handstand and flag practice is an explicitly authored, repeating seven-session timetable in `curriculum/morning_class.json`, with short easy exposures and prerequisite regressions. Early source sessions now have a separate working projection: 24 recovery mornings replace hard sessions, and the remaining 66 strength classes have a maximum of 20 main/practice sets, three sets per exercise, 12 repetitions or 30-second holds. Former max sets become eight-repetition ceilings. Original records remain unchanged in `content` and the forensic export. The app reads `training_content` for these adjusted strength classes.
+Handstand and flag practice is an explicitly authored, repeating seven-session timetable in `curriculum/morning_class.json`, with short easy exposures and prerequisite regressions. Early source sessions have a separate working projection: 24 recovery mornings replace hard sessions, and the remaining 66 strength classes use their level workload limit, at most three sets per exercise, 12 repetitions or 30-second holds. Former max sets become eight-repetition ceilings. Original records remain unchanged in `content` and the forensic export. The app reads `training_content` for these adjusted strength classes.
 
 All 600 classes have descriptive names. Coaching notes explain readiness, reserve effort and recovery; completing a class never certifies mastery. The movement guide offers pause, slow motion and selectable set-variation previews. These controls change the illustration, not the written dose.
 
 See [the coaching and UX review](docs/COACHING_UX_REVIEW.md) for findings, validation and remaining limitations.
+
+## Calisthenics, skills and complementary flexibility
+
+One varied sequence rotates strength and skill emphasis while keeping full-body fundamentals and regular flexibility work. Handstand preparation progresses from grounded overhead alignment to box pike holds, wall handstands, toe releases and brief balance practice. Recovery and consolidation days remain part of every level.
+
+`curriculum/class_progression.json` caps main work **including** the short skill-practice block:
+
+| Level | Total work-set ceiling | Sets per authored exercise |
+| --- | ---: | ---: |
+| 1 | 14 | 3 |
+| 2 | 16 | 3 |
+| 3 | 18 | 4 |
+| 4 | 18 | 4 |
+| 5 | 20 | 4 |
+| 6 | 20 | 4 |
+
+These are ceilings, not quotas. Assembly retains every exercise and its order, reps, holds, rest, tempo and regression, removing excess sets from the end of each exercise. Per-set ladders are shortened consistently. The original `main` remains auditable and the app reads `training_main`; original-source strength classes continue to use `training_content` and their stricter three-set limit. Higher levels build challenge through movement control and harder variations as well as workload. Progression still depends on repeatable technique and reserve effort.
+
+Warm-up and flexibility doses remain intact. One-sided stretches explicitly alternate sides between timed sets, with the starting side alternating between sessions when the count is odd. The app labels the main blocks Calisthenics and Flexibility & cooldown.
 
 ## Exercise animations
 

@@ -44,7 +44,7 @@
         "en": "Intermediate Strength"
       },
       "description": {
-        "en": "Develop shortened-lever strength, controlled muscle-up practice and wall-supported balance."
+        "en": "Develop longer-lever strength, controlled muscle-ups and handstand balance while maintaining full-body fundamentals and flexibility."
       }
     },
     {
@@ -64,12 +64,12 @@
     "en": "Replacement and extension sessions are newly authored and are not recovered Street Gymnastic PRO data. The app uses a balanced six-level sequence of 100 assigned workouts per level."
   },
   "progression_readiness": {
-    "en": "Advance a movement only after you can complete its current variation with controlled range and reserve effort on at least two separate sessions. Change only one variable: repetitions, hold time, assistance or lever length. A new workout number is not a skill-readiness test; keep using an easier variation as long as needed. Later planche, straddle and full-lever shapes are practice ceilings, not requirements: use the listed regression for as long as needed."
+    "en": "Advance a movement only after you can complete its current variation with controlled range and reserve effort on at least two separate sessions. Change only one variable: repetitions, hold time, assistance or lever length. A new workout number is not a skill-readiness test; keep using an easier variation as long as needed. Later planche, straddle and full-lever shapes are practice ceilings, not requirements: use the listed regression for as long as needed. The levels build challenge through harder variations and controlled workload, with easier consolidation days between demanding sessions. Keep the current variation until it is repeatable; a shorter lever or more assistance can still be challenging training."
   },
   "training_recovery": {
     "en": "Follow the assigned morning class, including its easy recovery sessions. Daily practice does not mean daily hard effort. If soreness or fatigue makes the warm-up unusually heavy, make today an easy walk and mobility morning, then return to the assigned strength session when recovered."
   },
   "authentic_scaling": {
-    "en": "The morning version limits strength plus skill practice to 20 sets, with at most 3 sets per exercise, 12 repetitions or 30 seconds per hold. Former max sets are capped at 8 quality repetitions. These are ceilings: stop sooner with 2-3 repetitions in reserve and keep effort at RPE 6 in Foundations and 7 in later levels, or below. Use foot-assisted hangs and pulls, higher rows, incline push-ups, assisted dips or bent-knee raises when needed. Skip behind-the-neck pulls and head bangers. Inversions and turnovers require controlled entries, exits and suitable assistance. Recovery mornings are already assigned."
+    "en": "The morning version limits strength plus skill practice to 14 sets in Foundations, 16 in Bar Strength and 18 in Skill Transition, with at most 3 sets per exercise, 12 repetitions or 30 seconds per hold. Former max sets are capped at 8 quality repetitions. These are ceilings: stop sooner with 2-3 repetitions in reserve and keep effort at RPE 6 in Foundations and 7 in later levels, or below. Use foot-assisted hangs and pulls, higher rows, incline push-ups, assisted dips or bent-knee raises when needed. Skip behind-the-neck pulls and head bangers. Inversions and turnovers require controlled entries, exits and suitable assistance. Recovery mornings are already assigned."
   }
 }

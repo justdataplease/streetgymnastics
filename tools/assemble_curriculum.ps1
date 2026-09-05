@@ -22,6 +22,38 @@ function Localized([string]$English) {
     return [ordered]@{ en = $English }
 }
 
+function Limit-TrainingSteps($Steps, [int]$SetBudget, [int]$SetsPerExercise) {
+    # Project the authored prescription without adding work or replacing movements.
+    $rows = @($Steps)
+    if ($SetBudget -lt $rows.Count) { throw "The set budget must retain every authored exercise" }
+    $counts = New-Object int[] $rows.Count
+    for ($round = 0; $round -lt $SetsPerExercise; $round++) {
+        for ($index = 0; $index -lt $rows.Count; $index++) {
+            if ($SetBudget -gt 0 -and $round -lt [int]$rows[$index][1]) {
+                $counts[$index]++
+                $SetBudget--
+            }
+        }
+    }
+    $projected = New-Object System.Collections.ArrayList
+    for ($index = 0; $index -lt $rows.Count; $index++) {
+        $step = @($rows[$index]).Clone()
+        $originalSets = [int]$step[1]
+        $step[1] = $counts[$index]
+        foreach ($doseIndex in @(2, 3)) {
+            # Keep per-set ladders aligned when their final sets are removed.
+            if ($step[$doseIndex] -is [string] -and $step[$doseIndex] -match '^(\d+(?:-\d+)+)(/side)?$') {
+                $series = $Matches[1] -split '-'
+                $side = $Matches[2]
+                if ($series.Count -ne $originalSets) { throw "Invalid authored dose ladder" }
+                $step[$doseIndex] = ($series[0..($counts[$index] - 1)] -join '-') + $side
+            }
+        }
+        [void]$projected.Add($step)
+    }
+    return ,$projected.ToArray()
+}
+
 $script:polishKey = ([string][char]112) + ([string][char]108)
 function Test-DormantVideoMetadataKey([string]$Name) {
     $normalized = [regex]::Replace($Name, '[_\-\s]', '').ToLowerInvariant()
@@ -65,6 +97,7 @@ $baseline = Read-JsonFile $BaselinePath
 $catalogMetadata = Read-JsonFile (Join-Path $CurriculumDirectory "catalog_metadata.json")
 $authenticTitles = (Read-JsonFile (Join-Path $CurriculumDirectory "authentic_titles.json")).titles
 $morningClass = Read-JsonFile (Join-Path $CurriculumDirectory "morning_class.json")
+$classProgression = Read-JsonFile (Join-Path $CurriculumDirectory "class_progression.json")
 $authoredBySlot = @{}
 $movementById = [ordered]@{}
 $coachingProfiles = New-Object System.Collections.ArrayList
@@ -252,6 +285,8 @@ foreach ($levelDefinition in $levelDefinitions) {
     }
 
     $classLevel = $morningClass.levels | Where-Object { [int]$_.level -eq $levelNumber } | Select-Object -First 1
+    $progressionLimits = $classProgression.levels | Where-Object { [int]$_.level -eq $levelNumber } | Select-Object -First 1
+    if ($null -eq $progressionLimits) { throw "Missing workload limits for level $levelNumber" }
     foreach ($program in $programs) {
         $classDay = (([int]$program.number - 1) % 7) + 1
         $classSlot = $classLevel.days | Where-Object { [int]$_.day -eq $classDay } | Select-Object -First 1
@@ -283,7 +318,8 @@ foreach ($levelDefinition in $levelDefinitions) {
                     $set.duration_seconds = $replacement.seconds
                 }
             }
-            $remaining = [int]$limits.main_sets_including_practice - @($program.practice).Count
+            $remaining = [Math]::Min([int]$limits.main_sets_including_practice, [int]$progressionLimits.main_sets_including_practice) - @($program.practice).Count
+            if ($remaining -lt @($training.exercises).Count) { throw "The set budget must retain every source exercise" }
             $selectedByExercise = @{}
             foreach ($exercise in $training.exercises) { $selectedByExercise[[string]$exercise.id] = New-Object System.Collections.ArrayList }
             for ($round = 0; $round -lt [int]$limits.sets_per_exercise; $round++) {
@@ -313,6 +349,13 @@ foreach ($levelDefinition in $levelDefinitions) {
         }
         if ($null -ne $program.schedule.rpe -and [int]$program.schedule.rpe -le 4) {
             $program["practice"] = @()
+        }
+        if ($program.origin -ne "apk_authentic") {
+            $practiceSets = 0
+            foreach ($step in @($program.practice)) { $practiceSets += [int]$step[1] }
+            $program["training_main"] = Limit-TrainingSteps $program.main `
+                ([int]$progressionLimits.main_sets_including_practice - $practiceSets) `
+                ([int]$progressionLimits.sets_per_exercise)
         }
     }
 

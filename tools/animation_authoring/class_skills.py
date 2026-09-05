@@ -5,8 +5,10 @@ pose("overhead_line", facing=1, torso=0, arms=[0, 0], legs=[180,180], feet=90,
      pin={"joint":"foot_near", "at":[100,104]})
 template("overhead_line", 3000, [(0,"overhead_line"),(1,"overhead_line")])
 
-pose("kneeling_side", facing=1, torso=285, arms=[134,90], arm_far=[0,0],
-     legs=[105,90], feet=90, pin={"joint":"knee_near", "at":[120,104]})
+# Stack the elbow under the shoulder and raise the shoulder/hip/knee line together.
+# The old diagonal upper arm left the shoulder close to the floor.
+pose("kneeling_side", facing=1, torso=292, arms=[180,90], arm_far=[0,0],
+     legs=[112,90], feet=90, pin={"joint":"knee_near", "at":[120,104]})
 
 template("kneeling_side_plank", 3000, [(0,"kneeling_side"),(1,"kneeling_side")])
 

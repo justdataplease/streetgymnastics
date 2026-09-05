@@ -2,6 +2,13 @@
 
 The intended product is a shared morning calisthenics class, without goal selection or skill deadlines. The sequence builds broad strength and exposes the athlete to front lever, back lever, muscle-up, handstand and human-flag practice. A workout number never proves readiness for a harder variation.
 
+## Calisthenics-first follow-up (5 September 2026)
+
+- Reviewed the shared sequence as a varied calisthenics program with complementary flexibility, retaining the existing handstand ladder and scheduled easy days.
+- Applied level workload ceilings of 14/16/18/18/20/20 main-plus-practice sets. For example, Foundations session 87 falls from 27 to 14 sets while retaining all five main exercises and its skill practice. The effective projection reduces sets in 177 authored classes; it preserves original prescriptions for audit.
+- Kept stretching durations and clarified alternate-side instructions directly in the movement cards. Renamed the working sections Calisthenics and Flexibility & cooldown.
+- Corrected the kneeling side-plank support-arm geometry, and added sampled checks for the handstand ladder's floor, box and wall contacts, straight arms and head clearance.
+
 ## Findings addressed
 
 The intended audience is recreational athletes building from fundamentals through intermediate strength, with the complete advanced skill ladders retained. Foundations effort is capped at RPE 6, Levels 2-4 at RPE 7, and later authored sessions at RPE 8. Planche, straddle and full-lever variations remain in the later progression as short practice ceilings, with easier regressions. The most advanced full-planche/full-lever exposures use at most three short sets; completing a level never requires mastery of those shapes. Early standalone muscle-ups use assistance, lever raises use tuck holds, and windshield-wiper work uses knee raises. Progress follows control and tolerance, with no deadline.
