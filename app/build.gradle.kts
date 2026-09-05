@@ -13,6 +13,7 @@ android {
         targetSdk = 35
         versionCode = 4
         versionName = "1.2.1"
+        testInstrumentationRunner = "co.streetgymnastic.streetgymnastic.revival.BasketballInstrumentation"
 
         vectorDrawables.useSupportLibrary = false
     }

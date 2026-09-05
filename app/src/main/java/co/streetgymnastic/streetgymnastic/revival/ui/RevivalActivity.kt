@@ -31,6 +31,7 @@ import android.widget.TextView
 import android.widget.Toast
 import co.streetgymnastic.streetgymnastic.revival.R
 import co.streetgymnastic.streetgymnastic.revival.data.AssetCurriculumRepository
+import co.streetgymnastic.streetgymnastic.revival.data.BasketballSkills
 import co.streetgymnastic.streetgymnastic.revival.data.model.CurriculumCatalog
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingExercise
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingLevel
@@ -53,7 +54,9 @@ open class RevivalActivity : Activity() {
     private sealed interface Screen {
         data object Dashboard : Screen
         data object Levels : Screen
-        data class Workouts(val levelNumber: Int) : Screen
+        data object Basketball : Screen
+        data object BasketballProgress : Screen
+        data class Workouts(val levelNumber: Int, val basketball: Boolean = false) : Screen
         data class Overview(val programId: String) : Screen
         data class Active(val programId: String) : Screen
         data object Progress : Screen
@@ -67,7 +70,9 @@ open class RevivalActivity : Activity() {
     )
 
     private lateinit var settings: AppSettings
-    private lateinit var progressRepository: SharedPreferencesProgressRepository
+    private lateinit var gymnasticsProgress: SharedPreferencesProgressRepository
+    private lateinit var basketballProgress: SharedPreferencesProgressRepository
+    private val progressRepository get() = repositoryFor(currentScreen)
     private lateinit var appRoot: LinearLayout
     private lateinit var toolbar: LinearLayout
     private lateinit var toolbarBack: TextView
@@ -77,10 +82,13 @@ open class RevivalActivity : Activity() {
 
     private val worker = Executors.newSingleThreadExecutor()
     private val backStack = ArrayDeque<Screen>()
-    private var catalog: CurriculumCatalog? = null
+    private var gymnasticsCatalog: CurriculumCatalog? = null
+    private var basketballCatalog: CurriculumCatalog? = null
+    private val catalog get() = catalogFor(currentScreen)
     private var currentScreen: Screen? = null
     private var restTimer: CountDownTimer? = null
     private var restEndsAtEpochMillis: Long? = null
+    private var restProgramId: String? = null
     private var restStatusView: TextView? = null
     private var toneGenerator: ToneGenerator? = null
     private var restoredScreen: Screen? = null
@@ -95,10 +103,12 @@ open class RevivalActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         settings = AppSettings(this)
-        progressRepository = SharedPreferencesProgressRepository(this)
+        gymnasticsProgress = SharedPreferencesProgressRepository(this)
+        basketballProgress = SharedPreferencesProgressRepository(this, "street_basketball_progress")
         restoredScreen = savedInstanceState?.let(::screenFromBundle)
         restEndsAtEpochMillis = savedInstanceState?.getLong(STATE_REST_END)
             ?.takeIf { it > System.currentTimeMillis() }
+        restProgramId = savedInstanceState?.getString(STATE_REST_PROGRAM)
 
         configureWindow()
         buildShell()
@@ -111,13 +121,17 @@ open class RevivalActivity : Activity() {
         currentScreen?.let { screen ->
             outState.putString(STATE_SCREEN, screen.javaClass.simpleName)
             when (screen) {
-                is Screen.Workouts -> outState.putInt(STATE_LEVEL, screen.levelNumber)
+                is Screen.Workouts -> {
+                    outState.putInt(STATE_LEVEL, screen.levelNumber)
+                    outState.putBoolean(STATE_BASKETBALL, screen.basketball)
+                }
                 is Screen.Overview -> outState.putString(STATE_PROGRAM, screen.programId)
                 is Screen.Active -> outState.putString(STATE_PROGRAM, screen.programId)
                 else -> Unit
             }
         }
         restEndsAtEpochMillis?.let { outState.putLong(STATE_REST_END, it) }
+        restProgramId?.let { outState.putString(STATE_REST_PROGRAM, it) }
     }
 
     override fun onDestroy() {
@@ -132,6 +146,8 @@ open class RevivalActivity : Activity() {
         when (val screen = currentScreen) {
             Screen.Dashboard, null -> super.onBackPressed()
             Screen.Levels, Screen.Progress, Screen.Settings -> openRoot(Screen.Dashboard)
+            Screen.Basketball -> openRoot(Screen.Dashboard)
+            Screen.BasketballProgress -> openRoot(Screen.Basketball)
             else -> {
                 val prior = backStack.pollLast()
                 if (prior != null) showScreen(prior, pushCurrent = false) else openRoot(Screen.Dashboard)
@@ -234,12 +250,16 @@ open class RevivalActivity : Activity() {
         bottomNavigation.visibility = View.GONE
         renderLoading()
         worker.execute {
-            val result = AssetCurriculumRepository(this).load()
+            val result = runCatching {
+                AssetCurriculumRepository(this).load().getOrThrow() to
+                    AssetCurriculumRepository(this, "basketball_curriculum.json").load().getOrThrow()
+            }
             runOnUiThread {
                 if (isFinishing || isDestroyed) return@runOnUiThread
                 result.fold(
                     onSuccess = {
-                        catalog = it
+                        gymnasticsCatalog = it.first
+                        basketballCatalog = it.second
                         val destination = restoredScreen?.takeIf(::isValidScreen) ?: Screen.Dashboard
                         restoredScreen = null
                         showScreen(destination, pushCurrent = false)
@@ -334,6 +354,8 @@ open class RevivalActivity : Activity() {
         when (screen) {
             Screen.Dashboard -> renderDashboard()
             Screen.Levels -> renderLevels()
+            Screen.Basketball -> renderBasketball()
+            Screen.BasketballProgress -> renderProgress()
             is Screen.Workouts -> renderWorkouts(screen.levelNumber)
             is Screen.Overview -> renderOverview(screen.programId)
             is Screen.Active -> renderActive(screen.programId)
@@ -355,6 +377,7 @@ open class RevivalActivity : Activity() {
         listOf(
             Triple(Screen.Dashboard, R.string.nav_today, "●"),
             Triple(Screen.Levels, R.string.nav_levels, "▦"),
+            Triple(Screen.Basketball, R.string.nav_basketball, ""),
             Triple(Screen.Progress, R.string.nav_progress, "↗"),
             Triple(Screen.Settings, R.string.nav_settings, "⚙"),
         ).forEach { (destination, labelRes, glyph) ->
@@ -366,7 +389,14 @@ open class RevivalActivity : Activity() {
                 isFocusable = true
                 contentDescription = getString(labelRes)
                 setOnClickListener { openRoot(destination) }
-                addView(TextView(context).apply {
+                if (destination == Screen.Basketball) addView(ImageView(context).apply {
+                    setImageResource(R.drawable.ic_basketball)
+                    imageTintList = ColorStateList.valueOf(
+                        if (isSelected) AppColors.PRIMARY_DARK else AppColors.TEXT_SECONDARY,
+                    )
+                    importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+                }, LinearLayout.LayoutParams(dp(22), dp(22)))
+                else addView(TextView(context).apply {
                     text = glyph
                     gravity = Gravity.CENTER
                     textSize = 17f
@@ -376,7 +406,12 @@ open class RevivalActivity : Activity() {
                 addView(TextView(context).apply {
                     text = getString(labelRes)
                     gravity = Gravity.CENTER
-                    textSize = 12f
+                    textSize = if (destination == Screen.Basketball) 11f else 12f
+                    maxLines = 1
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        setAutoSizeTextTypeUniformWithConfiguration(9, 12, 1,
+                            android.util.TypedValue.COMPLEX_UNIT_SP)
+                    }
                     typeface = if (isSelected) Typeface.DEFAULT_BOLD else Typeface.DEFAULT
                     setTextColor(if (isSelected) AppColors.PRIMARY_DARK else AppColors.TEXT_SECONDARY)
                     importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
@@ -492,6 +527,59 @@ open class RevivalActivity : Activity() {
         setBody(scroll(page))
     }
 
+    private fun renderBasketball() {
+        val plan = basketballCatalog ?: return
+        val completed = basketballProgress.completedProgramIds()
+        val active = basketballProgress.activeWorkout()
+        val next = active?.programId?.let(::programById)?.takeIf { canStart(it.id) }
+            ?: assignedProgram()
+        val page = verticalPage()
+        page.addView(titleText(getString(R.string.basketball_title), 26f))
+        page.addWithMargins(bodyText(getString(R.string.basketball_subtitle)), topDp = 4)
+        page.addWithMargins(BasketballCourtView(this, "overview"),
+            height = dp(128), topDp = 12, bottomDp = 8)
+        page.addView(sectionLabel(getString(R.string.basketball_next)))
+        if (next != null) {
+            page.addView(titleText(displayName(next, uiLocale()), 21f))
+            page.addWithMargins(bodyText(programMeta(next), 13f), topDp = 4)
+            page.addWithMargins(bodyText(next.description.resolve()), topDp = 8)
+            val start = primaryButton(getString(
+                if (active?.programId == next.id) R.string.resume_workout else R.string.basketball_start,
+            )) { requestStart(next) }
+            start.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_play_arrow_white_24dp, 0, 0, 0)
+            start.compoundDrawablePadding = dp(8)
+            page.addWithMargins(start, topDp = 12)
+            page.addView(secondaryButton(getString(R.string.basketball_session_details)) {
+                navigate(Screen.Overview(next.id))
+            })
+        } else {
+            page.addView(titleText(getString(R.string.basketball_complete), 20f))
+            page.addWithMargins(bodyText(getString(R.string.basketball_keep_practicing)), topDp = 6)
+        }
+        val all = allPrograms(plan)
+        page.addWithMargins(bodyText(getString(
+            R.string.workouts_completed_format, all.count { it.id in completed }, all.size,
+        )), topDp = 14)
+        page.addWithMargins(horizontalProgress(percentage(all.count { it.id in completed }, all.size)),
+            height = dp(8), topDp = 7)
+        page.addWithMargins(secondaryButton(getString(R.string.basketball_progress)) {
+            navigate(Screen.BasketballProgress)
+        }, topDp = 6)
+        page.addView(sectionLabel(getString(R.string.basketball_levels)))
+        plan.levels.forEach { level ->
+            page.addWithMargins(levelCard(level, uiLocale(), completed), bottomDp = 10)
+        }
+        page.addView(sectionLabel(getString(R.string.basketball_rhythm_title)))
+        page.addView(bodyText(getString(R.string.basketball_rhythm)))
+        page.addWithMargins(secondaryButton(getString(R.string.basketball_court_rules)) {
+            AlertDialog.Builder(this)
+                .setTitle(R.string.basketball_court_rules)
+                .setMessage(R.string.basketball_rules)
+                .setPositiveButton(android.R.string.ok, null).show()
+        }, topDp = 8)
+        setBody(scroll(page))
+    }
+
     private fun renderLevels() {
         val catalog = catalog ?: return
         val locale = uiLocale()
@@ -535,7 +623,7 @@ open class RevivalActivity : Activity() {
         )
         addWithMargins(horizontalProgress(percent), topDp = 7, height = dp(8))
         contentDescription = "${displayName(level, locale)}, ${getString(R.string.level_progress_format, complete, level.programs.size)}"
-        setOnClickListener { navigate(Screen.Workouts(level.number)) }
+        setOnClickListener { navigate(Screen.Workouts(level.number, isBasketball(currentScreen))) }
     }
 
     private fun renderWorkouts(levelNumber: Int) {
@@ -611,10 +699,14 @@ open class RevivalActivity : Activity() {
                 addExerciseSection(page, section, locale)
             }
             val assigned = assignedProgram()
-            if (assigned?.id == program.id) {
+            if (assigned?.id == program.id || canReplay(program.id)) {
                 val isResume = progressRepository.activeWorkout()?.programId == program.id
                 val start = primaryButton(
-                    getString(if (isResume) R.string.resume_workout else R.string.start_workout),
+                    getString(when {
+                        isResume -> R.string.resume_workout
+                        canReplay(program.id) -> R.string.basketball_repeat
+                        else -> R.string.start_workout
+                    }),
                 ) { requestStart(program) }
                 start.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_play_arrow_white_24dp, 0, 0, 0)
                 start.compoundDrawablePadding = dp(8)
@@ -714,7 +806,7 @@ open class RevivalActivity : Activity() {
     }
 
     private fun requestStart(program: TrainingProgram) {
-        if (assignedProgram()?.id != program.id) {
+        if (!canStart(program.id)) {
             Toast.makeText(this, R.string.sequence_locked_note, Toast.LENGTH_LONG).show()
             return
         }
@@ -740,12 +832,13 @@ open class RevivalActivity : Activity() {
     private fun renderActive(programId: String) {
         val program = programById(programId) ?: return
         val active = progressRepository.activeWorkout()
-        if (active?.programId != program.id || assignedProgram()?.id != program.id) {
+        if (active?.programId != program.id || !canStart(program.id)) {
             openRoot(Screen.Dashboard)
             return
         }
         val locale = uiLocale()
         val sections = sections(program).filter { it.exercises.isNotEmpty() }
+        if (restProgramId != program.id) clearRest()
         val allSetKeys = buildList {
             sections.forEach { section ->
                 section.exercises.forEachIndexed { exerciseIndex, exercise ->
@@ -887,7 +980,7 @@ open class RevivalActivity : Activity() {
     private fun askEffortAndFinish(program: TrainingProgram) {
         val values = (1..10).toList()
         val labels = values.map { getString(R.string.effort_item, it) }.toTypedArray()
-        var selected = 6
+        var selected = (program.targetRpe ?: 7) - 1
         AlertDialog.Builder(this)
             .setTitle(R.string.effort_title)
             .setSingleChoiceItems(labels, selected) { _, which -> selected = which }
@@ -897,7 +990,10 @@ open class RevivalActivity : Activity() {
                 clearRest()
                 Toast.makeText(this, R.string.workout_saved, Toast.LENGTH_SHORT).show()
                 backStack.clear()
-                showScreen(Screen.Progress, pushCurrent = false)
+                showScreen(
+                    if (program.id.startsWith("bb:")) Screen.BasketballProgress else Screen.Progress,
+                    pushCurrent = false,
+                )
             }
             .show()
     }
@@ -917,10 +1013,12 @@ open class RevivalActivity : Activity() {
     }
 
     private fun startRest(seconds: Int) {
+        restProgramId = progressRepository.activeWorkout()?.programId
         restEndsAtEpochMillis = System.currentTimeMillis() + seconds * 1_000L
     }
 
     private fun clearRest() {
+        restProgramId = null
         restEndsAtEpochMillis = null
         restTimer?.cancel()
         restTimer = null
@@ -969,7 +1067,9 @@ open class RevivalActivity : Activity() {
         val complete = all.count { it.id in completedIds }
         val percent = percentage(complete, all.size)
         val page = verticalPage()
-        page.addView(titleText(getString(R.string.progress_title), 26f))
+        page.addView(titleText(getString(
+            if (isBasketball(currentScreen)) R.string.basketball_progress else R.string.progress_title,
+        ), 26f))
 
         val overall = card().apply {
             addView(titleText("$percent%", 34f))
@@ -998,11 +1098,12 @@ open class RevivalActivity : Activity() {
                     topDp = 7,
                     height = dp(7),
                 )
-                setOnClickListener { navigate(Screen.Workouts(level.number)) }
+                setOnClickListener { navigate(Screen.Workouts(level.number, isBasketball(currentScreen))) }
             }
             page.addWithMargins(row, bottomDp = 8)
         }
 
+        if (isBasketball(currentScreen)) addBasketballChecks(page)
         page.addView(sectionLabel(getString(R.string.history)))
         val history = progressRepository.sessionHistory()
         if (history.isEmpty()) {
@@ -1037,6 +1138,33 @@ open class RevivalActivity : Activity() {
             }
         }
         setBody(scroll(page))
+    }
+
+    private fun addBasketballChecks(page: LinearLayout) {
+        val preferences = getSharedPreferences("street_basketball_skills", Context.MODE_PRIVATE)
+        val passed = preferences.getStringSet("passed", emptySet()).orEmpty().toMutableSet()
+        page.addView(sectionLabel(getString(R.string.basketball_checkpoints)))
+        page.addView(bodyText(getString(R.string.basketball_checkpoint_note), 14f))
+        BasketballSkills.checkpoints.forEachIndexed { levelIndex, checks ->
+            val level = basketballCatalog?.levels?.getOrNull(levelIndex) ?: return@forEachIndexed
+            page.addWithMargins(titleText(level.name.resolve(), 18f), topDp = 16, bottomDp = 4)
+            checks.forEachIndexed { checkIndex, label ->
+                val key = "l${levelIndex + 1}:c${checkIndex + 1}"
+                page.addView(CheckBox(this).apply {
+                    text = label
+                    textSize = 14f
+                    setTextColor(AppColors.TEXT)
+                    minHeight = dp(52)
+                    setPadding(0, dp(6), 0, dp(6))
+                    isChecked = key in passed
+                    buttonTintList = ColorStateList.valueOf(AppColors.SUCCESS)
+                    setOnCheckedChangeListener { _, checked ->
+                        if (checked) passed.add(key) else passed.remove(key)
+                        preferences.edit().putStringSet("passed", passed.toSet()).apply()
+                    }
+                })
+            }
+        }
     }
 
     @Suppress("DEPRECATION")
@@ -1087,7 +1215,9 @@ open class RevivalActivity : Activity() {
     private fun sections(program: TrainingProgram): List<ExerciseSection> = listOf(
         ExerciseSection("warmup", R.string.warm_up, program.warmup),
         ExerciseSection("practice", R.string.skill_practice, program.practice),
-        ExerciseSection("main", R.string.main_training, program.exercises),
+        ExerciseSection("main",
+            if (program.id.startsWith("bb:")) R.string.basketball_drills else R.string.main_training,
+            program.exercises),
         ExerciseSection("cooldown", R.string.cool_down, program.cooldown),
     )
 
@@ -1097,6 +1227,11 @@ open class RevivalActivity : Activity() {
         locale: Locale,
     ): LinearLayout = LinearLayout(this).apply {
         orientation = LinearLayout.VERTICAL
+        if (exercise.movementId?.startsWith("bb_") == true) {
+            addView(BasketballCourtView(context, exercise.category ?: "footwork"),
+                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(152)))
+            return@apply
+        }
         val preview = ExerciseAnimationView(context)
         val variations = exercise.sets.map { it.name.resolve(locale) }
             .filter(String::isNotBlank).distinct()
@@ -1143,6 +1278,17 @@ open class RevivalActivity : Activity() {
     }
 
     private fun workoutSafetyCard(program: TrainingProgram): LinearLayout = card().apply {
+        if (program.id.startsWith("bb:")) {
+            addView(titleText(getString(R.string.basketball_session_focus), 18f))
+            addWithMargins(bodyText(program.readiness.resolve(), 14f), topDp = 7)
+            addWithMargins(secondaryButton(getString(R.string.class_guidance_details)) {
+                AlertDialog.Builder(this@RevivalActivity)
+                    .setTitle(R.string.class_guidance_details)
+                    .setMessage(getString(R.string.basketball_rhythm) + "\n\n" + program.safety.resolve())
+                    .setPositiveButton(android.R.string.ok, null).show()
+            }, topDp = 4)
+            return@apply
+        }
         addView(titleText(getString(R.string.class_guidance_title), 18f))
         addWithMargins(bodyText(getString(R.string.class_guidance_summary), 14f), topDp = 7)
         addWithMargins(secondaryButton(getString(R.string.class_guidance_details)) {
@@ -1174,15 +1320,36 @@ open class RevivalActivity : Activity() {
         append(set.id).append('-').append(setIndex)
     }
 
+    private fun isBasketball(screen: Screen?): Boolean = when (screen) {
+        Screen.Basketball, Screen.BasketballProgress -> true
+        is Screen.Workouts -> screen.basketball
+        is Screen.Overview -> screen.programId.startsWith("bb:")
+        is Screen.Active -> screen.programId.startsWith("bb:")
+        else -> false
+    }
+
+    private fun catalogFor(screen: Screen?): CurriculumCatalog? =
+        if (isBasketball(screen)) basketballCatalog else gymnasticsCatalog
+
+    private fun repositoryFor(screen: Screen?): SharedPreferencesProgressRepository =
+        if (isBasketball(screen)) basketballProgress else gymnasticsProgress
+
     private fun programById(id: String): TrainingProgram? =
-        catalog?.levels?.asSequence()?.flatMap { it.programs.asSequence() }?.firstOrNull { it.id == id }
+        (if (id.startsWith("bb:")) basketballCatalog else gymnasticsCatalog)
+            ?.levels?.asSequence()?.flatMap { it.programs.asSequence() }?.firstOrNull { it.id == id }
+
+    private fun canReplay(id: String): Boolean =
+        id.startsWith("bb:") && basketballProgress.isProgramCompleted(id)
+
+    private fun canStart(id: String, screen: Screen? = currentScreen): Boolean =
+        assignedProgram(screen)?.id == id || canReplay(id)
 
     private fun allPrograms(catalog: CurriculumCatalog): List<TrainingProgram> =
         catalog.levels.sortedBy { it.number }.flatMap { level -> level.programs.sortedBy { it.number } }
 
-    private fun assignedProgram(): TrainingProgram? {
-        val loadedCatalog = catalog ?: return null
-        val completed = progressRepository.completedProgramIds()
+    private fun assignedProgram(screen: Screen? = currentScreen): TrainingProgram? {
+        val loadedCatalog = catalogFor(screen) ?: return null
+        val completed = repositoryFor(screen).completedProgramIds()
         // The assignment is derived only from ordered completion state. An active session may
         // come from an older build, so it must never promote a later workout past an incomplete one.
         return allPrograms(loadedCatalog).firstOrNull { it.id !in completed }
@@ -1216,6 +1383,8 @@ open class RevivalActivity : Activity() {
     private fun screenTitle(screen: Screen): String = when (screen) {
         Screen.Dashboard -> getString(R.string.dashboard_title)
         Screen.Levels -> getString(R.string.levels_title)
+        Screen.Basketball -> getString(R.string.basketball_title)
+        Screen.BasketballProgress -> getString(R.string.basketball_progress)
         is Screen.Workouts -> getString(R.string.workouts_title, screen.levelNumber)
         is Screen.Overview -> getString(R.string.workout_overview)
         is Screen.Active -> getString(R.string.active_workout)
@@ -1224,28 +1393,33 @@ open class RevivalActivity : Activity() {
     }
 
     private fun isNested(screen: Screen): Boolean =
-        screen is Screen.Workouts || screen is Screen.Overview || screen is Screen.Active
+        screen is Screen.Workouts || screen is Screen.Overview || screen is Screen.Active ||
+            screen == Screen.BasketballProgress
 
-    private fun rootFor(screen: Screen): Screen = when (screen) {
+    private fun rootFor(screen: Screen): Screen = if (isBasketball(screen)) Screen.Basketball else when (screen) {
         is Screen.Workouts, is Screen.Overview, is Screen.Active -> Screen.Levels
         else -> screen
     }
 
     private fun isValidScreen(screen: Screen): Boolean = when (screen) {
-        is Screen.Workouts -> catalog?.levels?.any { it.number == screen.levelNumber } == true
+        is Screen.Workouts -> catalogFor(screen)?.levels?.any { it.number == screen.levelNumber } == true
         is Screen.Overview -> programById(screen.programId) != null
         is Screen.Active -> programById(screen.programId) != null &&
-            progressRepository.activeWorkout()?.programId == screen.programId &&
-            assignedProgram()?.id == screen.programId
+            repositoryFor(screen).activeWorkout()?.programId == screen.programId &&
+            canStart(screen.programId, screen)
         else -> true
     }
 
     private fun screenFromBundle(bundle: Bundle): Screen? = when (bundle.getString(STATE_SCREEN)) {
         Screen.Dashboard.javaClass.simpleName -> Screen.Dashboard
         Screen.Levels.javaClass.simpleName -> Screen.Levels
+        Screen.Basketball.javaClass.simpleName -> Screen.Basketball
+        Screen.BasketballProgress.javaClass.simpleName -> Screen.BasketballProgress
         Screen.Progress.javaClass.simpleName -> Screen.Progress
         Screen.Settings.javaClass.simpleName -> Screen.Settings
-        Screen.Workouts::class.java.simpleName -> Screen.Workouts(bundle.getInt(STATE_LEVEL, -1))
+        Screen.Workouts::class.java.simpleName -> Screen.Workouts(
+            bundle.getInt(STATE_LEVEL, -1), bundle.getBoolean(STATE_BASKETBALL),
+        )
         Screen.Overview::class.java.simpleName -> bundle.getString(STATE_PROGRAM)?.let(Screen::Overview)
         Screen.Active::class.java.simpleName -> bundle.getString(STATE_PROGRAM)?.let(Screen::Active)
         else -> null
@@ -1256,5 +1430,7 @@ open class RevivalActivity : Activity() {
         private const val STATE_LEVEL = "level"
         private const val STATE_PROGRAM = "program"
         private const val STATE_REST_END = "rest_end_epoch_millis"
+        private const val STATE_REST_PROGRAM = "rest_program"
+        private const val STATE_BASKETBALL = "basketball"
     }
 }

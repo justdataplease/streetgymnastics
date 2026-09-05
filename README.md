@@ -1,8 +1,10 @@
 # Street Gymnastic
 
-An offline Kotlin/Android training app with one guided 600-workout calisthenics sequence.
+An offline Kotlin/Android training app with a guided 600-workout calisthenics sequence and a separate Street Basketball tab.
 
-The app is English-only and contains exactly 600 assigned workouts: six levels with 100 workouts each. The Today screen advances through one fixed sequence. Future workouts can be inspected, but only the next assigned workout can be started.
+Street Basketball adds 48 court sessions across six levels, 39 coached drills, offline court diagrams, repeatable sessions and 18 saved skill checks. Basketball has independent active workouts, checked sets and history. See [the basketball program](docs/BASKETBALL_PROGRAM.md) for progression, sources and verification.
+
+The app is English-only. Calisthenics contains exactly 600 assigned workouts: six levels with 100 workouts each. The Today screen advances through one fixed sequence. Future calisthenics workouts can be inspected, but only the next assigned workout can be started.
 
 ## Curriculum
 

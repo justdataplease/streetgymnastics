@@ -30,7 +30,11 @@ fun Context.displayName(exercise: TrainingExercise, locale: Locale): String =
     exercise.name.resolve(locale).ifBlank { getString(R.string.exercise_number, exercise.number) }
 
 fun Context.programMeta(program: TrainingProgram): String = buildList {
-    add(getString(R.string.workout_sequence_position, program.number))
+    add(getString(
+        if (program.id.startsWith("bb:")) R.string.basketball_session_number
+        else R.string.workout_sequence_position,
+        program.number,
+    ))
     program.estimatedMinutes?.let { add(getString(R.string.minutes_format, it)) }
     program.targetRpe?.let { add(getString(R.string.effort_item, it)) }
 }.joinToString(" • ")

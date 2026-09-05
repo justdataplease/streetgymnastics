@@ -20,6 +20,9 @@ try {
     & python "tools\validate_morning_class.py"
     if ($LASTEXITCODE -ne 0) { throw "Morning class or motion contact validation failed" }
 
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File "tools\validate_basketball.ps1"
+    if ($LASTEXITCODE -ne 0) { throw "Basketball curriculum validation failed" }
+
     New-Item -ItemType Directory -Force -Path "app\src\main\assets" | Out-Null
     Copy-Item -Force -LiteralPath "generated\curriculum_v2.json" -Destination "app\src\main\assets\curriculum.json"
 
@@ -36,6 +39,8 @@ try {
     Copy-Item -Force -LiteralPath "docs\EXTRACTION_REPORT.md" -Destination "dist\EXTRACTION_REPORT.md"
     Copy-Item -Force -LiteralPath "docs\CURRICULUM_METHOD.md" -Destination "dist\CURRICULUM_METHOD.md"
     Copy-Item -Force -LiteralPath "packaging\DIST_README.md" -Destination "dist\README.md"
+    Copy-Item -Force -LiteralPath "app\src\main\assets\basketball_curriculum.json" -Destination "dist\street-basketball-curriculum.json"
+    Copy-Item -Force -LiteralPath "docs\BASKETBALL_PROGRAM.md" -Destination "dist\BASKETBALL_PROGRAM.md"
 
     $distributionFiles = @(
         "dist\street-gymnastic-debug.apk",
@@ -44,7 +49,9 @@ try {
         "dist\street-gymnastic-forensic-export.json",
         "dist\EXTRACTION_REPORT.md",
         "dist\CURRICULUM_METHOD.md",
-        "dist\README.md"
+        "dist\README.md",
+        "dist\street-basketball-curriculum.json",
+        "dist\BASKETBALL_PROGRAM.md"
     )
     $expectedDistributionNames = @(
         $distributionFiles | ForEach-Object { Split-Path -Leaf $_ }

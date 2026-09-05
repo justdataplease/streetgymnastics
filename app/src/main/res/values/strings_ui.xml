@@ -97,7 +97,7 @@
     <string name="safety_title">Train safely</string>
     <string name="safety_body">Warm up before loading skills. Perform the prescribed variation only with clean control; otherwise use its displayed regression. If no lower rung is listed, reduce range, repetitions or sets, or add support and assistance. Leave repetitions in reserve and do not force German-hang or shoulder range. Stop for sharp pain, numbness, dizziness, or loss of control. Persistent symptoms need qualified medical advice.</string>
     <string name="about_title">About Street Gymnastic</string>
-    <string name="about_body">Street Gymnastic is a guided six-level training sequence with 600 workouts, built-in exercise demonstrations, rest timing, and progress tracking.</string>
+    <string name="about_body">Street Gymnastic includes 600 guided calisthenics workouts and a separate Street Basketball track with 48 court sessions, six levels, skill checks, rest timing and local progress tracking.</string>
     <string name="version_format">Version %1$s</string>
     <string name="empty_description">A balanced session of skill practice, fundamentals, and mobility.</string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_basketball">Basketball</string>
+    <string name="basketball_title">Street Basketball</string>
+    <string name="basketball_subtitle">From first touch to confident pickup play.</string>
+    <string name="basketball_next">Next court session</string>
+    <string name="basketball_start">Start court session</string>
+    <string name="basketball_session_details">Session details</string>
+    <string name="basketball_session_number">Session %1$d</string>
+    <string name="basketball_complete">All 48 sessions completed</string>
+    <string name="basketball_keep_practicing">Keep building consistency with repeat sessions, skill checks and live games against different players.</string>
+    <string name="basketball_repeat">Repeat court session</string>
+    <string name="basketball_progress">Basketball progress</string>
+    <string name="basketball_levels">Six levels of court craft</string>
+    <string name="basketball_drills">Basketball drills</string>
+    <string name="basketball_session_focus">Court focus</string>
+    <string name="basketball_rhythm_title">Practice rhythm</string>
+    <string name="basketball_rhythm">Begin with two court sessions a week, adding a third when recovery is comfortable. Leave an easy day between demanding court sessions and count pickup games as training. On calisthenics days, keep court work short and technical; reduce leg work when tired. Repeat sessions until control is consistent. Attempt counts are ceilings, not make-until-finished targets. Walk to recover and take longer rests when needed.</string>
+    <string name="basketball_checkpoints">Skill checks</string>
+    <string name="basketball_checkpoint_note">Check each target after meeting it on two different days. These are practice goals, not a certification. Repeat earlier sessions as needed. Solo rehearsals do not replace the live-player checks.</string>
+    <string name="basketball_court_rules">Pickup &amp; 3x3 rules</string>
+    <string name="basketball_rules">PICKUP\nAgree on scoring, winning score, fouls, clearing, checking and who keeps possession after a basket before playing. Call fouls calmly, respect the call and share the court.\n\nFIBA 3x3\nShots inside the arc and free throws count 1; shots outside count 2. Regulation lasts 10 minutes or ends when a team reaches 21. A possession has 12 seconds. After a defensive rebound or steal, clear the ball beyond the arc. After a made basket, the non-scoring team takes the ball from under the hoop and clears it; there is no check after each basket. Dead-ball restarts use a check at the top. In overtime, the first team to score 2 wins.\n\nLocal pickup rules vary. FIBA rules: about.fiba.basketball/en/our-sport/3x3-basketball</string>
+    <string name="basketball_court_description">Half-court diagram: hoop at the top, blue attackers, red defenders, gold ball, arrows show movement.</string>
+</resources>

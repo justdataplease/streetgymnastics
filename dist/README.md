@@ -1,6 +1,8 @@
 # Street Gymnastic debug distribution
 
-This folder is a scripted, rebuildable debug distribution of Street Gymnastic.
+This folder is a scripted, rebuildable debug distribution of Street Gymnastic, including the separate Street Basketball tab.
+
+Basketball adds 48 sessions across six levels, 39 drills, court diagrams, repeatable practice and 18 saved skill checks. Its progress is independent of calisthenics. The basketball asset is included as `street-basketball-curriculum.json`, with program notes in `BASKETBALL_PROGRAM.md`; both are covered by the checksums.
 
 ## Contents
 
@@ -24,7 +26,7 @@ The debug application ID is `co.streetgymnastic.streetgymnastic.revival.debug`. 
 
 ## Training sequence
 
-The app contains exactly 600 scheduled workouts: 100 in each of six levels.
+The calisthenics track contains exactly 600 scheduled workouts: 100 in each of six levels. The basketball track contains 48 additional court sessions.
 
 Available detailed workouts and newly written sessions are combined into one consistent sequence in the app. Source classifications exist only in the catalog and technical reports for auditing; they are not displayed as product labels. The supplied package did not contain the unavailable paid workout details, and the new sessions do not claim to recover them.
 

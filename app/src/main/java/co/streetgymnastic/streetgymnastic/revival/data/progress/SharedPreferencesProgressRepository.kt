@@ -5,9 +5,12 @@ import android.content.SharedPreferences
 import org.json.JSONArray
 import org.json.JSONObject
 
-class SharedPreferencesProgressRepository(context: Context) : ProgressRepository {
+class SharedPreferencesProgressRepository(
+    context: Context,
+    preferencesName: String = PREFERENCES_NAME,
+) : ProgressRepository {
     private val preferences: SharedPreferences = context.applicationContext.getSharedPreferences(
-        PREFERENCES_NAME,
+        preferencesName,
         Context.MODE_PRIVATE,
     )
     private val lock = Any()
