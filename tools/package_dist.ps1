@@ -17,6 +17,9 @@ try {
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File "tools\validate_animations.ps1"
     if ($LASTEXITCODE -ne 0) { throw "Exercise animation validation failed" }
 
+    & python "tools\validate_morning_class.py"
+    if ($LASTEXITCODE -ne 0) { throw "Morning class or motion contact validation failed" }
+
     New-Item -ItemType Directory -Force -Path "app\src\main\assets" | Out-Null
     Copy-Item -Force -LiteralPath "generated\curriculum_v2.json" -Destination "app\src\main\assets\curriculum.json"
 

@@ -139,7 +139,7 @@ DF = {"joint": "neck", "at": [54, 100]}
 def dragon(name, angle, shin=None, far_shin=None):
     legs = [angle, angle if shin is None else shin]
     leg_far = [angle + 2, (angle + 2) if far_shin is None else far_shin]
-    pose(name, facing=1, torso=angle, head=280, legs=legs, leg_far=leg_far, feet=(legs[1] + 10) % 360, pin=DF)
+    pose(name, facing=1, torso=(angle + 180) % 360, head=270, legs=legs, leg_far=leg_far, feet=(legs[1] + 10) % 360, pin=DF)
     reach_arm(name, (41, 82), pref=UP)
 dragon("dragon_top", 15)
 dragon("dragon_low", 75)

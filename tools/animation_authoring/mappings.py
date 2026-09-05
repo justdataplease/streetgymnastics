@@ -148,3 +148,6 @@ EQUIPMENT_DEFAULTS = {
     "wall": "wall_slide", "mat": "hollow_hold", "box": "step_up", "support": "leg_swing",
 }
 FALLBACK = "standing_mobility"
+
+# Explicit IDs for the shared morning-class skill ladders.
+MOVEMENTS.update({name: name for name in ["overhead_line", "kneeling_side_plank", "pike_handstand_hold", "wall_handstand", "handstand_toe_pull", "handstand_balance", "flag_ground_support", "assisted_tuck_flag", "tuck_flag"]})

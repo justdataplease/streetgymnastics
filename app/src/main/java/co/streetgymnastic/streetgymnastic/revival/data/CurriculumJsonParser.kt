@@ -81,12 +81,14 @@ object CurriculumJsonParser {
         val programId = json.optValueAsString("id")
             ?: "sg:l${level.toString().padStart(2, '0')}:p${number.toString().padStart(4, '0')}"
         val sections = json.optJSONObject("sections")
-        val content = json.optJSONObject("content")
+        val content = json.optJSONObject("training_content") ?: json.optJSONObject("content")
         val schedule = json.optJSONObject("schedule")
         val coachingOverlay = json.optJSONObject("coaching_overlay")
         val legacy = json.optJSONObject("legacy")
 
+        val morningRecovery = json.optBoolean("morning_recovery", false)
         val mainExercises = when {
+            morningRecovery -> parseCompactSteps(json.optJSONArray("main"), programId, "main", movementLibrary)
             content?.optJSONArray("exercises") != null ->
                 content.optJSONArray("exercises").mapObjects(::parseExpandedExercise)
             json.optJSONArray("exercises") != null ->
@@ -121,16 +123,19 @@ object CurriculumJsonParser {
             day = schedule?.optIntOrNull("day")
                 ?: json.optIntOrNull("day")
                 ?: json.optIntOrNull("day_number"),
-            estimatedMinutes = schedule?.optIntOrNull("minutes")
+            estimatedMinutes = if (morningRecovery) 20 else schedule?.optIntOrNull("minutes")
                 ?: json.optIntOrNull("estimated_minutes"),
             exercises = mainExercises,
-            targetRpe = (schedule?.optIntOrNull("rpe")
+            readiness = json.optLocalized("readiness"),
+            safety = json.optLocalized("safety"),
+            targetRpe = if (morningRecovery) 3 else json.optIntOrNull("training_rpe") ?: (schedule?.optIntOrNull("rpe")
                 ?: json.optIntOrNull("target_rpe"))?.takeIf { it in 1..10 },
             dayType = schedule?.optValueAsString("day_type")
                 ?: json.optValueAsString("day_type"),
             focusTags = (schedule?.optJSONArray("focus")
                 ?: json.optJSONArray("focus")
                 ?: json.optJSONArray("focus_tags")).mapStrings(),
+            practice = parseCompactSteps(json.optJSONArray("practice"), programId, "practice", movementLibrary),
             warmup = parseFlexibleSection(warmupArray, programId, "warmup", movementLibrary),
             cooldown = parseFlexibleSection(cooldownArray, programId, "cooldown", movementLibrary),
         )
@@ -273,7 +278,16 @@ object CurriculumJsonParser {
     ): LocalizedText {
         val tempoNote = tempo?.takeIf { it.isNotBlank() && !it.equals("null", ignoreCase = true) }
         return LocalizedText(
-            en = joinNotes(repetitionNote, durationNote, tempoNote?.let { "Tempo $it" }),
+            en = joinNotes(repetitionNote, durationNote, tempoNote?.let { raw ->
+                if (Regex("[0-9Xx]{4}").matches(raw)) {
+                    val lift = if (raw[2].equals('X', ignoreCase = true)) "brisk lift" else "${raw[2]}s lift"
+                    "${raw[0]}s lower, ${raw[1]}s pause, $lift, ${raw[3]}s reset"
+                } else if (raw.equals("isometric", ignoreCase = true)) {
+                    "Hold steady and breathe"
+                } else {
+                    raw.replace('_', ' ')
+                }
+            }),
         )
     }
 

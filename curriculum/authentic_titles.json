@@ -1,0 +1,277 @@
+{
+  "purpose": {
+    "en": "Authored display names based on the exercises in each recovered session; source prescriptions remain intact."
+  },
+  "titles": {
+    "1-1": {
+      "en": "Hang, Support & Squat"
+    },
+    "1-2": {
+      "en": "Hang & Hanging Core"
+    },
+    "1-3": {
+      "en": "Grip & Squat Practice"
+    },
+    "1-4": {
+      "en": "Support & Leg-Raise Practice"
+    },
+    "1-5": {
+      "en": "Hang & Leg Strength"
+    },
+    "1-6": {
+      "en": "Grip & Trunk Control"
+    },
+    "1-7": {
+      "en": "Jump-to-Hang & Squats"
+    },
+    "1-8": {
+      "en": "Jump-to-Hang & Core"
+    },
+    "1-9": {
+      "en": "Rows, Support & Squats"
+    },
+    "1-10": {
+      "en": "Rows, Support & Core"
+    },
+    "1-11": {
+      "en": "Rows & Half-Dip Foundations"
+    },
+    "1-12": {
+      "en": "Rows, Half Dips & Leg Raises"
+    },
+    "1-13": {
+      "en": "Bar Catches & Half Dips"
+    },
+    "1-14": {
+      "en": "Bar Catches & Hanging Core"
+    },
+    "1-15": {
+      "en": "Row & Squat Consolidation"
+    },
+    "1-16": {
+      "en": "Row & Core Consolidation"
+    },
+    "1-17": {
+      "en": "Bar Control & Leg Strength"
+    },
+    "1-18": {
+      "en": "Bar Control & Trunk Strength"
+    },
+    "1-19": {
+      "en": "Rows & Bar-to-Floor Practice"
+    },
+    "1-20": {
+      "en": "Rows & Bar-to-Floor Core"
+    },
+    "1-21": {
+      "en": "Push-Up & Squat Foundations"
+    },
+    "1-22": {
+      "en": "Push-Up & Leg-Raise Foundations"
+    },
+    "1-23": {
+      "en": "Bar Catches & Push-Up Practice"
+    },
+    "1-24": {
+      "en": "Bar Catches & Core Practice"
+    },
+    "1-25": {
+      "en": "Bar-to-Floor & Lunges"
+    },
+    "1-26": {
+      "en": "Bar-to-Floor & Leg Raises"
+    },
+    "1-27": {
+      "en": "Dip & Lunge Foundations"
+    },
+    "1-28": {
+      "en": "Dip & Hanging-Core Foundations"
+    },
+    "1-29": {
+      "en": "Grip, Dips & Leg Circuit"
+    },
+    "1-30": {
+      "en": "Grip, Dips & Core Circuit"
+    },
+    "1-31": {
+      "en": "Bar Catches & Lower-Body Strength"
+    },
+    "1-32": {
+      "en": "Bar Catches & Dip Control"
+    },
+    "1-33": {
+      "en": "Pull-Ups & Parallel-Bar Walks"
+    },
+    "1-34": {
+      "en": "Pull-Ups, Dips & Leg Raises"
+    },
+    "1-35": {
+      "en": "Pull-Up & Leg Strength"
+    },
+    "1-36": {
+      "en": "Pull-Up & Core Strength"
+    },
+    "1-37": {
+      "en": "Pull-Ups, Dips & Lunges"
+    },
+    "1-38": {
+      "en": "Bar Walks & Knee Raises"
+    },
+    "1-39": {
+      "en": "Full-Body Strength Consolidation"
+    },
+    "1-40": {
+      "en": "Pull, Push & Knee-Raise Consolidation"
+    },
+    "2-1": {
+      "en": "Inverted-Hang & Pull Foundations"
+    },
+    "2-2": {
+      "en": "Inversion & Mixed Bar Practice"
+    },
+    "2-3": {
+      "en": "Pulling Volume & Squat Practice"
+    },
+    "2-4": {
+      "en": "Inverted-Hang & Push-Up Practice"
+    },
+    "2-5": {
+      "en": "Inversion & Pull-Up Strength"
+    },
+    "2-6": {
+      "en": "Bar Strength & Squat Practice"
+    },
+    "2-7": {
+      "en": "Mixed Bar Combinations"
+    },
+    "2-8": {
+      "en": "Inversion & Hanging-Core Control"
+    },
+    "2-9": {
+      "en": "Hanging L-Sit & Push-Pull Strength"
+    },
+    "2-10": {
+      "en": "Hanging L-Sit & Bar Combinations"
+    },
+    "2-11": {
+      "en": "Hanging L-Sit & Leg Raises"
+    },
+    "2-12": {
+      "en": "Hanging L-Sit & Full-Body Practice"
+    },
+    "2-13": {
+      "en": "Pull-Up Volume & Leg Strength"
+    },
+    "2-14": {
+      "en": "Push-Up Combination Practice"
+    },
+    "2-15": {
+      "en": "Pull-Up Combination Practice"
+    },
+    "2-16": {
+      "en": "Pull & Push Consolidation"
+    },
+    "2-17": {
+      "en": "Knee-Raise & Squat Practice"
+    },
+    "2-18": {
+      "en": "Knee Raises & Hanging-Core Strength"
+    },
+    "2-19": {
+      "en": "Knee Raises & Pull-Up Practice"
+    },
+    "2-20": {
+      "en": "Assisted Turnover & Knee-Raise Control"
+    },
+    "2-21": {
+      "en": "Assisted Turnover & Push-Up Practice"
+    },
+    "2-22": {
+      "en": "Assisted Turnover & Pull-Up Practice"
+    },
+    "2-23": {
+      "en": "Pullover, Roll & Push-Pull Strength"
+    },
+    "2-24": {
+      "en": "Pullover & Assisted Turnover Practice"
+    },
+    "2-25": {
+      "en": "Pullover & Pull-Up Strength"
+    },
+    "2-26": {
+      "en": "Pullover & Hanging-Core Practice"
+    },
+    "2-27": {
+      "en": "Pullover, Roll & Strength Combinations"
+    },
+    "2-28": {
+      "en": "Mixed Push-Up & Bar Combinations"
+    },
+    "2-29": {
+      "en": "Pullover & Full-Body Combinations"
+    },
+    "2-30": {
+      "en": "Pullover & Core Consolidation"
+    },
+    "3-1": {
+      "en": "Pullover & Dip Strength"
+    },
+    "3-2": {
+      "en": "Muscle-Up & Bar-Dip Practice"
+    },
+    "3-3": {
+      "en": "Muscle-Up & Inverted-Hang Control"
+    },
+    "3-4": {
+      "en": "Pull, Dip & Bar Combinations"
+    },
+    "3-5": {
+      "en": "Plank & Trunk-Control Circuit"
+    },
+    "3-6": {
+      "en": "Muscle-Up, Pullover & Squats"
+    },
+    "3-7": {
+      "en": "Muscle-Up & Tuck-Lever Practice"
+    },
+    "3-8": {
+      "en": "Pullover & Straight-Bar Strength"
+    },
+    "3-9": {
+      "en": "Tuck-Lever Holds & Single-Leg Squats"
+    },
+    "3-10": {
+      "en": "Muscle-Up & Back-Lever Entries"
+    },
+    "3-11": {
+      "en": "Hanging-Core & Squat Circuit"
+    },
+    "3-12": {
+      "en": "Muscle-Up & Single-Leg Strength"
+    },
+    "3-13": {
+      "en": "Pullover, Dips & Jump Practice"
+    },
+    "3-14": {
+      "en": "Muscle-Up & Pullover Consolidation"
+    },
+    "3-15": {
+      "en": "Tuck-Lever Holds & Inversion Practice"
+    },
+    "3-16": {
+      "en": "Bar Combinations & Fundamentals"
+    },
+    "3-17": {
+      "en": "Squat Jumps & Knee-Raise Control"
+    },
+    "3-18": {
+      "en": "Muscle-Up & Pulling Combinations"
+    },
+    "3-19": {
+      "en": "Inversion & Bar-Dip Combinations"
+    },
+    "3-20": {
+      "en": "Muscle-Up & Full-Body Consolidation"
+    }
+  }
+}

@@ -18,3 +18,7 @@
 # Contact sheets rendered by tools/preview_animations.py (development aid only)
 /generated/animation_previews/
 __pycache__/
+
+# Local coaching and emulator review artifacts
+/generated/animation_audit/
+/generated/class_ui.xml

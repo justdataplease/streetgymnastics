@@ -2125,7 +2125,7 @@
         "en": "90/90 Hip Switch"
       },
       "description": {
-      "en": "Rotate both knees from one 90/90 side to the other under control; each arrival counts as one alternating repetition unless the workout explicitly says per side."
+        "en": "Rotate both knees from one 90/90 side to the other under control; each arrival counts as one alternating repetition unless the workout explicitly says per side."
       },
       "category": "mobility",
       "patterns": [
@@ -2262,28 +2262,260 @@
       }
     },
     {
-      "id": "assisted_pistol_squat", "name": {"en": "Supported Pistol Squat"},
-      "description": {"en": "Hold a secure support and descend on one leg only as far as balance and knee control allow."},
-      "category": "fundamental", "patterns": ["single_leg_squat"], "equipment": ["secure_support"], "regression_id": "split_squat",
-      "safety": {"en": "Keep the knee aligned with the foot and use the support rather than twisting."}
+      "id": "assisted_pistol_squat",
+      "name": {
+        "en": "Supported Pistol Squat"
+      },
+      "description": {
+        "en": "Hold a secure support and descend on one leg only as far as balance and knee control allow."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "single_leg_squat"
+      ],
+      "equipment": [
+        "secure_support"
+      ],
+      "regression_id": "split_squat",
+      "safety": {
+        "en": "Keep the knee aligned with the foot and use the support rather than twisting."
+      }
     },
     {
-      "id": "pistol_squat", "name": {"en": "Pistol Squat"},
-      "description": {"en": "Perform a controlled single-leg squat while the free leg reaches forward and the working heel stays grounded."},
-      "category": "advanced_fundamental", "patterns": ["single_leg_squat"], "equipment": [], "regression_id": "assisted_pistol_squat",
-      "safety": {"en": "Use only a depth that preserves foot pressure, knee alignment, and balance."}
+      "id": "pistol_squat",
+      "name": {
+        "en": "Pistol Squat"
+      },
+      "description": {
+        "en": "Perform a controlled single-leg squat while the free leg reaches forward and the working heel stays grounded."
+      },
+      "category": "advanced_fundamental",
+      "patterns": [
+        "single_leg_squat"
+      ],
+      "equipment": [],
+      "regression_id": "assisted_pistol_squat",
+      "safety": {
+        "en": "Use only a depth that preserves foot pressure, knee alignment, and balance."
+      }
     },
     {
-      "id": "hanging_leg_raise", "name": {"en": "Hanging Straight-Leg Raise"},
-      "description": {"en": "From an active hang, raise straight legs without swinging and lower with trunk control."},
-      "category": "fundamental", "patterns": ["hanging_core", "compression"], "equipment": ["high_bar"], "regression_id": "knee_raise",
-      "safety": {"en": "Bend the knees or stop the set when the back arches or grip fades."}
+      "id": "hanging_leg_raise",
+      "name": {
+        "en": "Hanging Straight-Leg Raise"
+      },
+      "description": {
+        "en": "From an active hang, raise straight legs without swinging and lower with trunk control."
+      },
+      "category": "fundamental",
+      "patterns": [
+        "hanging_core",
+        "compression"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "knee_raise",
+      "safety": {
+        "en": "Bend the knees or stop the set when the back arches or grip fades."
+      }
     },
     {
-      "id": "toes_to_bar", "name": {"en": "Strict Toes-to-Bar"},
-      "description": {"en": "Raise the feet toward the bar from a controlled active hang without a kip, then lower slowly."},
-      "category": "advanced_fundamental", "patterns": ["hanging_core", "compression"], "equipment": ["high_bar"], "regression_id": "hanging_leg_raise",
-      "safety": {"en": "Use a smaller range before swinging begins and step down before grip failure."}
+      "id": "toes_to_bar",
+      "name": {
+        "en": "Strict Toes-to-Bar"
+      },
+      "description": {
+        "en": "Raise the feet toward the bar from a controlled active hang without a kip, then lower slowly."
+      },
+      "category": "advanced_fundamental",
+      "patterns": [
+        "hanging_core",
+        "compression"
+      ],
+      "equipment": [
+        "high_bar"
+      ],
+      "regression_id": "hanging_leg_raise",
+      "safety": {
+        "en": "Use a smaller range before swinging begins and step down before grip failure."
+      }
+    },
+    {
+      "id": "overhead_line",
+      "name": {
+        "en": "Overhead Handstand-Line Practice"
+      },
+      "description": {
+        "en": "Stand tall with ribs stacked over pelvis. Reach both arms overhead without arching the back; gently elevate the shoulders. This rehearses the handstand line with feet grounded."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "handstand"
+      ],
+      "equipment": [],
+      "regression_id": "wall_slide",
+      "safety": {
+        "en": "Use only comfortable overhead range. Keep breathing; this is preparation, not a loaded handstand."
+      }
+    },
+    {
+      "id": "kneeling_side_plank",
+      "name": {
+        "en": "Kneeling Side Plank"
+      },
+      "description": {
+        "en": "Lie on one side, elbow below shoulder and knees bent. Lift hips into line with shoulders and knees; hold without rolling. Repeat on the other side."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "human_flag"
+      ],
+      "equipment": [],
+      "regression_id": null,
+      "safety": {
+        "en": "Keep the supporting shoulder active. Shorten the hold or keep hips down if needed."
+      }
+    },
+    {
+      "id": "pike_handstand_hold",
+      "name": {
+        "en": "Box-Pike Handstand Preparation"
+      },
+      "description": {
+        "en": "Place feet on a stable box and hands on the floor. Bend at the hips into an L shape, straighten elbows and push the floor away. Bring shoulders toward the hands only while you can step down calmly. Use a lower box and bent knees if needed; keep the head off the floor."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "handstand"
+      ],
+      "equipment": [
+        "secure_box"
+      ],
+      "regression_id": "overhead_line",
+      "safety": {
+        "en": "Use the easier variation until wrists and shoulders tolerate it comfortably. Keep elbows straight and breathe. Before inversion, rehearse a controlled exit with a qualified coach or spotter; never kick up without an exit."
+      }
+    },
+    {
+      "id": "wall_handstand",
+      "name": {
+        "en": "Chest-to-Wall Handstand Practice"
+      },
+      "description": {
+        "en": "From a plank facing away from a clear wall, walk feet up and hands in only as far as you can reverse safely. Push tall with straight elbows and ribs tucked. Walk back down before fatigue. A partial wall walk is valid."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "handstand"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": "pike_handstand_hold",
+      "safety": {
+        "en": "Use the easier variation until wrists and shoulders tolerate it comfortably. Keep elbows straight and breathe. Before inversion, rehearse a controlled exit with a qualified coach or spotter; never kick up without an exit."
+      }
+    },
+    {
+      "id": "handstand_toe_pull",
+      "name": {
+        "en": "Wall Handstand Balance Practice"
+      },
+      "description": {
+        "en": "From a controlled chest-to-wall handstand, shift pressure through the fingertips until the toes briefly become light. Return to light wall contact. The time is a practice window, not a required unsupported hold."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "handstand"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": "wall_handstand",
+      "safety": {
+        "en": "Use the easier variation until wrists and shoulders tolerate it comfortably. Keep elbows straight and breathe. Before inversion, rehearse a controlled exit with a qualified coach or spotter; never kick up without an exit."
+      }
+    },
+    {
+      "id": "handstand_balance",
+      "name": {
+        "en": "Handstand Balance Attempts"
+      },
+      "description": {
+        "en": "Near a clear wall, make low-effort entries and brief balance attempts using the exit already rehearsed with a coach. Reset between attempts. The time is a practice window; return to wall balance work whenever needed."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "handstand"
+      ],
+      "equipment": [
+        "wall"
+      ],
+      "regression_id": "handstand_toe_pull",
+      "safety": {
+        "en": "Use the easier variation until wrists and shoulders tolerate it comfortably. Keep elbows straight and breathe. Before inversion, rehearse a controlled exit with a qualified coach or spotter; never kick up without an exit."
+      }
+    },
+    {
+      "id": "flag_ground_support",
+      "name": {
+        "en": "Feet-Grounded Human-Flag Support"
+      },
+      "description": {
+        "en": "Stand beside a fixed vertical support and take a comfortable wide split grip. Keep both feet down and lean slightly away to rehearse upper-hand pulling and lower-hand pushing. Reverse sides."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "human_flag"
+      ],
+      "equipment": [
+        "flag_pole"
+      ],
+      "regression_id": "kneeling_side_plank",
+      "safety": {
+        "en": "Use fixed stall bars or a rated flag pole, never a loose rail or door frame. Train both sides. Keep the lower arm straight, push with the lower hand and pull with the upper hand. Stop for elbow or shoulder discomfort; do not jump into the hold."
+      }
+    },
+    {
+      "id": "assisted_tuck_flag",
+      "name": {
+        "en": "Foot-Assisted Tuck Human Flag"
+      },
+      "description": {
+        "en": "Use fixed stall bars with a secure low foothold. From split-grip support, bring knees toward the chest while retaining firm foot assistance. Lift only enough to practise the sideways body line; lower under control. Without a foothold or spotter, use grounded support."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "human_flag"
+      ],
+      "equipment": [
+        "stall_bars"
+      ],
+      "regression_id": "flag_ground_support",
+      "safety": {
+        "en": "Use fixed stall bars or a rated flag pole, never a loose rail or door frame. Train both sides. Keep the lower arm straight, push with the lower hand and pull with the upper hand. Stop for elbow or shoulder discomfort; do not jump into the hold."
+      }
+    },
+    {
+      "id": "tuck_flag",
+      "name": {
+        "en": "Tuck Human-Flag Practice"
+      },
+      "description": {
+        "en": "Only after assisted holds and controlled exits are repeatable, briefly unload the foothold with knees tucked. Keep the trunk facing forward and shoulders active. Regain foot support before form changes. Longer-leg and full flags come after stable tuck control, not after finishing a level."
+      },
+      "category": "skill_foundation",
+      "patterns": [
+        "human_flag"
+      ],
+      "equipment": [
+        "stall_bars"
+      ],
+      "regression_id": "assisted_tuck_flag",
+      "safety": {
+        "en": "Use fixed stall bars or a rated flag pole, never a loose rail or door frame. Train both sides. Keep the lower arm straight, push with the lower hand and pull with the upper hand. Stop for elbow or shoulder discomfort; do not jump into the hold."
+      }
     }
   ]
 }

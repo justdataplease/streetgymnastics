@@ -1,7 +1,7 @@
 import sys, os, importlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import author
-for g in ["group_a", "group_b", "group_c", "group_d"]:
+for g in ["group_a", "group_b", "group_c", "group_d", "contact_corrections", "class_skills"]:
     importlib.import_module(g)
 import mappings as m
 heur = [{"contains": c, "animation": a} for c, a in m.HEURISTICS]

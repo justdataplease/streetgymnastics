@@ -20,9 +20,9 @@ The unavailable paid catalog was not bundled in the supplied app, so its missing
 1. Foundations — 100 workouts
 2. Bar Strength — 100 workouts
 3. Skill Transition — 100 workouts
-4. Skill Foundations — 100 workouts
-5. Lever Strength — 100 workouts
-6. Mastery Consolidation — 100 workouts
+4. Skill Control — 100 workouts
+5. Intermediate Strength — 100 workouts
+6. Confident Calisthenics — 100 workouts
 
 Validation is rolling rather than limited to stored week boundaries. Within each level's authored portion, every consecutive seven authored sessions include a basic pull-up or row, a basic push-up, a dip or support, legs, core, and at least one recovery-like session at RPE 4 or below. From Level 3 onward, every such authored window also exposes all five goals in parallel. Existing fixed prescriptions retain their source doses and use the same conservative scaling guidance as the rest of the app.
 
@@ -35,9 +35,22 @@ Every authored skill or advanced movement includes a listed regression for the s
 - `generated/curriculum_v2.json` — mechanically assembled English-only 600-workout app catalog.
 - `tools/assemble_curriculum.ps1` — combines source data and authored batches; it does not invent workouts.
 - `tools/validate_curriculum.ps1` — verifies all 619 authored source records and the 600 app workouts: counts, IDs, provenance, prescriptions, explicit per-side doses, movement references, regression direction and prior rehearsal, uniqueness, rolling seven-authored-session fundamentals, Level 3+ five-goal exposure, low-RPE recovery, workload limits, and English-only output.
-- `tools/validate_animations.ps1` — verifies the offline exercise-animation asset: schema, figure proportions, pose inheritance and pins, keyframe timing, complete coverage of all 115 movement IDs and all 34 recovered exercise names, and a forward-kinematics pass that keeps every keyframe inside the drawing canvas.
+- `tools/validate_animations.ps1` — verifies the offline exercise-animation asset: schema, figure proportions, pose inheritance and pins, keyframe timing, complete coverage of all 124 movement IDs and all 34 recovered exercise names, and a forward-kinematics pass that keeps every keyframe inside the drawing canvas.
 - `tools/preview_animations.py` — optional development aid (Python 3 + Pillow) that renders contact sheets of every animation so pose edits can be reviewed without building the app.
 - `tools/animation_authoring/` — optional source scripts for the animation asset; `build.py` regenerates `exercise_animations.json` from compact angle specs with small inverse-kinematics helpers so hands and feet land exactly on bars, boxes, and the floor.
+
+## Guided morning classes
+
+The intended audience is recreational athletes building from fundamentals through intermediate strength, with the complete advanced skill ladders retained. Foundations effort is capped at RPE 6, Levels 2-4 at RPE 7, and later authored sessions at RPE 8. Planche, straddle and full-lever variations remain in the later progression as short practice ceilings, with easier regressions. The most advanced full-planche/full-lever exposures use at most three short sets; completing a level never requires mastery of those shapes. Early standalone muscle-ups use assistance, lever raises use tuck holds, and windshield-wiper work uses knee raises. Progress follows control and tolerance, with no deadline.
+
+
+Open Today and follow one assigned class. There are no goal routes or skill deadlines. The shared curriculum develops front lever, back lever, muscle-up, human flag and handstand, with planche and dragon-flag work retained as additional strength practice.
+
+Handstand and flag practice is an explicitly authored, repeating seven-session timetable in `curriculum/morning_class.json`, with short easy exposures and prerequisite regressions. Early source sessions now have a separate working projection: 24 recovery mornings replace hard sessions, and the remaining 66 strength classes have a maximum of 20 main/practice sets, three sets per exercise, 12 repetitions or 30-second holds. Former max sets become eight-repetition ceilings. Original records remain unchanged in `content` and the forensic export. The app reads `training_content` for these adjusted strength classes.
+
+All 600 classes have descriptive names. Coaching notes explain readiness, reserve effort and recovery; completing a class never certifies mastery. The movement guide offers pause, slow motion and selectable set-variation previews. These controls change the illustration, not the written dose.
+
+See [the coaching and UX review](docs/COACHING_UX_REVIEW.md) for findings, validation and remaining limitations.
 
 ## Exercise animations
 
@@ -59,6 +72,8 @@ On Windows with Android Studio's bundled JDK:
 $env:JAVA_HOME = 'C:\Program Files\Android\Android Studio\jbr'
 powershell -ExecutionPolicy Bypass -File .\tools\package_dist.ps1
 ```
+
+Development packaging also requires Python 3 and Pillow for the morning-class and sampled motion checks.
 
 The command assembles and validates the catalog and offline exercise-animation data, builds and lints the debug app offline, and creates `dist/` with the APK, JSON deliverables, documentation, and SHA-256 checksums.
 

@@ -44,6 +44,8 @@ class ExerciseAnimationView @JvmOverloads constructor(
     private var animationPhase = resolved.template.reducedMotionFrame
     private var animator: ValueAnimator? = null
     private var reducedMotionRequested = false
+    private var playbackPaused = false
+    private var slowPlayback = false
     private val visibleRect = Rect()
     private var scrollListenerAttached = false
     private val scrollChangedListener = ViewTreeObserver.OnScrollChangedListener {
@@ -130,6 +132,18 @@ class ExerciseAnimationView @JvmOverloads constructor(
         restartAnimationIfNeeded()
         invalidate()
         return this
+    }
+
+    fun setPlaybackPaused(paused: Boolean) {
+        playbackPaused = paused
+        if (paused) stopAnimator() else updateAnimationState()
+        invalidate()
+    }
+
+    fun setSlowPlayback(slow: Boolean) {
+        slowPlayback = slow
+        stopAnimator()
+        updateAnimationState()
     }
 
     /** Lets the containing screen honor an in-app reduce-motion preference as well. */
@@ -336,13 +350,13 @@ class ExerciseAnimationView @JvmOverloads constructor(
             return
         }
         if (animator != null) return
-        animator = ValueAnimator.ofFloat(0f, 1f).apply {
-            duration = resolved.template.durationMs
+        animator = ValueAnimator.ofFloat(animationPhase, animationPhase + 1f).apply {
+            duration = resolved.template.durationMs * if (slowPlayback) 2L else 1L
             interpolator = LinearInterpolator()
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.RESTART
             addUpdateListener {
-                animationPhase = it.animatedValue as Float
+                animationPhase = (it.animatedValue as Float) % 1f
                 postInvalidateOnAnimation()
             }
             start()
@@ -359,6 +373,7 @@ class ExerciseAnimationView @JvmOverloads constructor(
             getGlobalVisibleRect(visibleRect) &&
             !visibleRect.isEmpty &&
             !reducedMotionRequested &&
+            !playbackPaused &&
             systemAnimationsEnabled()
 
     private fun isAnimationRunning(): Boolean = animator?.isRunning == true

@@ -35,9 +35,12 @@ data class TrainingProgram(
     val day: Int?,
     val estimatedMinutes: Int?,
     val exercises: List<TrainingExercise>,
+    val readiness: LocalizedText = LocalizedText.EMPTY,
+    val safety: LocalizedText = LocalizedText.EMPTY,
     val targetRpe: Int? = null,
     val dayType: String? = null,
     val focusTags: List<String> = emptyList(),
+    val practice: List<TrainingExercise> = emptyList(),
     val warmup: List<TrainingExercise> = emptyList(),
     val cooldown: List<TrainingExercise> = emptyList(),
 )

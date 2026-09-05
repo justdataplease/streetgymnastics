@@ -1,5 +1,22 @@
 # Street Gymnastic Revival curriculum method
 
+## Morning-class revision (September 2026)
+
+The intended audience is recreational athletes building from fundamentals through intermediate strength, with the complete advanced skill ladders retained. Foundations effort is capped at RPE 6, Levels 2-4 at RPE 7, and later authored sessions at RPE 8. Planche, straddle and full-lever variations remain in the later progression as short practice ceilings, with easier regressions. The most advanced full-planche/full-lever exposures use at most three short sets; completing a level never requires mastery of those shapes. Early standalone muscle-ups use assistance, lever raises use tuck holds, and windshield-wiper work uses knee raises. Progress follows control and tolerance, with no deadline.
+
+
+The app now implements the requested class-style daily practice, with no goal selection or deadline for any skill. Front lever, back lever, muscle-up, human flag and handstand are the main long-term skills; planche and dragon flag remain supporting goals. The six levels specify practice opportunities and easier options, not readiness guarantees.
+
+The source-preservation statements below describe the audit record. The effective app prescriptions now differ from the 90 original sessions: the original `content` is retained unchanged, while 66 strength sessions use a conservative `training_content` projection and 24 use an authored recovery routine on session days four and seven. Strength and skill practice together are capped at 20 sets, with at most three sets per exercise, 12 repetitions or 30-second holds. Former max sets are capped at eight repetitions and all targets remain ceilings at RPE 7 or below. Set allocation retains every exercise before adding second and third sets. Rest is at least 60 seconds and is also offered between exercises. Existing authored sessions retain their main prescriptions and recovery waves.
+
+An explicit seven-session timetable adds one brief human-flag practice set on days one and five and one handstand practice set on days three and six. Existing RPE 4-or-lower recovery sessions receive no extra skill work. These are easy technique exposures at RPE 5 or below, with supported regressions; they are not extra maximal skill attempts. The timetable is written in JSON and mechanically expanded during assembly. This exception to the original per-session-only authoring format is intentional: the daily class remains deterministic, inspectable and shared by everyone.
+
+Handstand practice moves from overhead alignment to supported box pike, chest-to-wall control, light toe releases and brief balance attempts. Human-flag practice moves from kneeling side plank to grounded split-grip support, foot-assisted tuck support and brief tuck practice. Long-leg/full flags are a later coaching progression, not a required endpoint of the 600-session catalog. A controlled exit is a prerequisite for inversion and unsupported work.
+
+This is an evidence-informed coaching plan, not a scientifically validated 600-day protocol. General resistance-training evidence supports consistent, individualized loading; specific skill ladders and the timetable are coaching judgments. Daily recovery practice supports the habit without prescribing hard daily loading.
+
+Additional coaching references: [GMB handstand progression](https://gmb.io/handstand/), [GMB wall-to-balance practice](https://gmb.io/freestanding-handstand/), and [School of Calisthenics on human-flag pushing/pulling preparation](https://www.schoolofcalisthenics.com/blog/home-gym-workout).
+
 ## What the APK actually contains
 
 The supplied Base APK defines 379 workout slots across three levels, but complete exercise details exist for only 90: Level 1 workouts 1-40, Level 2 workouts 1-30, and Level 3 workouts 1-20. The remaining 289 records are entitlement placeholders. They contain identifiers and ordering metadata, but no hidden names, descriptions, exercises, sets, or videos.
@@ -36,9 +53,9 @@ Each newly authored card prescribes specific variations. If a skill or advanced 
 1. **Foundations** — clean pulling, pushing, squatting, hinging, trunk control, active hangs, support, wrists, shoulders, hips, and ankles.
 2. **Bar Strength** — stronger pulls, pull-over control, high pulling, straight-bar support, dips, and assisted transitions.
 3. **Skill Transition** — strict muscle-up development plus structured lever, dragon-flag, and planche entry work.
-4. **Skill Foundations** — reliable tuck shapes, joint-tolerant straight-arm strength, and continued basics.
-5. **Lever Strength** — longer lever shapes, cleaner transitions, stronger dragon-flag work, and deeper planche control.
-6. **Mastery Consolidation** — successive advanced-practice waves, collective checks, deloads, and permanent fundamental maintenance.
+4. **Skill Control** — reliable tuck shapes, joint-tolerant straight-arm strength, and continued basics.
+5. **Intermediate Strength** — longer lever shapes, cleaner transitions, stronger dragon-flag work, and deeper planche control.
+6. **Confident Calisthenics** — successive advanced-practice waves, collective checks, deloads, and permanent fundamental maintenance.
 
 Each level contains 100 sessions. Difficulty waves upward gradually, then falls through recovery and consolidation cards before another build.
 

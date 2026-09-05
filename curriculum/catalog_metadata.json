@@ -4,40 +4,72 @@
   "level_definitions": [
     {
       "number": 1,
-      "name": {"en": "Foundations"},
-      "description": {"en": "Build clean pulling, pushing, leg strength, trunk control, mobility, and resilient joints."}
+      "name": {
+        "en": "Foundations"
+      },
+      "description": {
+        "en": "Build clean pulling, pushing, leg strength, trunk control, mobility, and resilient joints."
+      }
     },
     {
       "number": 2,
-      "name": {"en": "Bar Strength"},
-      "description": {"en": "Develop pull-over control, high pulls, support strength, and assisted transitions."}
+      "name": {
+        "en": "Bar Strength"
+      },
+      "description": {
+        "en": "Develop pull-over control, high pulls, support strength, and assisted transitions."
+      }
     },
     {
       "number": 3,
-      "name": {"en": "Skill Transition"},
-      "description": {"en": "Consolidate strict muscle-ups and introduce structured lever, dragon flag, and planche work."}
+      "name": {
+        "en": "Skill Transition"
+      },
+      "description": {
+        "en": "Build controlled muscle-up transitions, tuck-lever foundations and supported handstand practice."
+      }
     },
     {
       "number": 4,
-      "name": {"en": "Skill Foundations"},
-      "description": {"en": "Own the tuck shapes, protect the joints, and keep the basic strength engine."}
+      "name": {
+        "en": "Skill Control"
+      },
+      "description": {
+        "en": "Repeat clean supported skills, strengthen tuck shapes and develop balanced full-body strength."
+      }
     },
     {
       "number": 5,
-      "name": {"en": "Lever Strength"},
-      "description": {"en": "Build longer levers, cleaner muscle-ups, stronger dragon flags, and planche control."}
+      "name": {
+        "en": "Intermediate Strength"
+      },
+      "description": {
+        "en": "Develop shortened-lever strength, controlled muscle-up practice and wall-supported balance."
+      }
     },
     {
       "number": 6,
-      "name": {"en": "Mastery Consolidation"},
-      "description": {"en": "Practice advanced shapes in successive waves while fundamentals remain permanent."}
+      "name": {
+        "en": "Confident Calisthenics"
+      },
+      "description": {
+        "en": "Consolidate strong basics and explore handstand, flag, lever and planche variations at your current ability. Use regressions freely; there is no mastery deadline."
+      }
     }
   ],
-  "authentic_title_prefix": {"en": "Workout"},
   "authentic_description": {
-    "en": "Follow the prescribed strength sequence with controlled technique, then complete the warm-up and cooldown."
+    "en": "Start with the warm-up, practise the strength sequence at a controllable difficulty, then finish with the cooldown."
   },
   "catalog_notice": {
     "en": "Replacement and extension sessions are newly authored and are not recovered Street Gymnastic PRO data. The app uses a balanced six-level sequence of 100 assigned workouts per level."
+  },
+  "progression_readiness": {
+    "en": "Advance a movement only after you can complete its current variation with controlled range and reserve effort on at least two separate sessions. Change only one variable: repetitions, hold time, assistance or lever length. A new workout number is not a skill-readiness test; keep using an easier variation as long as needed. Later planche, straddle and full-lever shapes are practice ceilings, not requirements: use the listed regression for as long as needed."
+  },
+  "training_recovery": {
+    "en": "Follow the assigned morning class, including its easy recovery sessions. Daily practice does not mean daily hard effort. If soreness or fatigue makes the warm-up unusually heavy, make today an easy walk and mobility morning, then return to the assigned strength session when recovered."
+  },
+  "authentic_scaling": {
+    "en": "The morning version limits strength plus skill practice to 20 sets, with at most 3 sets per exercise, 12 repetitions or 30 seconds per hold. Former max sets are capped at 8 quality repetitions. These are ceilings: stop sooner with 2-3 repetitions in reserve and keep effort at RPE 6 in Foundations and 7 in later levels, or below. Use foot-assisted hangs and pulls, higher rows, incline push-ups, assisted dips or bent-knee raises when needed. Skip behind-the-neck pulls and head bangers. Inversions and turnovers require controlled entries, exits and suitable assistance. Recovery mornings are already assigned."
   }
 }

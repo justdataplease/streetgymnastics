@@ -33,6 +33,17 @@
     <string name="assigned_next">Next</string>
     <string name="locked_later">Later</string>
     <string name="workout_overview">Workout overview</string>
+    <string name="animation_pause">Pause</string>
+    <string name="animation_play">Play</string>
+    <string name="animation_slow">Slow motion</string>
+    <string name="animation_normal">Normal speed</string>
+    <string name="animation_tempo_note">Movement guide. Follow the written tempo and hold time.</string>
+    <string name="animation_variation">Preview %1$d/%2$d: %3$s - tap to change</string>
+    <string name="class_guidance_title">Your morning class</string>
+    <string name="class_guidance_summary">Warm up, practise with control, then cool down. Keep 2-3 repetitions in reserve and use an easier variation when needed. Recovery mornings count. There is no deadline for a skill.</string>
+    <string name="class_guidance_details">Technique, scaling &amp; progression</string>
+    <string name="skill_practice">Skill practice</string>
+    <string name="skill_practice_note">Keep skill practice easy, around RPE 5 or below. The listed variation is a ceiling: use its regression until control is repeatable. One short practice set is enough today; do not add max attempts. Keep the prescribed rest before strength work.</string>
     <string name="warm_up">Warm-up</string>
     <string name="main_training">Main training</string>
     <string name="cool_down">Cool-down</string>
@@ -43,7 +54,7 @@
     <string name="seconds_format">%1$d sec</string>
     <string name="rest_format">Rest %1$d sec</string>
     <string name="no_exercises">No exercise details are available for this workout.</string>
-    <string name="readiness_note">Use the displayed regression whenever clean form is unavailable. If no lower step is listed, reduce range, support, assistance, repetitions, or sets. Keep two or three quality repetitions in reserve, stop a maximum-repetition set when technique starts to break, and stop for sharp joint pain.</string>
+    <string name="readiness_note">Use the displayed regression whenever clean form is unavailable. If no lower step is listed, reduce range, repetitions or sets, or add support and assistance. Keep two or three quality repetitions in reserve, stop a maximum-repetition set when technique starts to break, and stop for sharp joint pain.</string>
     <string name="start_workout">Start workout</string>
     <string name="assigned_later">Assigned later in the sequence</string>
     <string name="workout_completed">Workout completed</string>
@@ -80,7 +91,7 @@
     <string name="keep_screen_awake">Keep screen awake during workouts</string>
     <string name="sound_cues">Play a cue when rest ends</string>
     <string name="safety_title">Train safely</string>
-    <string name="safety_body">Warm up before loading skills. Perform the prescribed variation only with clean control; otherwise use its displayed regression. If no lower rung is listed, reduce range, support, assistance, repetitions, or sets. Leave repetitions in reserve and do not force German-hang or shoulder range. Stop for sharp pain, numbness, dizziness, or loss of control. Persistent symptoms need qualified medical advice.</string>
+    <string name="safety_body">Warm up before loading skills. Perform the prescribed variation only with clean control; otherwise use its displayed regression. If no lower rung is listed, reduce range, repetitions or sets, or add support and assistance. Leave repetitions in reserve and do not force German-hang or shoulder range. Stop for sharp pain, numbness, dizziness, or loss of control. Persistent symptoms need qualified medical advice.</string>
     <string name="about_title">About Street Gymnastic</string>
     <string name="about_body">Street Gymnastic is a guided six-level training sequence with 600 workouts, built-in exercise demonstrations, rest timing, and progress tracking.</string>
     <string name="version_format">Version %1$s</string>

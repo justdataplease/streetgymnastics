@@ -63,6 +63,8 @@ if ($baselineHash -ne $expectedBaselineSha256) {
 
 $baseline = Read-JsonFile $BaselinePath
 $catalogMetadata = Read-JsonFile (Join-Path $CurriculumDirectory "catalog_metadata.json")
+$authenticTitles = (Read-JsonFile (Join-Path $CurriculumDirectory "authentic_titles.json")).titles
+$morningClass = Read-JsonFile (Join-Path $CurriculumDirectory "morning_class.json")
 $authoredBySlot = @{}
 $movementById = [ordered]@{}
 $coachingProfiles = New-Object System.Collections.ArrayList
@@ -132,7 +134,7 @@ foreach ($levelDefinition in $levelDefinitions) {
                     origin = "apk_authentic"
                     level = $levelNumber
                     number = $number
-                    title = Localized "$($catalogMetadata.authentic_title_prefix.en) $number"
+                    title = $authenticTitles.PSObject.Properties["$levelNumber-$number"].Value
                     description = $catalogMetadata.authentic_description
                     schedule = [ordered]@{
                         week = [Math]::Floor(($number - 1) / 7) + 1
@@ -147,6 +149,8 @@ foreach ($levelDefinition in $levelDefinitions) {
                         pro = [bool]$legacyProgram.pro
                         has_details = $true
                     }
+                    readiness = $catalogMetadata.progression_readiness
+                    safety = $catalogMetadata.authentic_scaling
                     content = $legacyProgram
                     coaching_overlay = [ordered]@{
                         origin = "new_coaching_overlay"
@@ -182,8 +186,8 @@ foreach ($levelDefinition in $levelDefinitions) {
                 warmup = $authored.warmup
                 main = $authored.main
                 cooldown = $authored.cooldown
-                readiness = $authored.readiness
-                safety = $authored.safety
+                readiness = $(if ($null -ne $authored.readiness) { $authored.readiness } else { $catalogMetadata.progression_readiness })
+                safety = $(if ($null -ne $authored.safety) { $authored.safety } else { $catalogMetadata.training_recovery })
             }
             [void]$programs.Add($assembled)
             $reconstructedCount++
@@ -213,8 +217,8 @@ foreach ($levelDefinition in $levelDefinitions) {
                 warmup = $authored.warmup
                 main = $authored.main
                 cooldown = $authored.cooldown
-                readiness = $authored.readiness
-                safety = $authored.safety
+                readiness = $(if ($null -ne $authored.readiness) { $authored.readiness } else { $catalogMetadata.progression_readiness })
+                safety = $(if ($null -ne $authored.safety) { $authored.safety } else { $catalogMetadata.training_recovery })
             }
             [void]$programs.Add($assembled)
             $newExtensionCount++
@@ -239,11 +243,76 @@ foreach ($levelDefinition in $levelDefinitions) {
                 warmup = $authored.warmup
                 main = $authored.main
                 cooldown = $authored.cooldown
-                readiness = $authored.readiness
-                safety = $authored.safety
+                readiness = $(if ($null -ne $authored.readiness) { $authored.readiness } else { $catalogMetadata.progression_readiness })
+                safety = $(if ($null -ne $authored.safety) { $authored.safety } else { $catalogMetadata.training_recovery })
             }
             [void]$programs.Add($assembled)
             $newLevelCount++
+        }
+    }
+
+    $classLevel = $morningClass.levels | Where-Object { [int]$_.level -eq $levelNumber } | Select-Object -First 1
+    foreach ($program in $programs) {
+        $classDay = (([int]$program.number - 1) % 7) + 1
+        $classSlot = $classLevel.days | Where-Object { [int]$_.day -eq $classDay } | Select-Object -First 1
+        $program["practice"] = @($classSlot.practice)
+        if ($program.origin -eq "apk_authentic" -and $classDay -in @(4, 7)) {
+            $program["morning_recovery"] = $true
+            $program["main"] = $morningClass.early_recovery
+            $program["title"] = Localized ("Mobility & Recovery - Session {0}" -f $program.number)
+            $program["description"] = Localized "An easy morning class: gentle walking, shoulder mobility and trunk control. Finish feeling fresher for the next strength session."
+            $program["safety"] = $catalogMetadata.training_recovery
+        }
+        if ($program.origin -eq "apk_authentic" -and -not $program["morning_recovery"]) {
+            # A separate working projection keeps the original export auditable.
+            $training = $program.content | ConvertTo-Json -Depth 100 | ConvertFrom-Json
+            $limits = $morningClass.early_strength_limits
+            foreach ($exercise in $training.exercises) {
+                $replacement = $morningClass.early_movement_overrides.PSObject.Properties[[string]$exercise.name.en].Value
+                if ($null -eq $replacement) { continue }
+                $movement = $movementById[[string]$replacement.movement_id]
+                $exercise | Add-Member -NotePropertyName movement_id -NotePropertyValue $movement.id -Force
+                $exercise.name = $movement.name
+                $regression = $movementById[[string]$movement.regression_id]
+                $exercise.description = Localized ("{0} {1} Easier option: {2}." -f $movement.description.en, $movement.safety.en, $regression.name.en)
+                foreach ($set in $exercise.sets) {
+                    $set.name = Localized ""
+                    $set.description = Localized "Use the easier option whenever needed; stop with reserve effort."
+                    $set.repetitions_max = $false
+                    $set.repetitions = $replacement.reps
+                    $set.duration_seconds = $replacement.seconds
+                }
+            }
+            $remaining = [int]$limits.main_sets_including_practice - @($program.practice).Count
+            $selectedByExercise = @{}
+            foreach ($exercise in $training.exercises) { $selectedByExercise[[string]$exercise.id] = New-Object System.Collections.ArrayList }
+            for ($round = 0; $round -lt [int]$limits.sets_per_exercise; $round++) {
+                foreach ($exercise in $training.exercises) {
+                    if ($remaining -le 0) { break }
+                    $available = @($exercise.sets)
+                    if ($round -lt $available.Count) {
+                        $set = $available[$round]
+                        if ($set.repetitions_max) {
+                            $set.repetitions_max = $false
+                            $set.repetitions = [int]$limits.max_set_repetitions
+                        } elseif ($null -ne $set.repetitions) {
+                            $set.repetitions = [Math]::Min([int]$set.repetitions, [int]$limits.repetitions)
+                        }
+                        if ($null -ne $set.duration_seconds) {
+                            $set.duration_seconds = [Math]::Min([int]$set.duration_seconds, [int]$limits.hold_seconds)
+                        }
+                        $set.break_seconds = [Math]::Max([int]$set.break_seconds, [int]$limits.minimum_rest_seconds)
+                        [void]$selectedByExercise[[string]$exercise.id].Add($set)
+                        $remaining--
+                    }
+                }
+            }
+            foreach ($exercise in $training.exercises) { $exercise.sets = @($selectedByExercise[[string]$exercise.id]) }
+            $program["training_content"] = $training
+            $program["training_rpe"] = $(if ($levelNumber -eq 1) { 6 } else { [int]$limits.rpe })
+        }
+        if ($null -ne $program.schedule.rpe -and [int]$program.schedule.rpe -le 4) {
+            $program["practice"] = @()
         }
     }
 

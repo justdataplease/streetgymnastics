@@ -601,7 +601,7 @@ open class RevivalActivity : Activity() {
         )
         page.addWithMargins(hero, bottomDp = 14)
 
-        page.addWithMargins(workoutSafetyCard(), bottomDp = 16)
+        page.addWithMargins(workoutSafetyCard(program), bottomDp = 16)
 
         val sections = sections(program)
         if (sections.all { it.exercises.isEmpty() }) {
@@ -678,7 +678,7 @@ open class RevivalActivity : Activity() {
             exerciseCard.addView(heading)
             exerciseCard.addWithMargins(
                 exerciseAnimation(exercise, exerciseName, locale),
-                height = dp(168),
+                height = ViewGroup.LayoutParams.WRAP_CONTENT,
                 topDp = 10,
             )
             exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let {
@@ -787,7 +787,7 @@ open class RevivalActivity : Activity() {
         }
         page.addWithMargins(status, bottomDp = 14)
 
-        page.addWithMargins(workoutSafetyCard(), bottomDp = 14)
+        page.addWithMargins(workoutSafetyCard(program), bottomDp = 14)
 
         sections.forEach { section ->
             page.addView(sectionLabel(getString(section.titleRes)))
@@ -797,7 +797,7 @@ open class RevivalActivity : Activity() {
                 exerciseCard.addView(titleText(exerciseName, 18f))
                 exerciseCard.addWithMargins(
                     exerciseAnimation(exercise, exerciseName, locale),
-                    height = dp(168),
+                    height = ViewGroup.LayoutParams.WRAP_CONTENT,
                     topDp = 8,
                 )
                 exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let {
@@ -847,10 +847,9 @@ open class RevivalActivity : Activity() {
                     row.addView(copy, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
                     checkBox.setOnClickListener {
                         progressRepository.setCompleted(setKey, checkBox.isChecked)
-                        if (checkBox.isChecked && setIndex == exercise.sets.lastIndex) {
-                            clearRest()
-                        } else if (checkBox.isChecked) {
-                            set.breakSeconds?.takeIf { it > 0 }?.let(::startRest)
+                        if (checkBox.isChecked) {
+                            if (doneCount + 1 >= allSetKeys.size) clearRest()
+                            else set.breakSeconds?.takeIf { it > 0 }?.let(::startRest)
                         }
                         renderActive(program.id)
                     }
@@ -1087,6 +1086,7 @@ open class RevivalActivity : Activity() {
 
     private fun sections(program: TrainingProgram): List<ExerciseSection> = listOf(
         ExerciseSection("warmup", R.string.warm_up, program.warmup),
+        ExerciseSection("practice", R.string.skill_practice, program.practice),
         ExerciseSection("main", R.string.main_training, program.exercises),
         ExerciseSection("cooldown", R.string.cool_down, program.cooldown),
     )
@@ -1095,27 +1095,69 @@ open class RevivalActivity : Activity() {
         exercise: TrainingExercise,
         exerciseName: CharSequence,
         locale: Locale,
-    ): ExerciseAnimationView = ExerciseAnimationView(this).apply {
-        val descriptor = buildList {
-            exercise.description.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
-            exercise.sets.forEach { set ->
-                set.name.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
-                set.description.resolve(locale).takeIf(String::isNotBlank)?.let(::add)
+    ): LinearLayout = LinearLayout(this).apply {
+        orientation = LinearLayout.VERTICAL
+        val preview = ExerciseAnimationView(context)
+        val variations = exercise.sets.map { it.name.resolve(locale) }
+            .filter(String::isNotBlank).distinct()
+        fun showVariation(index: Int) {
+            preview.bind(
+                movementId = exercise.movementId,
+                exerciseName = exerciseName,
+                category = exercise.category,
+                equipment = exercise.equipment,
+                descriptor = variations.getOrNull(index) ?: exercise.description.resolve(locale),
+            )
+        }
+        showVariation(0)
+        addView(preview, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp(168)))
+        addView(bodyText(getString(R.string.animation_tempo_note), 12f))
+        val controls = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
+        var paused = false
+        var slow = false
+        val pause = secondaryButton(getString(R.string.animation_pause)) { }
+        pause.setOnClickListener {
+            paused = !paused
+            preview.setPlaybackPaused(paused)
+            pause.text = getString(if (paused) R.string.animation_play else R.string.animation_pause)
+        }
+        val speed = secondaryButton(getString(R.string.animation_slow)) { }
+        speed.setOnClickListener {
+            slow = !slow
+            preview.setSlowPlayback(slow)
+            speed.text = getString(if (slow) R.string.animation_normal else R.string.animation_slow)
+        }
+        controls.addView(pause, LinearLayout.LayoutParams(0, dp(48), 1f))
+        controls.addView(speed, LinearLayout.LayoutParams(0, dp(48), 1f))
+        addView(controls)
+        if (exercise.movementId == null && variations.size > 1) {
+            var variation = 0
+            val change = secondaryButton(getString(R.string.animation_variation, 1, variations.size, variations[0])) { }
+            change.setOnClickListener {
+                variation = (variation + 1) % variations.size
+                showVariation(variation)
+                change.text = getString(R.string.animation_variation, variation + 1, variations.size, variations[variation])
             }
-        }.distinct().joinToString(" ").takeIf(String::isNotBlank)
-        bind(
-            movementId = exercise.movementId,
-            exerciseName = exerciseName,
-            category = exercise.category,
-            equipment = exercise.equipment,
-            descriptor = descriptor,
-        )
+            addView(change)
+        }
     }
 
-    private fun workoutSafetyCard(): LinearLayout = card().apply {
-        background = roundedDrawable(AppColors.WARNING_SURFACE, dp(10).toFloat())
-        addView(titleText(getString(R.string.safety_title), 18f))
-        addWithMargins(bodyText(getString(R.string.readiness_note), 14f), topDp = 7)
+    private fun workoutSafetyCard(program: TrainingProgram): LinearLayout = card().apply {
+        addView(titleText(getString(R.string.class_guidance_title), 18f))
+        addWithMargins(bodyText(getString(R.string.class_guidance_summary), 14f), topDp = 7)
+        addWithMargins(secondaryButton(getString(R.string.class_guidance_details)) {
+            val notes = buildList {
+                add(getString(R.string.readiness_note))
+                if (program.practice.isNotEmpty()) add(getString(R.string.skill_practice_note))
+                program.readiness.resolve().takeIf(String::isNotBlank)?.let(::add)
+                program.safety.resolve().takeIf(String::isNotBlank)?.let(::add)
+            }.joinToString("\n\n")
+            AlertDialog.Builder(this@RevivalActivity)
+                .setTitle(R.string.class_guidance_details)
+                .setMessage(notes)
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }, topDp = 4)
     }
 
     private fun scopedSetId(
