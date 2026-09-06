@@ -70,7 +70,14 @@ class BasketballCourtView(context: Context, private val category: String) : View
                 arrow(canvas, 140f, 90f, 181f, 90f)
                 ball(canvas, 232f, 118f)
             }
-            "decision", "overview" -> {
+            "overview" -> {
+                player(canvas, 205f, 128f)
+                player(canvas, 187f, 100f, defense = true)
+                arrow(canvas, 214f, 111f, 223f, 78f)
+                arrow(canvas, 220f, 70f, 181f, 40f)
+                ball(canvas, 220f, 131f)
+            }
+            "decision" -> {
                 player(canvas, 74f, 103f)
                 player(canvas, 160f, 137f)
                 player(canvas, 248f, 102f)

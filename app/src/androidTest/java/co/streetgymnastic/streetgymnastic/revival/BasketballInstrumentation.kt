@@ -13,6 +13,14 @@ import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.CheckBox
 import android.widget.AdapterView
 import android.widget.TextView
+import android.widget.EditText
+import android.widget.Switch
+import co.streetgymnastic.streetgymnastic.revival.ui.AppSettings
+import co.streetgymnastic.streetgymnastic.revival.data.BasketballPlanMigration
+import com.google.firebase.auth.FirebaseAuth
+import com.google.android.gms.tasks.Tasks
+import java.util.UUID
+import java.util.concurrent.TimeUnit
 import co.streetgymnastic.streetgymnastic.revival.data.AssetCurriculumRepository
 import co.streetgymnastic.streetgymnastic.revival.data.BasketballSkills
 import co.streetgymnastic.streetgymnastic.revival.data.progress.SharedPreferencesProgressRepository
@@ -20,12 +28,17 @@ import co.streetgymnastic.streetgymnastic.revival.data.progress.SharedPreference
 /** Framework-only instrumented checks, with the emulator's original progress restored afterward. */
 class BasketballInstrumentation : Instrumentation() {
     private lateinit var activity: Activity
+    private var liveAuth = false
+    private var testEmail: String? = null
+    private var testPassword: String? = null
     private val preferenceNames = listOf(
         "street_gymnastic_progress", "street_basketball_progress", "street_basketball_skills",
+        "street_gymnastic_settings", "street_basketball_plan",
     )
 
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
+        liveAuth = arguments?.getString("liveAuth") == "true"
         start()
     }
 
@@ -36,13 +49,35 @@ class BasketballInstrumentation : Instrumentation() {
             validateCatalogs()
             report("Catalogs: 600 calisthenics workouts, 48 basketball sessions, valid drills and doses.")
             preferenceNames.forEach { preferences(it).edit().clear().commit() }
+            verifyPlanMigration()
+            report("Upgrade: revised drill ticks clear once, unchanged ticks and history persist.")
             verifyTrainingFlow()
             report("Training: independent active sessions, saved sets, completion, repeat and future locks.")
             verifySkillChecks()
             report("Skills: checkpoint state survives reopening and can be cleared.")
+            verifySettings()
+            report("Settings: preferences persist, invalid email is rejected, form modes work.")
+            if (liveAuth) {
+                verifyLiveAuth()
+                report("Firebase: sign-up, sign-out, wrong-password handling, sign-in and session restoration passed.")
+            }
         } catch (error: Throwable) {
             failure = error
         } finally {
+            try {
+                testEmail?.let { email ->
+                    val auth = FirebaseAuth.getInstance()
+                    val user = auth.currentUser ?: Tasks.await(auth.signInWithEmailAndPassword(email, checkNotNull(testPassword)), 30, TimeUnit.SECONDS).user
+                    check(user?.email == email)
+                    Tasks.await(checkNotNull(user).delete(), 30, TimeUnit.SECONDS)
+                    runOnMainSync { auth.signOut() }
+                    settle()
+                    check(auth.currentUser == null)
+                    report("Firebase: disposable test account deleted.")
+                }
+            } catch (cleanup: Throwable) {
+                failure = failure ?: cleanup
+            }
             if (::activity.isInitialized) runOnMainSync { activity.finish() }
             originals.forEach { (name, values) ->
                 val edit = preferences(name).edit().clear()
@@ -67,6 +102,87 @@ class BasketballInstrumentation : Instrumentation() {
             result.putString("stream", "\nFAIL: ${failure.stackTraceToString()}\n")
             finish(Activity.RESULT_CANCELED, result)
         }
+    }
+
+    private fun verifyPlanMigration() {
+        val ball = SharedPreferencesProgressRepository(targetContext, "street_basketball_progress")
+        ball.startWorkout("bb:l1:p01", 1000)
+        ball.finishWorkout(2000, 4)
+        ball.startWorkout("bb:l2:p01", 3000)
+        val changed = "bb:l2:p01:main:e01:s01"
+        val unchanged = "bb:l2:p01:main:e02:s01"
+        ball.setCompleted(changed, true)
+        ball.setCompleted(unchanged, true)
+        BasketballPlanMigration.apply(targetContext, ball)
+        check(ball.activeWorkout()?.completedSetIds == setOf(unchanged))
+        check(ball.sessionHistory().size == 1 && ball.completedProgramIds() == setOf("bb:l1:p01"))
+        ball.setCompleted(changed, true)
+        BasketballPlanMigration.apply(targetContext, ball)
+        check(ball.activeWorkout()?.completedSetIds == setOf(changed, unchanged))
+        preferences("street_basketball_progress").edit().clear().commit()
+    }
+
+    private fun verifySettings() {
+        nav(R.string.nav_settings)
+        val initial = AppSettings(targetContext).soundCues
+        val toggle = checkNotNull(find { it is Switch && it.text == targetContext.getString(R.string.sound_cues) })
+        runOnMainSync { toggle.performClick() }
+        nav(R.string.nav_today)
+        nav(R.string.nav_settings)
+        check(AppSettings(targetContext).soundCues != initial)
+        check((find { it is Switch && it.text == targetContext.getString(R.string.sound_cues) } as Switch).isChecked != initial)
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            clickText(R.string.account_sign_in)
+            check((find { it is EditText && it.hint == targetContext.getString(R.string.account_email) } as EditText).error != null)
+            clickText(R.string.account_new_account)
+            check(find { it is EditText && it.hint == targetContext.getString(R.string.account_confirm_password) && it.visibility == View.VISIBLE } != null)
+            clickText(R.string.account_have_account)
+        }
+    }
+
+    private fun fill(label: Int, value: String) {
+        val input = find { it is EditText && it.hint == targetContext.getString(label) } as EditText
+        runOnMainSync { input.setText(value) }
+    }
+
+    private fun awaitText(label: Int) {
+        val text = targetContext.getString(label)
+        repeat(300) {
+            if (find { it is TextView && it.text.toString() == text } != null) return
+            SystemClock.sleep(100)
+        }
+        error("Timed out waiting for: $text")
+    }
+
+    private fun verifyLiveAuth() {
+        check(FirebaseAuth.getInstance().currentUser == null) { "Live auth test requires a signed-out emulator" }
+        val email = "streetgym-test-${UUID.randomUUID()}@example.invalid"
+        val password = "Sg!9-${UUID.randomUUID()}"
+        clickText(R.string.account_new_account)
+        fill(R.string.account_email, email)
+        fill(R.string.account_password, password)
+        fill(R.string.account_confirm_password, password)
+        clickText(R.string.account_create)
+        awaitText(R.string.account_signed_in)
+        testEmail = email
+        testPassword = password
+        check(FirebaseAuth.getInstance().currentUser?.email == email)
+        val history = SharedPreferencesProgressRepository(targetContext, "street_basketball_progress").sessionHistory()
+        clickText(R.string.account_sign_out)
+        fill(R.string.account_email, email)
+        fill(R.string.account_password, "incorrect-password")
+        clickText(R.string.account_sign_in)
+        awaitText(R.string.account_invalid_credentials)
+        fill(R.string.account_password, password)
+        clickText(R.string.account_sign_in)
+        awaitText(R.string.account_signed_in)
+        runOnMainSync { activity.finish() }
+        settle()
+        launch()
+        nav(R.string.nav_settings)
+        awaitText(R.string.account_signed_in)
+        check(FirebaseAuth.getInstance().currentUser?.email == email)
+        check(SharedPreferencesProgressRepository(targetContext, "street_basketball_progress").sessionHistory() == history)
     }
 
     private fun preferences(name: String): SharedPreferences =

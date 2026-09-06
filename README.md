@@ -1,8 +1,8 @@
 # Street Gymnastic
 
-An offline Kotlin/Android training app with a guided 600-workout calisthenics sequence and a separate Street Basketball tab.
+A Kotlin/Android training app with offline workouts and optional Firebase login with a guided 600-workout calisthenics sequence and a separate Street Basketball tab.
 
-Street Basketball adds 48 court sessions across six levels, 39 coached drills, offline court diagrams, repeatable sessions and 18 saved skill checks. Basketball has independent active workouts, checked sets and history. See [the basketball program](docs/BASKETBALL_PROGRAM.md) for progression, sources and verification.
+Street Basketball adds 48 court sessions across six levels, 45 coached drills, offline court diagrams, repeatable sessions and 24 saved skill checks. Basketball has independent active workouts, checked sets and history. See [the basketball program](docs/BASKETBALL_PROGRAM.md) for progression, sources and verification.
 
 The app is English-only. Calisthenics contains exactly 600 assigned workouts: six levels with 100 workouts each. The Today screen advances through one fixed sequence. Future calisthenics workouts can be inspected, but only the next assigned workout can be started.
 
@@ -107,7 +107,7 @@ The command assembles and validates the catalog and offline exercise-animation d
 - Between-set rest timer, sound cue, finish/effort flow, progress, and history
 - Local-only progress in Android `SharedPreferences`
 
-The app contains no advertising, analytics, account login, cloud sync, broad storage permission, video playback, or outbound video links. Unavailable videos are replaced by lightweight offline movement illustrations; historic IDs exist only in the separate technical export.
+Settings includes optional Firebase email/password sign-in, account creation, password reset and sign-out. Firebase sessions persist through app restarts. Workout progress remains on this device and is shared across accounts using this installation; login does not provide cloud sync. The app contains no advertising, analytics, broad storage permission, video playback, or outbound video links. Unavailable videos are replaced by lightweight offline movement illustrations; historic IDs exist only in the separate technical export.
 
 ## Permission and safety
 
@@ -116,3 +116,11 @@ The requester states they have written permission from the owner to modify and r
 New sessions are capped at RPE 8, recovery sessions at RPE 4, and no more than three hard days may appear consecutively. The same in-app scaling guidance appears on every workout.
 
 This is general exercise programming, not medical care. Use sound equipment and appropriate spotting. Perform the listed regression whenever control is lost; for a movement with no lower rung, reduce range, support, assistance, repetitions, or sets conservatively. Stop for sharp pain, instability, numbness, dizziness, or unusual symptoms. Seek individualized advice when returning from injury or managing a medical condition.
+
+## Firebase accounts
+
+The debug and release package IDs are registered in Firebase project `streetgym-8dc6d`, with email/password sign-in enabled. Variant-specific `app/src/{debug,release}/res/values/firebase.xml` files contain the public Android client configuration used by Firebase initialization. Only the Authentication SDK is included. These resources do not contain an Admin SDK credential.
+
+Never copy a service-account JSON into the app or repository. Admin credentials are needed only for trusted project administration; clients use the [Firebase Android Authentication SDK](https://firebase.google.com/docs/auth/android/password-auth). The first build needs internet access to download Firebase dependencies; subsequent packaging can use the Gradle cache offline.
+
+The 1.3 basketball revision retains all program IDs, completion history and original skill-check keys. On upgrade, checked sets for replaced drill slots in an active basketball workout are cleared once, so a newly assigned drill cannot appear already performed. Unchanged checked sets and all calisthenics data remain intact.

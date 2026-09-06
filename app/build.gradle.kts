@@ -11,8 +11,8 @@ android {
         applicationId = "co.streetgymnastic.streetgymnastic.revival"
         minSdk = 23
         targetSdk = 35
-        versionCode = 4
-        versionName = "1.2.1"
+        versionCode = 5
+        versionName = "1.3.0"
         testInstrumentationRunner = "co.streetgymnastic.streetgymnastic.revival.BasketballInstrumentation"
 
         vectorDrawables.useSupportLibrary = false
@@ -58,4 +58,9 @@ android {
         }
     }
 
+}
+
+dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+    implementation("com.google.firebase:firebase-auth")
 }

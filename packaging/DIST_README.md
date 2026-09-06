@@ -2,7 +2,7 @@
 
 This folder is a scripted, rebuildable debug distribution of Street Gymnastic, including the separate Street Basketball tab.
 
-Basketball adds 48 sessions across six levels, 39 drills, court diagrams, repeatable practice and 18 saved skill checks. Its progress is independent of calisthenics. The basketball asset is included as `street-basketball-curriculum.json`, with program notes in `BASKETBALL_PROGRAM.md`; both are covered by the checksums.
+Basketball adds 48 sessions across six levels, 45 drills, court diagrams, repeatable practice and 24 saved skill checks. Its progress is independent of calisthenics. The basketball asset is included as `street-basketball-curriculum.json`, with program notes in `BASKETBALL_PROGRAM.md`; both are covered by the checksums.
 
 ## Contents
 
@@ -45,3 +45,5 @@ Exercise demonstrations are drawn locally by an articulated line-figure rig from
 New sessions are capped at RPE 8, with workload and hard-day limits checked during packaging. The same scaling warning is shown on every workout.
 
 This is general educational programming, not medical advice. Use sound equipment and appropriate spotting. Follow the listed regression for skill work; scale movements without a lower rung conservatively when control is unavailable. Stop for sharp pain, instability, numbness, dizziness, or unusual symptoms.
+
+Settings includes optional Firebase email/password login, account creation, password reset and sign-out. Training stays available offline. Workout progress remains on the device, shared by accounts using this installation; cloud sync is not included. The basketball plan emphasizes one-on-one handles, pace, counters and short court runs while retaining shooting, finishing, defense and team-play foundations.

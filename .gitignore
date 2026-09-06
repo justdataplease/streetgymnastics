@@ -22,3 +22,7 @@ __pycache__/
 # Local coaching and emulator review artifacts
 /generated/animation_audit/
 /generated/class_ui.xml
+
+# Never package or commit Firebase server credentials.
+*firebase-adminsdk*.json
+*service-account*.json

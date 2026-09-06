@@ -31,6 +31,7 @@ import android.widget.TextView
 import android.widget.Toast
 import co.streetgymnastic.streetgymnastic.revival.R
 import co.streetgymnastic.streetgymnastic.revival.data.AssetCurriculumRepository
+import co.streetgymnastic.streetgymnastic.revival.data.BasketballPlanMigration
 import co.streetgymnastic.streetgymnastic.revival.data.BasketballSkills
 import co.streetgymnastic.streetgymnastic.revival.data.model.CurriculumCatalog
 import co.streetgymnastic.streetgymnastic.revival.data.model.TrainingExercise
@@ -47,8 +48,7 @@ import java.util.Locale
 import java.util.concurrent.Executors
 
 /**
- * Framework-only application shell. It intentionally avoids network and private API dependencies:
- * the catalog and exercise demonstrations are bundled with the app.
+ * Offline training shell with optional Firebase account access in Settings.
  */
 open class RevivalActivity : Activity() {
     private sealed interface Screen {
@@ -105,6 +105,7 @@ open class RevivalActivity : Activity() {
         settings = AppSettings(this)
         gymnasticsProgress = SharedPreferencesProgressRepository(this)
         basketballProgress = SharedPreferencesProgressRepository(this, "street_basketball_progress")
+        BasketballPlanMigration.apply(this, basketballProgress)
         restoredScreen = savedInstanceState?.let(::screenFromBundle)
         restEndsAtEpochMillis = savedInstanceState?.getLong(STATE_REST_END)
             ?.takeIf { it > System.currentTimeMillis() }
@@ -1172,6 +1173,10 @@ open class RevivalActivity : Activity() {
         val page = verticalPage()
         page.addView(titleText(getString(R.string.settings_title), 26f))
 
+        page.addWithMargins(bodyText(getString(R.string.settings_subtitle)), topDp = 4, bottomDp = 18)
+        page.addView(sectionLabel(getString(R.string.account_section)))
+        page.addWithMargins(AccountSettingsView(this), bottomDp = 16)
+        page.addView(sectionLabel(getString(R.string.training_preferences)))
         val preferencesCard = card()
         preferencesCard.addView(settingSwitch(
             getString(R.string.keep_screen_awake),
@@ -1181,7 +1186,16 @@ open class RevivalActivity : Activity() {
             getString(R.string.sound_cues),
             settings.soundCues,
         ) { settings.soundCues = it })
+        preferencesCard.addWithMargins(bodyText(getString(R.string.training_preferences_note), 13f), topDp = 6)
         page.addWithMargins(preferencesCard, bottomDp = 16)
+        val focus = card().apply {
+            addView(titleText(getString(R.string.settings_focus_title), 19f))
+            addWithMargins(bodyText(getString(R.string.settings_focus_body), 14f), topDp = 7)
+            addWithMargins(secondaryButton(getString(R.string.settings_open_court)) {
+                openRoot(Screen.Basketball)
+            }, topDp = 8)
+        }
+        page.addWithMargins(focus, bottomDp = 16)
 
         page.addView(sectionLabel(getString(R.string.safety_title)))
         val safety = card().apply {

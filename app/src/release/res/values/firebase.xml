@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="google_app_id" translatable="false">1:77722312393:android:0a9e1ba7c9ee6c85b27718</string>
+  <string name="google_api_key" translatable="false">AIzaSyBsfksVQ2tZJcLCDnasHxMs7GMa4YDoUrY</string>
+  <string name="project_id" translatable="false">streetgym-8dc6d</string>
+  <string name="gcm_defaultSenderId" translatable="false">77722312393</string>
+</resources>

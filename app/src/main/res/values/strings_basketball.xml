@@ -2,7 +2,7 @@
 <resources>
     <string name="nav_basketball">Basketball</string>
     <string name="basketball_title">Street Basketball</string>
-    <string name="basketball_subtitle">From first touch to confident pickup play.</string>
+    <string name="basketball_subtitle">Build your one-on-one game: handles, pace and confident finishes.</string>
     <string name="basketball_next">Next court session</string>
     <string name="basketball_start">Start court session</string>
     <string name="basketball_session_details">Session details</string>

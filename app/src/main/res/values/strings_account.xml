@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_subtitle">Your account, training preferences and court focus.</string>
+    <string name="account_section">Account</string>
+    <string name="account_title">Make yourself at home</string>
+    <string name="account_signed_in">Signed in</string>
+    <string name="account_optional">Sign in or create an account with your email. Training is always available offline. Workout progress stays on this device; cloud sync is not available yet.</string>
+    <string name="account_local_progress">Your workout history and skill checks stay on this device and are shared by anyone using this installation. Signing out keeps that progress.</string>
+    <string name="account_email">Email address</string>
+    <string name="account_password">Password</string>
+    <string name="account_confirm_password">Confirm password</string>
+    <string name="account_sign_in">Sign in</string>
+    <string name="account_create">Create account</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_have_account">Already have an account? Sign in</string>
+    <string name="account_new_account">New here? Create an account</string>
+    <string name="account_reset">Forgot password?</string>
+    <string name="account_working">Connecting?</string>
+    <string name="account_invalid_email">Enter a valid email address.</string>
+    <string name="account_enter_password">Enter your password.</string>
+    <string name="account_short_password">Use at least 6 characters.</string>
+    <string name="account_password_mismatch">Passwords do not match.</string>
+    <string name="account_reset_sent">If this email has an account, a password reset link will arrive shortly. Check your inbox and spam folder.</string>
+    <string name="account_network_error">Could not connect. Check your internet connection and try again. You can still train offline.</string>
+    <string name="account_rate_limit">Too many attempts. Please wait a little before trying again.</string>
+    <string name="account_weak_password">Choose a stronger password that meets the account password requirements.</string>
+    <string name="account_email_in_use">This email already has an account. Sign in or reset your password.</string>
+    <string name="account_unavailable">Email sign-in is temporarily unavailable. Please try again later.</string>
+    <string name="account_disabled">This account is disabled. Contact the app owner for help.</string>
+    <string name="account_invalid_credentials">Email or password is incorrect. Try again or reset your password.</string>
+    <string name="account_generic_error">Could not complete that request. Please try again.</string>
+    <string name="training_preferences">During your workout</string>
+    <string name="training_preferences_note">Keep the display on while a workout is open, and play a sound when your rest timer ends. These preferences are saved on this device.</string>
+    <string name="settings_focus_title">Built for your one-on-one game</string>
+    <string name="settings_focus_body">Build a reliable handle with either hand, change pace, attack an open lane and recover between short court runs. Keep developing your shot, finishing and defense alongside calisthenics.</string>
+    <string name="settings_open_court">Open basketball training</string>
+</resources>
